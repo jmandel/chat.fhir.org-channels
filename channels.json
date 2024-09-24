@@ -1,0 +1,3783 @@
+{
+  "channels": [
+    {
+      "channelName": "Advance Directives",
+      "channelId": 282785,
+      "channelDescription": "Sharing implementation experience and harmonizing standards for representing and exchanging Advance Directives, legal documents that specify patient preferences for medical treatment in situations where they are unable to make decisions for themselves. Focuses on US-specific models and workflows, including the Patient Advance Care Information (PACIO) initiative and the Advance Directive Interoperability (ADI) Implementation Guide.",
+      "keywords": [
+        "Advance Directives",
+        "Patient Advance Care Information",
+        "ADI Implementation Guide",
+        "legal documents",
+        "patient preferences",
+        "medical treatment"
+      ]
+    },
+    {
+      "channelName": "Allergy Intolerance",
+      "channelId": 222004,
+      "channelDescription": "Management and representation of patient allergy and intolerance information for clinical use. Addresses data elements, validation rules, clinical workflows, and extensions for representing allergy details.",
+      "keywords": [
+        "allergy intolerance",
+        "allergy",
+        "clinical status",
+        "verification status",
+        "allergen",
+        "allergen-containing products",
+        "clinical decision support"
+      ]
+    },
+    {
+      "channelName": "Announcements",
+      "channelId": 179240,
+      "channelDescription": "Official HL7 announcements of general interest to the FHIR community, such as new publications, upcoming events, and calls for participation. Everyone is encouraged to subscribe.",
+      "keywords": [
+        "Announcements",
+        "HL7",
+        "FHIR",
+        "Connectathon",
+        "Working Group Meeting",
+        "Publication",
+        "Ballot",
+        "Project Proposal",
+        "New Stream"
+      ]
+    },
+    {
+      "channelName": "Argo Patient Lists",
+      "channelId": 227046,
+      "channelDescription": "Sharing and retrieval of lists of patients in healthcare settings. Focuses on defining and discovering patient lists, including support for clinical and administrative use cases. Discusses how to represent list criteria, membership, and additional patient details.",
+      "keywords": [
+        "Argonaut Project",
+        "Patient Lists",
+        "Group Resource",
+        "Patient Discovery",
+        "List Management",
+        "Questionnaire Responses",
+        "Clinical Workflows",
+        "Administrative Use Cases",
+        "Data Exchange"
+      ]
+    },
+    {
+      "channelName": "Artificial Intelligence/Machine Learning (AI/ML)",
+      "channelId": 323443,
+      "channelDescription": "Exploring the potential benefits and applications of Artificial Intelligence and Machine Learning (AI/ML) in healthcare through the lens of HL7 Fast Healthcare Interoperability Resources (FHIR) standards. ",
+      "keywords": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "AI/ML use cases",
+        "Clinical Decision Support",
+        "Large Language Models"
+      ]
+    },
+    {
+      "channelName": "At-Home In-Vitro Test IG",
+      "channelId": 322481,
+      "channelDescription": "Standardization of data exchange for at-home in-vitro diagnostic tests. Includes patient-reported information, test results, and communication with clinical systems.",
+      "keywords": [
+        "At-Home In-Vitro Test",
+        "DiagnosticReport",
+        "Observation",
+        "Patient",
+        "Bundle"
+      ]
+    },
+    {
+      "channelName": "BRR - Pharmacy model",
+      "channelId": 179308,
+      "channelDescription": "Development of the Common Medication Model and associated FHIR resources for representing medications and related concepts. Discussions include structuring medication data, defining relationships between ingredients, substances, and products, representing packaging, routes of administration, and clinical use information.",
+      "keywords": [
+        "Biomedical Research and Regulation",
+        "Common Medication Model",
+        "medication definitions",
+        "ingredients",
+        "substances",
+        "routes of administration",
+        "dosage",
+        "drug interactions",
+        "contraindications",
+        "clinical use definitions",
+        "packaged products",
+        "pharmaceutical product identifiers"
+      ]
+    },
+    {
+      "channelName": "BSeR",
+      "channelId": 179496,
+      "channelDescription": "Standardizing healthcare referral workflows using the HL7 FHIR standard, specifically focusing on bidirectional exchange of referral information.",
+      "keywords": [
+        "bidirectional service referral",
+        "healthcare referral workflows",
+        "referral implementation guide"
+      ]
+    },
+    {
+      "channelName": "Ballot-QA",
+      "channelId": 179257,
+      "channelDescription": "This channel is dedicated to the quality assurance (QA) process for FHIR ballots, covering editorial guidelines, technical issues, terminology rules, and ballot submission procedures.",
+      "keywords": [
+        "Ballot-QA",
+        "quality assurance",
+        "editorial guidelines",
+        "technical issues",
+        "terminology rules",
+        "ballot submission",
+        "spreadsheet",
+        "gForge",
+        "JIRA"
+      ]
+    },
+    {
+      "channelName": "Belgium",
+      "channelId": 216261,
+      "channelDescription": "Discussion and coordination of FHIR implementation projects in Belgium, including national standards, events, and specific use cases.",
+      "keywords": [
+        "Belgium",
+        "Belgian implementation",
+        "Belgian profiles",
+        "Belgian events",
+        "Belgian use cases",
+        "national standards",
+        "eHealth",
+        "mHealth",
+        "International Patient Access"
+      ]
+    },
+    {
+      "channelName": "Birth and Fetal Death on FHIR",
+      "channelId": 434619,
+      "channelDescription": "This channel focuses on the use of HL7 FHIR to exchange data for Vital Records Birth and Fetal Death Reporting (BFDR). This includes discussion of implementation guides, certification requirements, and specific technical details related to the BFDR FHIR standard.",
+      "keywords": [
+        "Birth and Fetal Death Reporting",
+        "BFDR",
+        "Vital Records",
+        "National Center for Health Statistics",
+        "NCHS",
+        "IJE",
+        "Canary"
+      ]
+    },
+    {
+      "channelName": "C-CDA",
+      "channelId": 179311,
+      "channelDescription": "Implementation, testing, and certification of the Consolidated Clinical Document Architecture (C-CDA) standard for electronic health information exchange. Discusses best practices, tooling, common challenges, and mapping between C-CDA and FHIR.",
+      "keywords": [
+        "Consolidated Clinical Document Architecture",
+        "C-CDA Implementation-A-Thon",
+        "Clinical Document Architecture",
+        "electronic health information exchange",
+        "US Core Data for Interoperability",
+        "C-CDA Scorecard"
+      ]
+    },
+    {
+      "channelName": "CARIN BB ExplanationOfBenefit",
+      "channelId": 246287,
+      "channelDescription": "Implementation and technical questions related to the CARIN Blue Button Explanation of Benefit Implementation Guide. Discussion centers around mapping claims data to the Explanation of Benefit (EOB) resource, handling specific data elements like status, totals, and provider information, and understanding the nuances of different EOB profiles (pharmacy, professional, institutional).",
+      "keywords": [
+        "CARIN Blue Button",
+        "Explanation of Benefit",
+        "EOB",
+        "claims data",
+        "adjudication",
+        "payment",
+        "insurance",
+        "provider",
+        "patient",
+        "pharmacy claims",
+        "medical claims",
+        "inpatient claims",
+        "outpatient claims"
+      ]
+    },
+    {
+      "channelName": "CARIN Benefit Check IG",
+      "channelId": 208660,
+      "channelDescription": "Standardization of real-time pharmacy benefit checks, enabling consumers and applications to determine patient-specific medication costs and coverage information before arriving at the pharmacy.",
+      "keywords": [
+        "CARIN Benefit Check Implementation Guide",
+        "Real-time Pharmacy Benefit Check",
+        "pharmacy benefit check",
+        "medication cost transparency",
+        "patient access to cost information",
+        "payer routing",
+        "health plan integration"
+      ]
+    },
+    {
+      "channelName": "CARIN IG for Blue Button®",
+      "channelId": 204607,
+      "channelDescription": "This channel focuses on the CARIN Implementation Guide for Blue Button (C4BB IG), specifically addressing issues related to implementing and using the Blue Button specification for accessing and exchanging patient payer data. Topics include Explanation of Benefit (EOB) resources, Coverage resources, Patient Access API compliance, data elements, terminology, and testing.",
+      "keywords": [
+        "CARIN IG for Blue Button",
+        "Blue Button",
+        "patient access API",
+        "explanation of benefit",
+        "EOB",
+        "coverage",
+        "payer data",
+        "USCDI",
+        "compliance",
+        "testing",
+        "connectathon"
+      ]
+    },
+    {
+      "channelName": "CARIN IG for Digital Insurance Card",
+      "channelId": 285193,
+      "channelDescription": "Standardization of digital health insurance card data exchange using FHIR.  Covers data elements, exchange workflows, and integration with SMART Health Cards and SMART Health Links for representing and verifying insurance information.",
+      "keywords": [
+        "CARIN IG for Digital Insurance Card",
+        "health insurance card",
+        "coverage",
+        "patient",
+        "subscriber",
+        "beneficiary",
+        "SMART Health Card",
+        "SMART Health Link"
+      ]
+    },
+    {
+      "channelName": "CCDA / FHIR mapping stream",
+      "channelId": 179273,
+      "channelDescription": "Mapping Consolidated Clinical Document Architecture (CCDA) data to Fast Healthcare Interoperability Resources (FHIR) format for interoperability and data exchange. Discusses mapping challenges, best practices, and alignment with US Core Data for Interoperability (USCDI).",
+      "keywords": [
+        "CCDA",
+        "Consolidated Clinical Document Architecture",
+        "FHIR",
+        "Fast Healthcare Interoperability Resources",
+        "mapping",
+        "US Core Data for Interoperability",
+        "USCDI",
+        "transformation",
+        "data conversion",
+        "clinical data",
+        "electronic health records",
+        "EHR"
+      ]
+    },
+    {
+      "channelName": "CDA",
+      "channelId": 229921,
+      "channelDescription": "Discussions related to HL7 Clinical Document Architecture (CDA) standards, including implementation details, use cases, and conformance. This channel covers topics such as document structure, template usage, data exchange, and validation.",
+      "keywords": [
+        "Clinical Document Architecture",
+        "CDA Release 2",
+        "CCDA",
+        "Continuity of Care Document",
+        "document templates",
+        "entryRelationship",
+        "Schematron validation",
+        "XML",
+        "document identifiers"
+      ]
+    },
+    {
+      "channelName": "CDA IG Publisher",
+      "channelId": 246127,
+      "channelDescription": "Development and support of tooling and infrastructure for publishing Clinical Document Architecture (CDA) Implementation Guides (IGs) using the FHIR IG Publisher.",
+      "keywords": [
+        "CDA IG Publisher",
+        "Clinical Document Architecture",
+        "Implementation Guide",
+        "FHIR IG Publisher",
+        "SUSHI",
+        "Schematron",
+        "C-CDA"
+      ]
+    },
+    {
+      "channelName": "CMG CDA Announcements",
+      "channelId": 267293,
+      "channelDescription": "Official announcements and updates from the HL7 Clinical Document Architecture (CDA) Management Group, covering errata, schema changes, implementation guides, events, and general news related to the CDA standard.",
+      "keywords": [
+        "Clinical Document Architecture",
+        "CDA Management Group",
+        "schema",
+        "stylesheet",
+        "implementation guides",
+        "implementation-a-thons",
+        "ballots",
+        "errata releases",
+        "value sets",
+        "Consolidated CDA"
+      ]
+    },
+    {
+      "channelName": "Canada Core",
+      "channelId": 213856,
+      "channelDescription": "Development and maintenance of the Canadian FHIR Baseline, a set of FHIR profiles based on US Core, adapted to Canadian healthcare data requirements.",
+      "keywords": [
+        "Canada Core",
+        "Canadian FHIR Baseline",
+        "US Core",
+        "patient",
+        "practitioner",
+        "organization",
+        "location",
+        "practitioner role",
+        "immunization",
+        "medication",
+        "medication request",
+        "medication statement",
+        "observation",
+        "condition",
+        "procedure",
+        "allergy intolerance",
+        "encounter",
+        "Canadian postal code"
+      ]
+    },
+    {
+      "channelName": "Canadian eReferral",
+      "channelId": 279576,
+      "channelDescription": "Implementation of electronic referral workflows in Canada, based on the Canadian eReferral specification and Ontario eReferral Implementation Guide. Discusses FHIR messaging, data modeling, and technical details for exchanging referral information between healthcare providers.  ",
+      "keywords": [
+        "Canadian eReferral",
+        "Ontario eReferral",
+        "FHIR messaging",
+        "ServiceRequest",
+        "QuestionnaireResponse",
+        "HealthcareService",
+        "Location"
+      ]
+    },
+    {
+      "channelName": "Cancer Interoperability",
+      "channelId": 179234,
+      "channelDescription": "Discussion and collaboration on clinical data modeling and interoperability standards for comprehensive cancer care. Topics include diagnosis, treatment, research, staging, grading, toxicity, and the use of FHIR resources like Condition, Observation, and Procedure to represent cancer-related information.",
+      "keywords": [
+        "cancer interoperability",
+        "cancer diagnosis",
+        "cancer treatment",
+        "cancer research",
+        "cancer staging",
+        "cancer grading",
+        "tumor modeling",
+        "toxicity",
+        "adverse events",
+        "NAACCR",
+        "mCODE"
+      ]
+    },
+    {
+      "channelName": "Care Plan/Care Coordination",
+      "channelId": 220328,
+      "channelDescription": "Sharing and discussing implementation experiences, use cases, and best practices for using the FHIR CarePlan resource and related resources for care coordination. Covers topics like patient understanding of conditions, self-treatment plans, advanced directives, pharmacist care plans, clinical decision support recommendations, post-discharge care, and connecting care plans to specific episodes of care.",
+      "keywords": [
+        "Care Plan",
+        "Care Coordination",
+        "Care Team",
+        "Plan Definition",
+        "Request Group",
+        "Activity Definition",
+        "Clinical Use Definition",
+        "patient goals",
+        "medication management",
+        "chronic conditions",
+        "Social Determinants of Health"
+      ]
+    },
+    {
+      "channelName": "Clinicians on FHIR",
+      "channelId": 179230,
+      "channelDescription": "Discussion and collaboration among clinicians about the use of FHIR in healthcare, including tools, use cases, and representation of clinical concepts.",
+      "keywords": [
+        "Clinicians on FHIR",
+        "clinical workflows",
+        "clinical data representation",
+        "electronic health records",
+        "terminology",
+        "ontology",
+        "social determinants of health",
+        "lifestyle medicine",
+        "physical exam findings",
+        "data provenance"
+      ]
+    },
+    {
+      "channelName": "Consent Decision and Management Services",
+      "channelId": 253681,
+      "channelDescription": "Managing and enforcing patient consent for sharing and accessing health information. Covers topics such as consent services, workflows, use cases, and connectathon tracks related to consent management.",
+      "keywords": [
+        "Consent Decision and Management Services",
+        "patient consent",
+        "consent services",
+        "consent workflows",
+        "consent use cases",
+        "connectathon tracks"
+      ]
+    },
+    {
+      "channelName": "Covid-19 Response",
+      "channelId": 226195,
+      "channelDescription": "Sharing implementation experiences and best practices for using FHIR to exchange healthcare data related to the COVID-19 pandemic. Discussions include specific use cases like reporting hospital capacity, patient impacts, and lab results, working with public health agencies, and implementing the Situational Awareness for Novel Epidemic Response (SANER) Implementation Guide.",
+      "keywords": [
+        "COVID-19 Response",
+        "public health reporting",
+        "hospital capacity reporting",
+        "patient impact reporting",
+        "lab test reporting",
+        "electronic lab reporting",
+        "immunization registry reporting",
+        "situational awareness for novel epidemic response",
+        "SANER",
+        "Centers for Disease Control",
+        "Federal Emergency Management Agency"
+      ]
+    },
+    {
+      "channelName": "Da Vinci",
+      "channelId": 179283,
+      "channelDescription": "The Da Vinci Project focuses on accelerating the adoption of Fast Healthcare Interoperability Resources (FHIR) to enable value-based care and healthcare interoperability in the United States. It involves collaborative efforts between healthcare stakeholders, including payers, providers, and technology vendors, to develop and implement FHIR-based solutions for various use cases, such as prior authorization, data exchange for quality measures, clinical data exchange, and payer data exchange.",
+      "keywords": [
+        "Da Vinci Project",
+        "value-based care",
+        "prior authorization",
+        "quality measures",
+        "clinical data exchange",
+        "payer data exchange",
+        "payer",
+        "provider",
+        "Health Level Seven International",
+        "Centers for Medicare and Medicaid Services"
+      ]
+    },
+    {
+      "channelName": "Da Vinci ATR",
+      "channelId": 214784,
+      "channelDescription": "Management and exchange of member attribution lists for risk-based contracts between payers and providers. Discussions on implementation, testing, and regulatory requirements related to sharing patient lists and associated coverage information.",
+      "keywords": [
+        "Da Vinci ATR",
+        "Risk Based Contracts",
+        "Member Attribution List",
+        "payer",
+        "provider",
+        "coverage",
+        "attribution",
+        "group"
+      ]
+    },
+    {
+      "channelName": "Da Vinci Burden Reduction interoperability",
+      "channelId": 259713,
+      "channelDescription": "Demonstrating and testing implementation approaches for Da Vinci burden reduction use cases, focusing on the interoperability of electronic health records (EHRs), payers, and prior authorization systems. Key topics include workflow integration, data exchange, and testing tools.",
+      "keywords": [
+        "Da Vinci Burden Reduction",
+        "Coverage Requirements Discovery (CRD)",
+        "Documentation Templates and Rules (DTR)",
+        "Prior Authorization Support (PAS)",
+        "Clinical Data Exchange (CDex)",
+        "Health Record Exchange (HRex)",
+        "interoperability testing",
+        "Connectathon",
+        "Logica Sandbox",
+        "Inferno Test Kit",
+        "SMART on FHIR"
+      ]
+    },
+    {
+      "channelName": "Da Vinci CDex",
+      "channelId": 180805,
+      "channelDescription": "Exchange of clinical data (documents and other resources) between payers and providers. Focuses on use cases such as prior authorization, claims attachments, and data sharing requests.",
+      "keywords": [
+        "Da Vinci Clinical Data Exchange",
+        "prior authorization",
+        "claims attachments",
+        "clinical document exchange",
+        "health record exchange"
+      ]
+    },
+    {
+      "channelName": "Da Vinci CRD",
+      "channelId": 180803,
+      "channelDescription": "Development and testing of the Da Vinci Coverage Requirements Discovery (CRD) Implementation Guide and its associated use cases. This channel focuses on the exchange of information between electronic health records (EHRs) and payers to determine coverage requirements and prior authorization needs for healthcare services.",
+      "keywords": [
+        "Da Vinci Coverage Requirements Discovery",
+        "prior authorization",
+        "coverage requirements",
+        "clinical decision support hooks",
+        "payer-provider communication",
+        "electronic health records",
+        "healthcare services",
+        "coverage information",
+        "documentation requirements"
+      ]
+    },
+    {
+      "channelName": "Da Vinci DTR",
+      "channelId": 197320,
+      "channelDescription": "This Da Vinci project focuses on facilitating Prior Authorization by streamlining the information exchange between providers (Electronic Health Records) and payers. This includes defining standard document templates, business rules, and workflows for requesting, providing, and processing prior authorization requests. The primary exchange mechanism is SMART on FHIR applications.",
+      "keywords": [
+        "Da Vinci DTR",
+        "Documents Templates and Rules",
+        "Prior Authorization",
+        "Clinical Reasoning",
+        "Coverage Requirements Discovery",
+        "SMART on FHIR",
+        "Questionnaires",
+        "Clinical Quality Language",
+        "Payer Rules"
+      ]
+    },
+    {
+      "channelName": "Da Vinci PAS",
+      "channelId": 208874,
+      "channelDescription": "Standardization of electronic Prior Authorization workflows, primarily using HL7 FHIR to exchange data between healthcare providers and payers.  Discussion focuses heavily on mapping between FHIR resources and X12 278 transaction sets, covering topics like claim submission, status inquiry, updates, and responses. ",
+      "keywords": [
+        "Da Vinci Prior Authorization Support",
+        "Prior Authorization",
+        "X12 278",
+        "Claim",
+        "ClaimResponse",
+        "Payer",
+        "Provider",
+        "Health Insurance Portability and Accountability Act",
+        "Centers for Medicare and Medicaid Services"
+      ]
+    },
+    {
+      "channelName": "Da Vinci PCT",
+      "channelId": 301151,
+      "channelDescription": "US-specific implementation guidance for the Da Vinci Patient Cost Transparency use cases.  This channel focuses on developing FHIR profiles and implementation details for exchanging healthcare cost estimates, including Good Faith Estimates (GFE), Advanced Explanation of Benefits (AEOB), and related data. Discussion centers around aligning with CMS regulations and harmonizing with other US core profiles.",
+      "keywords": [
+        "Da Vinci Patient Cost Transparency",
+        "Good Faith Estimate",
+        "GFE",
+        "Advanced Explanation of Benefits",
+        "AEOB",
+        "Prior Authorization",
+        "cost estimation",
+        "claims",
+        "US healthcare regulations",
+        "CMS guidance"
+      ]
+    },
+    {
+      "channelName": "Da Vinci PDex",
+      "channelId": 235286,
+      "channelDescription": "Implementation of Da Vinci's Payer Data Exchange (PDex) Implementation Guide for healthcare data sharing between payers and other entities, such as providers and third-party applications. Addresses technical details, use cases, and regulatory requirements like the CMS Patient Access API and Payer-to-Payer exchange.",
+      "keywords": [
+        "Da Vinci Payer Data Exchange",
+        "PDex",
+        "Patient Access API",
+        "Payer-to-Payer exchange",
+        "CMS 9123",
+        "Member Match",
+        "Consent",
+        "Provenance",
+        "Bulk Data",
+        "Explanation of Benefit",
+        "Prior Authorization",
+        "Medicaid",
+        "mTLS"
+      ]
+    },
+    {
+      "channelName": "Da Vinci PDex Drug Formulary",
+      "channelId": 197730,
+      "channelDescription": "Exchange of health insurer drug formulary information for patients, consumers, and providers.",
+      "keywords": [
+        "Da Vinci PDex Drug Formulary Implementation Guide",
+        "Formulary",
+        "Coverage Plan",
+        "Medication Knowledge",
+        "Drug Tier",
+        "Prior Authorization",
+        "Step Therapy",
+        "Quantity Limit",
+        "Cost Sharing",
+        "RxNorm",
+        "National Drug Codes",
+        "Pharmacy Benefit Managers"
+      ]
+    },
+    {
+      "channelName": "Da Vinci PDex/connectathon",
+      "channelId": 235291,
+      "channelDescription": "Payer Data Exchange (PDex) implementation and testing for the Da Vinci project. Discussion focuses on connecting systems, sharing payer data, and complying with regulations like the CMS rule for patient access APIs. ",
+      "keywords": [
+        "Da Vinci",
+        "Payer Data Exchange",
+        "connectathon",
+        "patient access API",
+        "CMS rule",
+        "payer endpoint directory",
+        "US Core"
+      ]
+    },
+    {
+      "channelName": "Da Vinci PR",
+      "channelId": 440634,
+      "channelDescription": "Implementation guide for the Da Vinci  Payer/Provider Information Exchange  Postable Remittance use case. This channel focuses on exchanging healthcare remittance advice information between payers and providers using HL7 FHIR.",
+      "keywords": [
+        "Da Vinci",
+        "Payer/Provider Information Exchange",
+        "Postable Remittance",
+        "remittance advice",
+        "healthcare payments"
+      ]
+    },
+    {
+      "channelName": "Da Vinci Risk Adjustment",
+      "channelId": 311469,
+      "channelDescription": "Development and implementation of the Da Vinci Risk Adjustment Implementation Guide, which focuses on exchanging patient data between payers and providers for the purpose of calculating risk scores in Medicare Advantage programs.",
+      "keywords": [
+        "Da Vinci Risk Adjustment",
+        "Medicare Advantage",
+        "risk adjustment",
+        "risk scores",
+        "payer-provider data exchange"
+      ]
+    },
+    {
+      "channelName": "Da+Vinci+PDex+Plan-Net",
+      "channelId": 229922,
+      "channelDescription": "Discussions related to the Da Vinci Payer Data Exchange (PDex) Plan-Net Implementation Guide, which focuses on standardizing provider directory data exchange between payers and other healthcare entities. This includes topics like representing provider networks, pharmacy networks, insurance plans, locations, and healthcare services using FHIR resources.",
+      "keywords": [
+        "Da Vinci PDex Plan-Net",
+        "provider directories",
+        "payer networks",
+        "insurance plans",
+        "healthcare services",
+        "locations",
+        "pharmacy directories",
+        "CMS Interoperability Rule"
+      ]
+    },
+    {
+      "channelName": "Death on FHIR",
+      "channelId": 179301,
+      "channelDescription": "Discussion and support for implementers of the Vital Records Death Reporting (VRDR) standard using HL7 FHIR. Covers topics such as data mapping, validation, message exchange, testing procedures, and troubleshooting of issues with the NCHS systems (NVSS and STEVE).",
+      "keywords": [
+        "Vital Records Death Reporting",
+        "mortality data exchange",
+        "death certificates",
+        "FHIR implementation",
+        "NCHS certification",
+        "IJE data mapping",
+        "STEVE API",
+        "NVSS API",
+        "Canary testing tool",
+        "interjurisdictional exchange"
+      ]
+    },
+    {
+      "channelName": "DevDays",
+      "channelId": 242116,
+      "channelDescription": "Logistics, announcements, and technical support for attendees of the HL7 FHIR DevDays conference, including virtual and in-person events. Covers topics such as registration, accessing presentations, troubleshooting conference software, and general event information.",
+      "keywords": [
+        "DevDays",
+        "conference logistics",
+        "technical support",
+        "attendee information",
+        "Whova",
+        "Zoom",
+        "conference recordings"
+      ]
+    },
+    {
+      "channelName": "Endpoint Discovery",
+      "channelId": 252301,
+      "channelDescription": "Strategies for registering and discovering FHIR endpoints, including public directory maintenance, endpoint status monitoring, and best practices for managing multiple endpoints for a single resource.",
+      "keywords": [
+        "endpoint discovery",
+        "FHIR endpoint directories",
+        "endpoint registration",
+        "endpoint status monitoring",
+        "imaging study endpoints"
+      ]
+    },
+    {
+      "channelName": "Enhancing Oncology Model (EOM) IG",
+      "channelId": 428252,
+      "channelDescription": "United States Core Data for Interoperability (USCDI) implementation guidance for oncology data, specifically focused on the Enhancing Oncology Model (EOM) initiative.",
+      "keywords": [
+        "Enhancing Oncology Model",
+        "USCDI",
+        "Cancer",
+        "Oncology",
+        "Tumor Marker Tests",
+        "LOINC",
+        "mCODE"
+      ]
+    },
+    {
+      "channelName": "FAIR",
+      "channelId": 267332,
+      "channelDescription": "Applying the FAIR (Findable, Accessible, Interoperable, Reusable) data principles to healthcare information using the HL7 FHIR standard. Discusses practical approaches, use cases, and challenges related to making healthcare data FAIR using FHIR.",
+      "keywords": [
+        "FAIR",
+        "Findable, Accessible, Interoperable and Reusable",
+        "FHIR4FAIR",
+        "metadata",
+        "endpoint discovery",
+        "data sets",
+        "logical models"
+      ]
+    },
+    {
+      "channelName": "FAST",
+      "channelId": 323104,
+      "channelDescription": "This channel focuses on the HL7 FHIR at Scale Taskforce (FAST) implementation guides, specifically covering security, identity, and national directory specifications. Discussions revolve around connectathon testing, implementation issues, and questions related to these guides. ",
+      "keywords": [
+        "FHIR at Scale Taskforce",
+        "FAST",
+        "security",
+        "identity",
+        "national directory",
+        "connectathon",
+        "implementation guides",
+        "testing"
+      ]
+    },
+    {
+      "channelName": "FHIR  AFRICA",
+      "channelId": 264576,
+      "channelDescription": "This channel centers around the adoption and implementation of Fast Healthcare Interoperability Resources (FHIR) in Africa to enhance patient care and improve healthcare interoperability across the continent.",
+      "keywords": [
+        "FHIR Africa",
+        "proof of concept",
+        "patient experience",
+        "community health worker data",
+        "OpenMRS",
+        "RapidSMS",
+        "mobile phone data access",
+        "FHIR education",
+        "SNOMED on FHIR",
+        "FHIR Connectathon",
+        "national base profiles",
+        "International Patient Access (IPA)"
+      ]
+    },
+    {
+      "channelName": "FHIR Camp in Portugal",
+      "channelId": 394572,
+      "channelDescription": "Planning an informal gathering of FHIR community members in Portugal for a week of collaborative work and leisure activities.",
+      "keywords": [
+        "FHIR Camp",
+        "Portugal",
+        "FHIR Community",
+        "Collaboration"
+      ]
+    },
+    {
+      "channelName": "FHIR HL7 test servers",
+      "channelId": 257023,
+      "channelDescription": "Discussion and troubleshooting for the public FHIR test servers hosted by HL7 and Firely. This includes reporting errors, downtime, and unexpected behavior encountered when using these servers for testing and development.",
+      "keywords": [
+        "FHIR HL7 test servers",
+        "test.fhir.org",
+        "hapi.fhir.org",
+        "server.fire.ly",
+        "connectathon testing",
+        "server errors",
+        "validation issues",
+        "search parameter issues",
+        "batch interaction",
+        "chained parameters"
+      ]
+    },
+    {
+      "channelName": "FHIR Mapping Language",
+      "channelId": 379173,
+      "channelDescription": "Discussion and support for the FHIR Mapping Language (FML), a language for defining transformations between data models and FHIR resources. Topics include FML syntax, semantics, tooling, and specific mapping challenges.",
+      "keywords": [
+        "FHIR Mapping Language",
+        "FML",
+        "data transformation",
+        "mapping engine",
+        "syntax",
+        "semantics",
+        "StructureMap",
+        "ConceptMap"
+      ]
+    },
+    {
+      "channelName": "FHIR Poetry",
+      "channelId": 197113,
+      "channelDescription": "A place for FHIR-related poetry and lighthearted conversation. Share your creative writing inspired by FHIR, healthcare interoperability, or the joys and challenges of working with healthcare data standards.",
+      "keywords": [
+        "FHIR Poetry",
+        "haiku",
+        "verse",
+        "creative writing",
+        "humor"
+      ]
+    },
+    {
+      "channelName": "FHIR Schema",
+      "channelId": 391879,
+      "channelDescription": "Development and implementation of validation tooling and rule documentation for FHIR schema. Aims to simplify and standardize validation processes for implementers.",
+      "keywords": [
+        "FHIR schema",
+        "validation",
+        "validation rules",
+        "validation engine",
+        "JSON schema"
+      ]
+    },
+    {
+      "channelName": "FHIR Validator",
+      "channelId": 291844,
+      "channelDescription": "Discussion and support for the FHIR Validator and related tools, including troubleshooting validation errors, understanding validation rules, and exploring advanced validation techniques. Covers topics like schema validation, profile validation, terminology services, and validation in different FHIR versions.",
+      "keywords": [
+        "FHIR Validator",
+        "validation errors",
+        "validation rules",
+        "schema validation",
+        "profile validation",
+        "terminology services",
+        "validation",
+        "FHIR versions",
+        "validator_cli.jar",
+        "Inferno Validator",
+        "validation-wrapper"
+      ]
+    },
+    {
+      "channelName": "FHIR at Scale Taskforce (FAST): Identity",
+      "channelId": 294750,
+      "channelDescription": "Standardization of patient identity management in FHIR, including matching patients across organizations, verifying patient identity, and managing patient safety concerns related to identity. Topics include: identity assurance levels, patient matching algorithms, attribute weighting, and error handling in matching workflows. ",
+      "keywords": [
+        "FHIR at Scale Taskforce",
+        "FAST",
+        "Identity",
+        "patient matching",
+        "identity assurance",
+        "patient safety",
+        "data validation",
+        "match operation",
+        "minimum attribute set",
+        "error reporting",
+        "master patient index"
+      ]
+    },
+    {
+      "channelName": "FHIR at Scale Taskforce (FAST): Security",
+      "channelId": 294749,
+      "channelDescription": "This channel focuses on the security aspects of implementing FHIR at scale, including authentication, authorization, client registration, and trust management.",
+      "keywords": [
+        "FHIR at Scale Taskforce",
+        "FAST",
+        "security",
+        "authentication",
+        "authorization",
+        "client registration",
+        "trust management",
+        "UDAP",
+        "OpenID Connect Federation",
+        "tiered OAuth",
+        "JWT",
+        "PKI",
+        "mTLS"
+      ]
+    },
+    {
+      "channelName": "FHIR cross-version issues",
+      "channelId": 426854,
+      "channelDescription": "Discussion and technical work on managing differences between FHIR versions, with a focus on cross-version extensions and their generation. This includes topics like mapping data types and structures, handling version-specific changes, and tooling for cross-version compatibility.",
+      "keywords": [
+        "FHIR cross-version extensions",
+        "cross-version implementation guide",
+        "data type mapping",
+        "structure mapping",
+        "version-specific changes",
+        "tooling",
+        "concept maps",
+        "backbone elements",
+        "value sets",
+        "required bindings"
+      ]
+    },
+    {
+      "channelName": "FHIRcast",
+      "channelId": 179271,
+      "channelDescription": "Real-time application context synchronization in healthcare using the FHIRcast standard. Discussion focuses on technical details of the specification, reference implementations, security considerations, connectathon testing, and use cases for synchronizing patient and encounter context across various healthcare applications, including imaging viewers, reporting tools, and electronic health records.",
+      "keywords": [
+        "FHIRcast",
+        "context synchronization",
+        "websockets",
+        "application context",
+        "healthcare application integration",
+        "connectathon",
+        "real-time updates",
+        "patient context",
+        "encounter context",
+        "imaging workflow",
+        "reporting workflow"
+      ]
+    },
+    {
+      "channelName": "FQL",
+      "channelId": 317772,
+      "channelDescription": "Discussion and support for the Firely Query Language (FQL), a syntax for querying and analyzing FHIR data. Covers topics like query syntax, examples, features, and use cases.",
+      "keywords": [
+        "Firely Query Language",
+        "FQL",
+        "FHIR Querying",
+        "Data Analysis",
+        "Query Syntax",
+        "SQL",
+        "Joins",
+        "Grouping",
+        "Aggregations"
+      ]
+    },
+    {
+      "channelName": "Feature Capability Statement",
+      "channelId": 434649,
+      "channelDescription": "Development and implementation of a standard FHIR Capability Statement to represent detailed system features and functionalities. This includes defining methods for querying and describing specific system capabilities, beyond the basic capabilities outlined in the standard CapabilityStatement resource.",
+      "keywords": [
+        "Feature Capability Statement",
+        "system capabilities",
+        "feature querying",
+        "functionality representation"
+      ]
+    },
+    {
+      "channelName": "Finland",
+      "channelId": 365175,
+      "channelDescription": "Finnish national-level efforts to implement and standardize Fast Healthcare Interoperability Resources (FHIR). Includes discussions on national base profiles, implementation guides, and interoperability projects.",
+      "keywords": [
+        "Finland",
+        "Finnish Base Profiles",
+        "Finnish SMART Implementation Guide",
+        "Kanta Services",
+        "Omatietovaranto",
+        "EU Laboratory Report FHIR Implementation Guide"
+      ]
+    },
+    {
+      "channelName": "Foundry",
+      "channelId": 433092,
+      "channelDescription": "This channel is for the administration and support of HL7 Foundry, a platform for publishing and deploying FHIR reference implementations. Discussions include technical details, policies, announcements, and user support.",
+      "keywords": [
+        "Foundry",
+        "Reference Implementations",
+        "Deployment",
+        "Docker",
+        "Portainer",
+        "Continuous Integration/Continuous Deployment",
+        "SMART Launcher",
+        "Catalog",
+        "Curation"
+      ]
+    },
+    {
+      "channelName": "Fuerza Latina",
+      "channelId": 373282,
+      "channelDescription": "A Spanish- and Portuguese-language discussion forum for the Latin American FHIR community. Members exchange information, experiences, and resources related to FHIR implementation and related standards in the region.",
+      "keywords": [
+        "Fuerza Latina",
+        "Latin America",
+        "Spanish",
+        "Portuguese",
+        "community discussion"
+      ]
+    },
+    {
+      "channelName": "Gender Harmony",
+      "channelId": 330101,
+      "channelDescription": "This channel is dedicated to the HL7 Gender Harmony project, which aims to standardize the representation and exchange of sexual orientation and gender identity (SOGI) data across various healthcare data standards, including FHIR, HL7 Version 2, and CDA.",
+      "keywords": [
+        "gender harmony",
+        "sexual orientation and gender identity",
+        "SOGI",
+        "FHIR",
+        "HL7 Version 2",
+        "CDA",
+        "terminology",
+        "value sets",
+        "patient demographics",
+        "clinical use cases",
+        "certification requirements"
+      ]
+    },
+    {
+      "channelName": "Grahame's travels",
+      "channelId": 294149,
+      "channelDescription": "Grahame's semi-daily photo updates from his trip around Australia.",
+      "keywords": [
+        "Australia",
+        "travel",
+        "holiday",
+        "photos"
+      ]
+    },
+    {
+      "channelName": "Gravity sdoh-cc",
+      "channelId": 233957,
+      "channelDescription": "Implementation and interoperability of the Gravity Project's FHIR profiles for capturing and sharing social determinants of health (SDOH) data in clinical care settings. Discussions cover data elements, workflows, use cases, implementation challenges, and testing during FHIR connectathons.",
+      "keywords": [
+        "Gravity Project",
+        "social determinants of health",
+        "SDOH clinical care",
+        "SDOH questionnaires",
+        "referral workflows",
+        "patient screening",
+        "community resources",
+        "health equity",
+        "task management",
+        "care plans",
+        "conditions",
+        "goals",
+        "service requests"
+      ]
+    },
+    {
+      "channelName": "HL7 Brasil",
+      "channelId": 222874,
+      "channelDescription": "Discussions about the implementation and use of HL7 FHIR in Brazil, including national base profiles, regulatory considerations, and local terminology mapping.",
+      "keywords": [
+        "HL7 Brasil",
+        "Fast Healthcare Interoperability Resources",
+        "FHIR",
+        "Brazil",
+        "International Patient Access",
+        "IPA",
+        "International Patient Summary",
+        "IPS",
+        "ASO",
+        "TISS",
+        "SNOMED CT",
+        "Snowstorm",
+        "AllergyIntolerance"
+      ]
+    },
+    {
+      "channelName": "HL7 Colombia",
+      "channelId": 373174,
+      "channelDescription": "A forum for the Fast Healthcare Interoperability Resources (FHIR) user community in Colombia to collaborate and share information, led by HL7 Colombia.",
+      "keywords": [
+        "HL7 Colombia",
+        "Fast Healthcare Interoperability Resources",
+        "FHIR",
+        "Colombia",
+        "Latin America"
+      ]
+    },
+    {
+      "channelName": "HSSWG",
+      "channelId": 310049,
+      "channelDescription": "Developing and promoting the use of FHIR standards in human and social services contexts. Topics include mapping existing social services data standards to FHIR, facilitating data sharing between social services organizations, and developing FHIR-based solutions for managing consents and client data in non-healthcare settings.",
+      "keywords": [
+        "Human and Social Services Working Group",
+        "HSDS",
+        "Open Referral",
+        "consents",
+        "social services data exchange",
+        "SDOH",
+        "social determinants of health"
+      ]
+    },
+    {
+      "channelName": "Helios Accelerator",
+      "channelId": 307807,
+      "channelDescription": "This channel is a forum for discussing the Helios public health FHIR accelerator project.  Helios is an initiative to accelerate the adoption of FHIR in public health by developing and testing FHIR-based solutions for key public health use cases, including bulk data access, aggregate data reporting, and public health information system interoperability.",
+      "keywords": [
+        "Helios",
+        "public health",
+        "immunization information systems",
+        "bulk data",
+        "aggregate data",
+        "public health reporting",
+        "electronic case reports",
+        "connectathons"
+      ]
+    },
+    {
+      "channelName": "Helios Aggregate Data",
+      "channelId": 355141,
+      "channelDescription": "Sharing aggregated healthcare data with public health agencies using HL7 FHIR. Topics include MeasureReport resources, Clinical Quality Language (CQL) tooling, and prioritization of public health measures for situational awareness reporting during emergencies.",
+      "keywords": [
+        "Helios Aggregate Data",
+        "MeasureReport",
+        "Clinical Quality Language",
+        "public health measures",
+        "situational awareness reporting",
+        "emergency preparedness"
+      ]
+    },
+    {
+      "channelName": "Helios Query & Response",
+      "channelId": 416755,
+      "channelDescription": "Developing and testing Fast Healthcare Interoperability Resources (FHIR) standards to support public health data exchange, with a focus on query and response mechanisms for accessing and retrieving relevant information. Activities center around the Helios FHIR Accelerator for Public Health, a collaborative effort to accelerate FHIR adoption in public health.",
+      "keywords": [
+        "Helios FHIR Accelerator",
+        "Public Health",
+        "Query and Response",
+        "Fast Healthcare Interoperability Resources",
+        "HL7 Connectathon",
+        "Electronic Health Records",
+        "Health Information Technology"
+      ]
+    },
+    {
+      "channelName": "IG creation",
+      "channelId": 179252,
+      "channelDescription": "This channel is dedicated to discussing technical aspects of creating and managing FHIR Implementation Guides (IGs), including tooling, validation, publication, and common issues encountered during the process. It covers topics such as IG structure, content authoring, automated build processes, terminology services, and resolving errors and warnings.",
+      "keywords": [
+        "IG creation",
+        "implementation guide tooling",
+        "implementation guide publication",
+        "implementation guide validation",
+        "sushi",
+        "FHIR IG template"
+      ]
+    },
+    {
+      "channelName": "IPA",
+      "channelId": 261969,
+      "channelDescription": "Standardizing data exchange for international patient health record access, based on the HL7 FHIR standard. Aims to enable secure sharing of patient data across different countries and healthcare systems, similar to the Argonaut project in the US. Discusses implementation approaches, conformance testing, and alignment with national and regional data exchange specifications, with a focus on global interoperability.",
+      "keywords": [
+        "International Patient Access",
+        "cross-border data exchange",
+        "patient health records",
+        "Argonaut project",
+        "national health information networks",
+        "conformance testing",
+        "SMART on FHIR",
+        "security and privacy",
+        "international patient summary",
+        "data exchange standards"
+      ]
+    },
+    {
+      "channelName": "IPS",
+      "channelId": 207835,
+      "channelDescription": "Discussion and development of the International Patient Summary (IPS) standard, encompassing both FHIR and CDA implementations. The focus is on creating a concise, standardized summary of patient health information for cross-border or inter-organizational exchange.",
+      "keywords": [
+        "International Patient Summary",
+        "IPS",
+        "CDA",
+        "patient summary exchange",
+        "cross-border health data",
+        "patient data subset",
+        "privacy consent"
+      ]
+    },
+    {
+      "channelName": "Imaging for Consumers",
+      "channelId": 306103,
+      "channelDescription": "Development of standards and prototypes for consumer access to imaging data using SMART on FHIR.",
+      "keywords": [
+        "imaging for consumers",
+        "SMART on FHIR",
+        "imaging API",
+        "consumer access",
+        "patient imaging data",
+        "sample imaging data"
+      ]
+    },
+    {
+      "channelName": "JIRA/Confluence",
+      "channelId": 184932,
+      "channelDescription": "Discussion and support for HL7's use of Atlassian JIRA and Confluence, the software tools used for project and issue tracking, collaboration, and specification development.",
+      "keywords": [
+        "JIRA",
+        "Confluence",
+        "Atlassian",
+        "issue tracking",
+        "ballot reconciliation",
+        "workflow",
+        "single sign-on",
+        "account management",
+        "dashboard creation",
+        "filter",
+        "JQL"
+      ]
+    },
+    {
+      "channelName": "Kanta FHIR Prescription",
+      "channelId": 269119,
+      "channelDescription": "Finnish national specification for exchange of prescription data using HL7 FHIR. Includes discussion of data elements, mappings, and implementation guidance for connecting to the Kanta national health information system.",
+      "keywords": [
+        "Kanta FHIR Prescription",
+        "Finland",
+        "prescription exchange",
+        "structured dosage",
+        "prescription metadata",
+        "medication request",
+        "medication dispense",
+        "national medication database"
+      ]
+    },
+    {
+      "channelName": "LinuxForHealth",
+      "channelId": 212434,
+      "channelDescription": "This channel is dedicated to the LinuxForHealth FHIR Server, an open-source implementation of the HL7 FHIR standard. Discussion topics include installation, configuration, deployment, features, releases, and troubleshooting of the server and its related components.",
+      "keywords": [
+        "LinuxForHealth FHIR Server",
+        "Open Source",
+        "FHIR Server",
+        "IBM FHIR Server",
+        "Keycloak",
+        "Open Liberty",
+        "Docker",
+        "Kubernetes",
+        "Helm",
+        "Persistence",
+        "Bulk Data",
+        "Security",
+        "Authentication",
+        "Authorization",
+        "Terminology Services",
+        "Performance",
+        "Release Planning",
+        "Migration",
+        "Error Handling"
+      ]
+    },
+    {
+      "channelName": "Madison, WI",
+      "channelId": 205997,
+      "channelDescription": "Discussions and announcements for the Fast Healthcare Interoperability Resources (FHIR) community in Madison, Wisconsin. Includes local events, networking opportunities, and general chat.",
+      "keywords": [
+        "Madison, Wisconsin",
+        "FHIR Community",
+        "local events",
+        "networking",
+        "meetups"
+      ]
+    },
+    {
+      "channelName": "Medication",
+      "channelId": 179249,
+      "channelDescription": "Discussion and questions about representing and exchanging medication data in FHIR. Covers topics like medication prescriptions, dispensing, administration, reconciliation, terminology, and national and international medication workflows.",
+      "keywords": [
+        "Medication",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "prescription",
+        "dispense",
+        "administration",
+        "medication reconciliation",
+        "RxNorm",
+        "NDC codes",
+        "EMEA",
+        "IHE",
+        "NCPDP",
+        "HL7",
+        "medication terminology",
+        "medication workflows",
+        "pharmacy"
+      ]
+    },
+    {
+      "channelName": "Medicolegal Death Investigation",
+      "channelId": 305799,
+      "channelDescription": "Facilitating interoperability between Case Management Systems used by Coroners and Medical Examiners and Electronic Death Registration Systems. Discussion focuses on implementation of the HL7 Medicolegal Death Investigation Implementation Guide, including data exchange, API specifications, validation tools, and best practices.",
+      "keywords": [
+        "Medicolegal Death Investigation",
+        "Electronic Death Registration System",
+        "Case Management System",
+        "Coroner",
+        "Medical Examiner",
+        "death record",
+        "autopsy",
+        "cause of death",
+        "death certificate"
+      ]
+    },
+    {
+      "channelName": "Mental Health Crisis Support",
+      "channelId": 401668,
+      "channelDescription": "Developing and testing a real-world scenario and workflow for coordinating mental health crisis support, specifically for the Veterans Health Administration.  This involves defining appropriate FHIR resources, including clinical practice guidelines and business process models, and testing their interoperability within a simulated environment.",
+      "keywords": [
+        "Mental Health Crisis Support",
+        "Veterans Health Administration",
+        "Care Coordination",
+        "Clinical Practice Guidelines",
+        "Business Process Models",
+        "Workflow Automation",
+        "Service Requests",
+        "Synthetic Data",
+        "Connectathons"
+      ]
+    },
+    {
+      "channelName": "Multi-Language Implementation",
+      "channelId": 350156,
+      "channelDescription": "Implementation strategies and challenges related to supporting multiple languages in FHIR applications and Implementation Guides. Discusses translation file formats, architectural considerations, tooling, and best practices for handling multilingual content.",
+      "keywords": [
+        "Multi-language Implementation",
+        "FHIR Translation extension",
+        "Internationalization",
+        "Localization",
+        "Language Metadata",
+        "Questionnaire Translations",
+        "Multilingual Decision Support",
+        "CQL"
+      ]
+    },
+    {
+      "channelName": "Multi-domain environments",
+      "channelId": 428828,
+      "channelDescription": "Strategies and technical approaches for implementing FHIR REST APIs in healthcare environments that span multiple organizations or security domains. This includes discussion of architectural patterns like intermediaries and facades that enable data exchange and workflow coordination across these boundaries.",
+      "keywords": [
+        "multi-domain environments",
+        "FHIR intermediaries",
+        "FHIR facades",
+        "cross-domain data exchange",
+        "healthcare data aggregation",
+        "security and privacy considerations"
+      ]
+    },
+    {
+      "channelName": "Multi-lingual IGs",
+      "channelId": 380308,
+      "channelDescription": "Facilitating the creation and maintenance of Implementation Guides (IGs) in multiple languages. Discussing tooling, processes, and technical aspects of supporting translations for FHIR specifications and related documentation.",
+      "keywords": [
+        "multi-lingual implementation guides",
+        "translation tools",
+        "translation workflows",
+        "language packs",
+        "language support",
+        "validator language features",
+        "internationalization",
+        "localization"
+      ]
+    },
+    {
+      "channelName": "NVSS CoP Office Hours Meeting Minutes",
+      "channelId": 364826,
+      "channelDescription": "Meeting minutes and announcements from the National Vital Statistics System (NVSS) Community of Practice (CoP) focused on modernizing death reporting using HL7 FHIR. Covers topics like testing events, certification requirements, implementation guidance, technical support, and software tools.",
+      "keywords": [
+        "National Vital Statistics System",
+        "NVSS CoP",
+        "death records",
+        "Electronic Death Registration System",
+        "EDRS",
+        "Fast Healthcare Interoperability Resources",
+        "FHIR",
+        "HL7 FHIR Connectathon",
+        "certification",
+        "testing events",
+        "STEVE",
+        "System for Electronic Vital Events",
+        "Canary",
+        "VRDR",
+        "Vital Records Death Reporting Implementation Guide",
+        "MDI",
+        "Messaging Death Information Implementation Guide"
+      ]
+    },
+    {
+      "channelName": "National IGuides",
+      "channelId": 392078,
+      "channelDescription": "This channel is for collaboration and information sharing among authors and implementers of national FHIR Implementation Guides (IGs). Discussions center around harmonization of national IGs with international standards, best practices for IG development and profiling, and strategies for national uptake and adoption of FHIR.",
+      "keywords": [
+        "National Implementation Guides",
+        "FHIR Implementation Guides",
+        "IG Harmonization",
+        "IG Best Practices",
+        "National FHIR Profiles",
+        "Jurisdictional IGs",
+        "International Council"
+      ]
+    },
+    {
+      "channelName": "OMOP + FHIR Terminologies",
+      "channelId": 306130,
+      "channelDescription": "Mapping and harmonizing clinical terminologies between HL7 FHIR and the Observational Medical Outcomes Partnership (OMOP) Common Data Model. Discusses best practices, tooling, and mapping projects for aligning these data models.",
+      "keywords": [
+        "OMOP Common Data Model",
+        "FHIR terminologies",
+        "terminology mapping",
+        "vocabulary alignment",
+        "clinical concept mapping",
+        "OHDSI Athena",
+        "Vulcan FHIR to OMOP"
+      ]
+    },
+    {
+      "channelName": "Oceania IPS Connectathon 2023",
+      "channelId": 397991,
+      "channelDescription": "Planning and coordination for the Oceania International Patient Summary (IPS) Connectathon, held in conjunction with NZ Digital Health Week Nov 27-28, 2023. ",
+      "keywords": [
+        "International Patient Summary",
+        "Oceania IPS Connectathon",
+        "New Zealand Digital Health Week",
+        "Connectathon planning"
+      ]
+    },
+    {
+      "channelName": "OpenHIE",
+      "channelId": 274603,
+      "channelDescription": "A community dedicated to building and supporting OpenHIE, a health information exchange platform using FHIR. Discussions cover implementation guides, architecture, tools, and specific use cases.",
+      "keywords": [
+        "OpenHIE",
+        "health information exchange",
+        "implementation guides",
+        "client registries",
+        "case reporting",
+        "data extraction",
+        "HAPI FHIR",
+        "mADX",
+        "SanteMPI"
+      ]
+    },
+    {
+      "channelName": "Opthalmology",
+      "channelId": 238885,
+      "channelDescription": "Exchange of ophthalmology clinical data using FHIR. Covers data formats and terminologies for visual acuity, intraocular pressure, visual field measurements, optical coherence tomography, and ophthalmic device information. Also, discussion about relevant implementation guides and connectathon participation.",
+      "keywords": [
+        "ophthalmology",
+        "visual acuity",
+        "intraocular pressure",
+        "visual field",
+        "optical coherence tomography",
+        "ophthalmic device nomenclature",
+        "DICOM",
+        "SNOMED CT",
+        "JOIA"
+      ]
+    },
+    {
+      "channelName": "Orders and Observation WG",
+      "channelId": 179256,
+      "channelDescription": "Discussion and standardization of FHIR resources related to clinical orders, observations, and diagnostic reports. This includes topics like resource structure, workflows, terminology, and implementation guidance for resources such as Observation, ServiceRequest, DiagnosticReport, Device, Specimen, and related resources.",
+      "keywords": [
+        "orders and observations working group",
+        "observation",
+        "service request",
+        "diagnostic report",
+        "device",
+        "specimen",
+        "laboratory results",
+        "vital signs",
+        "immunization inventory",
+        "clinical notes",
+        "point of care testing",
+        "audiograms",
+        "hearing tests",
+        "wearable sensor data",
+        "clinical decision support",
+        "artificial intelligence results",
+        "prostate biopsies",
+        "organ inventory",
+        "family and household data"
+      ]
+    },
+    {
+      "channelName": "cda to fhir",
+      "channelId": 179191,
+      "channelDescription": "Techniques and challenges related to converting Consolidated Clinical Document Architecture (CCDA) data to and from Fast Healthcare Interoperability Resources (FHIR) format. Discusses mappings, tooling, best practices, and real-world implementation scenarios.",
+      "keywords": [
+        "CCDA to FHIR",
+        "Consolidated Clinical Document Architecture",
+        "Fast Healthcare Interoperability Resources",
+        "data conversion",
+        "mapping",
+        "tooling",
+        "implementation guides",
+        "HL7 v3",
+        "Continuity of Care Document"
+      ]
+    },
+    {
+      "channelName": "cda/publish",
+      "channelId": 198221,
+      "channelDescription": "This channel is dedicated to discussions about tooling and infrastructure used to publish Clinical Document Architecture (CDA) specifications and implementation guides. Topics include template customization, build processes, error resolution, and managing CDA-related artifacts within the FHIR ecosystem.",
+      "keywords": [
+        "Clinical Document Architecture",
+        "CDA publishing tools",
+        "implementation guide tooling",
+        "template customization",
+        "build errors",
+        "FHIR IG Publisher"
+      ]
+    },
+    {
+      "channelName": "cds",
+      "channelId": 406765,
+      "channelDescription": "Discussions and development of standards and specifications related to Clinical Decision Support (CDS) in healthcare. Covers topics like CDS Hooks, CDS logic representation (e.g., CQL), and integration with quality measures and clinical guidelines.",
+      "keywords": [
+        "clinical decision support",
+        "clinical decision support hooks",
+        "clinical quality language",
+        "clinical practice guidelines",
+        "order sets",
+        "medication recommendations"
+      ]
+    },
+    {
+      "channelName": "cds hooks",
+      "channelId": 179159,
+      "channelDescription": "Developing and using the CDS Hooks standard, a specification for integrating clinical decision support services into electronic health records and other health IT systems.",
+      "keywords": [
+        "clinical decision support hooks",
+        "electronic health records",
+        "clinical decision support services",
+        "clinical workflows",
+        "CDS Hook requests",
+        "CDS Hook responses",
+        "CDS Hook cards",
+        "CDS Hook suggestions",
+        "SMART on FHIR applications"
+      ]
+    },
+    {
+      "channelName": "cds hooks/committers",
+      "channelId": 179231,
+      "channelDescription": "Clinical Decision Support (CDS) Hooks standard development and implementation.",
+      "keywords": [
+        "clinical decision support hooks",
+        "CDS Hooks",
+        "committer notifications"
+      ]
+    },
+    {
+      "channelName": "chile",
+      "channelId": 179258,
+      "channelDescription": "Chilean healthcare interoperability initiatives, including discussion and collaboration on FHIR implementation, national profiles, and connecting public and private healthcare systems.",
+      "keywords": [
+        "chile",
+        "interoperabilidad",
+        "Chilean healthcare",
+        "FHIR implementation",
+        "national profiles",
+        "public healthcare",
+        "private healthcare"
+      ]
+    },
+    {
+      "channelName": "clinFHIR",
+      "channelId": 179176,
+      "channelDescription": "Support and discussion related to the ClinFHIR tool. Users discuss features, report bugs, request help using the tool, and suggest new capabilities.",
+      "keywords": [
+        "ClinFHIR",
+        "tool support",
+        "user interface",
+        "logical modeler",
+        "scenario builder",
+        "graph builder",
+        "patient viewer",
+        "fhir server connections",
+        "data validation",
+        "error reporting"
+      ]
+    },
+    {
+      "channelName": "committers",
+      "channelId": 179165,
+      "channelDescription": "Discussion and coordination related to the FHIR specification codebase, tooling, build processes, and technical infrastructure. This channel addresses questions about the FHIR build process, source code management, technical corrections, and general FHIR committer processes.",
+      "keywords": [
+        "committers",
+        "FHIR codebase",
+        "build process",
+        "tooling",
+        "source code management",
+        "technical corrections",
+        "FHIR specification",
+        "snapshot publication",
+        "search parameters",
+        "extensions",
+        "narrative generation",
+        "value set expansion"
+      ]
+    },
+    {
+      "channelName": "committers/announce",
+      "channelId": 179294,
+      "channelDescription": "Official announcements and guidance regarding the HL7 FHIR commit and build process, tooling, and publication policies. Essential for individuals involved in the technical development, editing, and publication of FHIR specifications and implementation guides.",
+      "keywords": [
+        "committers/announce",
+        "FHIR specification publication",
+        "implementation guide publication",
+        "tooling updates",
+        "ballot process",
+        "terminology server",
+        "HL7 FHIR commit process"
+      ]
+    },
+    {
+      "channelName": "committers/git-help",
+      "channelId": 179293,
+      "channelDescription": "Help for committers on technical issues related to the use of Git and GitHub for managing the FHIR specification.",
+      "keywords": [
+        "committers",
+        "git",
+        "GitHub",
+        "version control",
+        "pull requests",
+        "branching",
+        "merging",
+        "tagging",
+        "repository management",
+        "FHIR specification"
+      ]
+    },
+    {
+      "channelName": "committers/notification",
+      "channelId": 179297,
+      "channelDescription": "Automated notifications about changes and updates to the FHIR specification and related implementation guides (IGs). Includes build statuses, code commits, new tracker items, and test case releases.",
+      "keywords": [
+        "committers",
+        "notifications",
+        "FHIR specification updates",
+        "implementation guide updates",
+        "build status",
+        "code commits",
+        "tracker items",
+        "test case releases"
+      ]
+    },
+    {
+      "channelName": "conformance",
+      "channelId": 179177,
+      "channelDescription": "Technical discussions about FHIR conformance rules and expectations, primarily focusing on StructureDefinition and ElementDefinition. This channel explores the intricacies of data modeling, validation rules, constraints, slicing, and best practices for defining and implementing FHIR profiles.",
+      "keywords": [
+        "conformance",
+        "structure definition",
+        "element definition",
+        "validation",
+        "slicing",
+        "data absent reason",
+        "fhirpath",
+        "terminology binding",
+        "capability statement",
+        "search parameters"
+      ]
+    },
+    {
+      "channelName": "connectathon mgmt",
+      "channelId": 179207,
+      "channelDescription": "Planning and coordination of the HL7 FHIR Connectathons, a recurring event where implementers test and improve FHIR interoperability.",
+      "keywords": [
+        "connectathon management",
+        "connectathon logistics",
+        "track proposals",
+        "conman",
+        "whova",
+        "testing tools",
+        "fhir connectathon"
+      ]
+    },
+    {
+      "channelName": "cql",
+      "channelId": 179220,
+      "channelDescription": "Discussion and support for the Clinical Quality Language (CQL), a language designed for representing clinical knowledge and logic, particularly for clinical decision support and quality measure evaluation.",
+      "keywords": [
+        "clinical quality language",
+        "CQL engine",
+        "measure authoring",
+        "measure evaluation",
+        "clinical decision support"
+      ]
+    },
+    {
+      "channelName": "crucible",
+      "channelId": 179204,
+      "channelDescription": "This channel focuses on the automated conformance testing of FHIR servers using the open-source Crucible testing tool. Discussions include technical details, installation, configuration, troubleshooting, interpreting test results, and contributing to the project.",
+      "keywords": [
+        "crucible",
+        "conformance testing",
+        "FHIR servers",
+        "automated testing",
+        "test suites",
+        "test results",
+        "validation"
+      ]
+    },
+    {
+      "channelName": "deleted",
+      "channelId": 412506,
+      "channelDescription": "This channel has been deleted and no longer contains any content.",
+      "keywords": [
+        "deleted"
+      ]
+    },
+    {
+      "channelName": "denmark",
+      "channelId": 179182,
+      "channelDescription": "Danish national efforts in implementing Fast Healthcare Interoperability Resources (FHIR). Discusses national profiles, infrastructure, tooling, and collaboration with other Nordic countries.",
+      "keywords": [
+        "Denmark",
+        "national profiles",
+        "implementation guides",
+        "tooling",
+        "Nordic cooperation",
+        "MedCom",
+        "eSundhedsObservatoriet"
+      ]
+    },
+    {
+      "channelName": "dental",
+      "channelId": 179292,
+      "channelDescription": "Application of FHIR to dental health interoperability, including exchanging dental records, referrals, conditions, and procedures. Focuses on integrating standard dental terminologies like SNODENT and ADA's Current Dental Terminology.",
+      "keywords": [
+        "dental",
+        "SNODENT",
+        "Current Dental Terminology",
+        "dental informatics",
+        "dental records",
+        "dental referrals"
+      ]
+    },
+    {
+      "channelName": "devices",
+      "channelId": 179199,
+      "channelDescription": "This channel focuses on exchanging healthcare data from medical devices, both acute care and personal health devices. Discussions include applying the FHIR standard to device informatics, using ISO/IEEE 11073 standards, and implementing Devices on FHIR (DoF) guides. ",
+      "keywords": [
+        "devices",
+        "medical device interoperability",
+        "ISO/IEEE 11073",
+        "Devices on FHIR",
+        "point-of-care devices",
+        "personal health devices",
+        "device data",
+        "device specialization profiles",
+        "FDA Unique Device Identification",
+        "device metrics",
+        "device definitions",
+        "device alerting"
+      ]
+    },
+    {
+      "channelName": "dotnet",
+      "channelId": 179171,
+      "channelDescription": "This channel focuses on using the Firely .NET SDK to build and interact with FHIR servers. Discussions center around code samples, troubleshooting, and best practices for working with FHIR resources and profiles using C# and related .NET libraries.",
+      "keywords": [
+        ".NET",
+        "Firely SDK",
+        "C#",
+        "FHIR client",
+        "FHIR server",
+        "resource serialization",
+        "profile validation",
+        "terminology services",
+        "FHIRPath",
+        "bundle processing"
+      ]
+    },
+    {
+      "channelName": "eCR Now FHIR App",
+      "channelId": 236764,
+      "channelDescription": "Development and deployment of the eCR Now FHIR application for electronically reporting cases to public health agencies, specifically the Centers for Disease Control and Prevention (CDC) through its AIMS platform. Discussions encompass application configuration, integration with electronic health records (EHRs), data mapping, transport mechanisms (Direct, XDR, FHIR), and technical support.",
+      "keywords": [
+        "eCR Now FHIR App",
+        "Electronic Case Reporting",
+        "Public Health Reporting",
+        "CDC AIMS",
+        "EHR Integration",
+        "Data Mapping",
+        "Transport Configuration",
+        "Schematron Validation",
+        "ERSD",
+        "Reportability Response"
+      ]
+    },
+    {
+      "channelName": "eLTSS",
+      "channelId": 300072,
+      "channelDescription": "Standardization of electronic Long-Term Services and Supports (LTSS) data using HL7 FHIR. This channel supports the development of the eLTSS Implementation Guide, discussion of the eLTSS standard itself, and coordination of testing at HL7 FHIR Connectathons.",
+      "keywords": [
+        "electronic Long-Term Services and Supports",
+        "eLTSS Implementation Guide",
+        "HL7 FHIR Connectathon",
+        "CarePlan",
+        "ServiceRequest",
+        "Questionnaire",
+        "digital signatures"
+      ]
+    },
+    {
+      "channelName": "español",
+      "channelId": 179208,
+      "channelDescription": "Spanish language discussion about Fast Healthcare Interoperability Resources (FHIR).",
+      "keywords": [
+        "español",
+        "Spanish",
+        "FHIR",
+        "Fast Healthcare Interoperability Resources"
+      ]
+    },
+    {
+      "channelName": "europe",
+      "channelId": 242580,
+      "channelDescription": "European community discussions about Fast Healthcare Interoperability Resources (FHIR) implementation and adoption. This includes European Union (EU) specific initiatives and projects, regional collaborations, and discussions about aligning with international FHIR standards.",
+      "keywords": [
+        "europe",
+        "european union",
+        "european health data space",
+        "international patient summary",
+        "laboratory reporting",
+        "electronic health record exchange format",
+        "ehealth interoperability"
+      ]
+    },
+    {
+      "channelName": "fhir-messages",
+      "channelId": 179263,
+      "channelDescription": "Exchange of healthcare information using the HL7 FHIR messaging framework. Covers topics like message structure, reliable messaging, message definitions, asynchronous communication, message headers, and real-world implementation examples.",
+      "keywords": [
+        "FHIR messaging",
+        "message bundles",
+        "message headers",
+        "reliable messaging",
+        "asynchronous messaging",
+        "message definitions",
+        "integration engine",
+        "subscriptions",
+        "change notifications"
+      ]
+    },
+    {
+      "channelName": "fhir/documents",
+      "channelId": 179270,
+      "channelDescription": "Discussion and support for using the FHIR \"document paradigm\" to represent clinical documents, including composition of documents from multiple resources, conversion between FHIR and other document standards (like CDA), and management of document lifecycle and metadata.",
+      "keywords": [
+        "fhir documents",
+        "clinical documents",
+        "composition",
+        "document reference",
+        "CDA",
+        "C-CDA",
+        "document bundles",
+        "document lifecycle",
+        "document metadata"
+      ]
+    },
+    {
+      "channelName": "fhir/infrastructure-wg",
+      "channelId": 179280,
+      "channelDescription": "The FHIR Infrastructure workgroup (FHIR-I) focuses on the underlying mechanics of FHIR, including search, operations, conformance, security, and terminology. This group handles the technical underpinnings that enable interoperability and data exchange using FHIR.",
+      "keywords": [
+        "FHIR Infrastructure workgroup",
+        "FHIR-I",
+        "search",
+        "terminology services",
+        "operations",
+        "conformance",
+        "security",
+        "tooling"
+      ]
+    },
+    {
+      "channelName": "fhirbase",
+      "channelId": 179172,
+      "channelDescription": "Discussion and support for Fhirbase, an open-source toolkit built on PostgreSQL for storing and querying Fast Healthcare Interoperability Resources (FHIR) data.",
+      "keywords": [
+        "Fhirbase",
+        "PostgreSQL",
+        "database",
+        "toolkit",
+        "open source",
+        "querying"
+      ]
+    },
+    {
+      "channelName": "fhircast-github",
+      "channelId": 179269,
+      "channelDescription": "This channel publishes all actions from the FHIRcast GitHub repository, including issues, commits, comments, pull requests, and other activities related to the FHIRcast specification.",
+      "keywords": [
+        "FHIRcast",
+        "GitHub repository",
+        "issues",
+        "commits",
+        "comments",
+        "pull requests"
+      ]
+    },
+    {
+      "channelName": "fhirpath",
+      "channelId": 179266,
+      "channelDescription": "Discussion and maintenance of the FHIRPath specification, a domain-specific language (DSL) used for querying and manipulating FHIR data.",
+      "keywords": [
+        "FHIRPath",
+        "FHIRPath expressions",
+        "FHIRPath syntax",
+        "FHIRPath implementation",
+        "FHIRPath testing",
+        "FHIRPath functions"
+      ]
+    },
+    {
+      "channelName": "fhirpath.js",
+      "channelId": 179298,
+      "channelDescription": "This channel is for developers working on the fhirpath.js JavaScript FHIRPath engine to discuss implementation details, issues, and upcoming features. While primarily for developers, others interested in FHIRPath and its JavaScript implementation are welcome.",
+      "keywords": [
+        "fhirpath.js",
+        "JavaScript FHIRPath engine",
+        "FHIRPath implementation",
+        "JavaScript",
+        "fhirpath.js development",
+        "FHIRPath testing"
+      ]
+    },
+    {
+      "channelName": "financial",
+      "channelId": 208600,
+      "channelDescription": "This channel focuses on using FHIR to manage the financial aspects of healthcare, such as claims processing, insurance plans, patient payments, and other financial transactions.",
+      "keywords": [
+        "financial",
+        "claims",
+        "explanation of benefit",
+        "coverage",
+        "payment reconciliation",
+        "insurance plans",
+        "payment notices",
+        "charge items",
+        "health saving accounts",
+        "flexible spending accounts",
+        "prior authorization",
+        "account management",
+        "healthcare costs",
+        "medicare",
+        "medicaid"
+      ]
+    },
+    {
+      "channelName": "finnish PHR",
+      "channelId": 179222,
+      "channelDescription": "This channel discusses the Finnish national Personal Health Record (Kanta PHR) system. Topics include technical details of connecting to and using the system, its conformance to FHIR standards, the FHIR profiles used, and its evolving capabilities.",
+      "keywords": [
+        "Finnish Personal Health Record",
+        "Kanta PHR",
+        "Omakanta",
+        "Finnish Social Identity Number",
+        "sandbox environment",
+        "authentication",
+        "authorization",
+        "scopes",
+        "error codes",
+        "profiles",
+        "blood glucose",
+        "medication administration",
+        "fitness tests",
+        "spirometry",
+        "electrocardiogram data",
+        "Nordic cooperation",
+        "developer support"
+      ]
+    },
+    {
+      "channelName": "fmg",
+      "channelId": 179192,
+      "channelDescription": "Governance and management of the HL7 FHIR specification, including publication, balloting, and policy decisions.",
+      "keywords": [
+        "FHIR Management Group",
+        "FHIR specification governance",
+        "publication process",
+        "ballot reconciliation",
+        "extension management",
+        "FHIR core profile review",
+        "standardized medication profile"
+      ]
+    },
+    {
+      "channelName": "france",
+      "channelId": 179209,
+      "channelDescription": "Discussions and information related to the use and implementation of FHIR in France. Topics include national projects, profiles, implementation guides, and healthcare interoperability initiatives within the French healthcare system.",
+      "keywords": [
+        "France",
+        "French healthcare system",
+        "national health number",
+        "national FHIR projects",
+        "French profiles",
+        "French implementation guides",
+        "Agence du numérique en santé (ANS)",
+        "French Terminology Service"
+      ]
+    },
+    {
+      "channelName": "fsh-courses",
+      "channelId": 322131,
+      "channelDescription": "Support and discussion for learners using the FHIR Shorthand (FSH) courses at https://fshschool.org/courses. The FSH language is used to write concise, human-readable definitions for FHIR resources and profiles that can be used to generate Implementation Guides.",
+      "keywords": [
+        "FSH",
+        "FHIR Shorthand",
+        "Implementation Guide Development",
+        "FSH Courses",
+        "FSHSchool.org",
+        "SUSHI",
+        "FHIR Implementation Guide Publisher"
+      ]
+    },
+    {
+      "channelName": "genomics",
+      "channelId": 179197,
+      "channelDescription": "Standardization of genomic data representation and exchange using FHIR. Discussions center around representing genetic variations, interpretations, and clinical implications for use in clinical genomics workflows.",
+      "keywords": [
+        "genomics",
+        "genetic variations",
+        "whole genome sequencing",
+        "variant calling format",
+        "human genome variation society",
+        "hugo gene nomenclature committee",
+        "clinical significance",
+        "gene fusion",
+        "family health history",
+        "molecular consequences",
+        "genomic source class",
+        "population allele frequency",
+        "genomic annotation",
+        "genomic operations",
+        "genomic reporting"
+      ]
+    },
+    {
+      "channelName": "genomics/committers",
+      "channelId": 179304,
+      "channelDescription": "Genomics Reporting Implementation Guide development, specifically for technical implementers involved in creating and maintaining the guide.",
+      "keywords": [
+        "genomics reporting",
+        "implementation guide development",
+        "molecular sequence",
+        "human gene nomenclature committee"
+      ]
+    },
+    {
+      "channelName": "german (Students)",
+      "channelId": 241189,
+      "channelDescription": "German-speaking students using FHIR for healthcare application development projects, including mobile apps and data exchange with electronic health records. Discussions about specific FHIR resources, implementation challenges, and best practices for working with FHIR in student projects.",
+      "keywords": [
+        "german",
+        "students",
+        "mobile wound documentation",
+        "electronic wound report",
+        "observation history",
+        "custom search parameters",
+        "validation",
+        "android development",
+        "glucose values",
+        "KBV profile"
+      ]
+    },
+    {
+      "channelName": "german (d-a-ch)",
+      "channelId": 179183,
+      "channelDescription": "German-language discussion forum for the DACH (Germany, Austria, and Switzerland) region on the implementation and specification of HL7 FHIR in healthcare. Topics include best practices, terminology mapping, profile development, and implementation issues specific to the region.",
+      "keywords": [
+        "german",
+        "d-a-ch",
+        "germany",
+        "austria",
+        "switzerland",
+        "german basis profiles",
+        "IHE",
+        "terminology",
+        "validation",
+        "implementation guides"
+      ]
+    },
+    {
+      "channelName": "german/isik",
+      "channelId": 287581,
+      "channelDescription": "German-language discussion forum for developers and stakeholders of the ISiK (Informationstechnische Systeme im Krankenhaus) specifications from Gematik.",
+      "keywords": [
+        "german",
+        "isik",
+        "Informationstechnische Systeme im Krankenhaus",
+        "Gematik",
+        "German Electronic Health Record",
+        "document exchange",
+        "patient data",
+        "encounter data",
+        "appointment scheduling",
+        "medication administration",
+        "billing data",
+        "insurance coverage"
+      ]
+    },
+    {
+      "channelName": "german/kbv",
+      "channelId": 208065,
+      "channelDescription": "German-language discussions about the Kassenärztliche Bundesvereinigung (KBV) specifications for electronic prescriptions (ePrescription), electronic health records (EHR), and related data exchange in German healthcare, including the VoS (Verordnungssoftware-Schnittstelle), AuW (Archivierungs- und Wechselschnittstelle), and MIO (Medizinische Informationsobjekte).",
+      "keywords": [
+        "german/kbv",
+        "Kassenärztliche Bundesvereinigung",
+        "Verordnungssoftware-Schnittstelle",
+        "Archivierungs- und Wechselschnittstelle",
+        "Medizinische Informationsobjekte",
+        "electronic prescriptions",
+        "electronic health records",
+        "German healthcare"
+      ]
+    },
+    {
+      "channelName": "german/mi-initiative",
+      "channelId": 179307,
+      "channelDescription": "German language discussions for the Medical Informatics Initiative (Medizininformatik-Initiative or MI-I), a German national project to promote interoperable electronic health records using FHIR.",
+      "keywords": [
+        "german mi-initiative",
+        "medizininformatik-initiative",
+        "kerndatensatz",
+        "electronic health records",
+        "fhir profiles",
+        "validation",
+        "hapifhir",
+        "simplifier"
+      ]
+    },
+    {
+      "channelName": "german/mio42",
+      "channelId": 447281,
+      "channelDescription": "German-language discussion platform for the exchange of information, updates, and questions related to Medical Information Objects (MIOs) in the context of the German healthcare system.",
+      "keywords": [
+        "Medical Information Objects",
+        "MIOs",
+        "German Healthcare System",
+        "DiGa",
+        "Digital Health Applications",
+        "Mutterpass",
+        "Electronic Health Record",
+        "ePA"
+      ]
+    },
+    {
+      "channelName": "german/oncology",
+      "channelId": 224719,
+      "channelDescription": "German-language discussion of data exchange standards for oncology-related use cases, including tumor documentation, biobanks, pathology, and genomics. There is a particular emphasis on the use of FHIR in the German healthcare system.",
+      "keywords": [
+        "german",
+        "oncology",
+        "tumor documentation",
+        "biobanks",
+        "pathology",
+        "genomics",
+        "International Classification of Diseases 10th Revision German Modification (ICD-10-GM)",
+        "Systematized Nomenclature of Medicine - Clinical Terms (SNOMED CT)",
+        "TNM Classification of Malignant Tumors",
+        "minimal Common Oncology Data Elements (mCODE)"
+      ]
+    },
+    {
+      "channelName": "german/terminologien",
+      "channelId": 179316,
+      "channelDescription": "This channel is dedicated to discussing and clarifying terminology-related issues specifically within the German healthcare context. This includes finding appropriate codes and value sets for German use cases, discussing German translations of international terminologies, and addressing challenges related to the use of terminologies in German healthcare systems.",
+      "keywords": [
+        "german/terminologien",
+        "German healthcare terminology",
+        "SNOMED CT German Edition",
+        "ICD-10-GM",
+        "OPS",
+        "German translations",
+        "terminology mapping",
+        "value sets",
+        "coding systems"
+      ]
+    },
+    {
+      "channelName": "github",
+      "channelId": 179306,
+      "channelDescription": "HL7's primary Github repository. Discussion about access requests, technical support for using Git with FHIR, and general Github administration.",
+      "keywords": [
+        "github",
+        "repository access",
+        "git version control",
+        "branch management",
+        "pull requests",
+        "continuous integration",
+        "salesforce"
+      ]
+    },
+    {
+      "channelName": "graphql",
+      "channelId": 192326,
+      "channelDescription": "Use of GraphQL for querying and interacting with FHIR data. Discusses GraphQL support in FHIR servers, schema generation, query and mutation syntax, and integration with FHIR features like subscriptions.",
+      "keywords": [
+        "GraphQL",
+        "FHIR queries",
+        "GraphQL mutations",
+        "GraphQL subscriptions",
+        "GraphQL schema generation",
+        "HAPI FHIR",
+        "GraphQL developer experience"
+      ]
+    },
+    {
+      "channelName": "hapi",
+      "channelId": 179167,
+      "channelDescription": "Discussion and support for the HAPI FHIR library, a popular open-source implementation of the FHIR standard in Java. Covers topics like server setup, data validation, terminology services, clinical reasoning, and working with specific FHIR resources.",
+      "keywords": [
+        "hapi fhir",
+        "java fhir library",
+        "fhir server",
+        "jpa server",
+        "data persistence",
+        "validation",
+        "terminology services",
+        "clinical reasoning module",
+        "cql",
+        "docker",
+        "search parameters",
+        "subscriptions",
+        "bulk export"
+      ]
+    },
+    {
+      "channelName": "ig publishing requirements",
+      "channelId": 196008,
+      "channelDescription": "Discussing technical details and requirements for publishing FHIR Implementation Guides (IGs). This includes topics such as publishing requirements, tooling, templates, technical corrections, and testing. ",
+      "keywords": [
+        "implementation guide publishing requirements",
+        "IG publisher",
+        "templates",
+        "technical corrections",
+        "testing",
+        "documentation",
+        "terminology services"
+      ]
+    },
+    {
+      "channelName": "ihe",
+      "channelId": 179223,
+      "channelDescription": "Discussion and announcements related to Integrating the Healthcare Enterprise (IHE) profiles and their use of FHIR. This includes topics such as IHE implementation guides, templates, planning, and general questions about IHE and FHIR interoperability in healthcare systems.",
+      "keywords": [
+        "Integrating the Healthcare Enterprise",
+        "IHE profiles",
+        "Mobile Access to Health Documents",
+        "Cross-Community Document Sharing",
+        "Basic Audit Log Patterns",
+        "Privacy Consent",
+        "Patient Identifier Cross-referencing",
+        "IHE Connectathon"
+      ]
+    },
+    {
+      "channelName": "imaging",
+      "channelId": 316835,
+      "channelDescription": "This channel is for implementers working with FHIR Imaging resources, specifically ImagingStudy. It covers topics related to mapping between FHIR and DICOM standards, connectathon preparation and results, and implementation challenges.",
+      "keywords": [
+        "imaging",
+        "imaging study",
+        "DICOM",
+        "connectathon",
+        "IHE",
+        "SMART on FHIR",
+        "QIDO-RS",
+        "DICOMweb"
+      ]
+    },
+    {
+      "channelName": "implementers",
+      "channelId": 179166,
+      "channelDescription": "General discussion among implementers of HL7 FHIR standards, including technical questions, best practices, and challenges encountered during implementation.",
+      "keywords": [
+        "implementers",
+        "FHIR Implementation",
+        "HL7v2 Conversion",
+        "Epic Integration",
+        "Cerner Integration",
+        "OpenEMR",
+        "HAPI FHIR",
+        "SMART on FHIR",
+        "Terminology Services",
+        "Data Validation",
+        "Resource Generation",
+        "Search Parameters",
+        "Audit Events",
+        "Security",
+        "Data Exchange",
+        "Remote Patient Monitoring",
+        "Laboratory Information Management Systems"
+      ]
+    },
+    {
+      "channelName": "india",
+      "channelId": 179224,
+      "channelDescription": "This channel centers around the adoption and implementation of FHIR (Fast Healthcare Interoperability Resources) in the Indian healthcare system. Discussions cover national projects, initiatives, and regulatory considerations related to FHIR in India.",
+      "keywords": [
+        "India",
+        "FHIR Adoption",
+        "National Digital Health Blueprint",
+        "Ayushman Bharat Digital Mission",
+        "National Unified Health Interface",
+        "FHIR Connectathons",
+        "e-Prescription Service",
+        "Clinical Document Architecture"
+      ]
+    },
+    {
+      "channelName": "indonesia",
+      "channelId": 257956,
+      "channelDescription": "This channel is for discussing the use of Fast Healthcare Interoperability Resources (FHIR) in Indonesia. Discussions often occur in Bahasa, the Indonesian language.",
+      "keywords": [
+        "indonesia",
+        "FHIR in Indonesia",
+        "Bahasa",
+        "digital transformation",
+        "patient access",
+        "health data"
+      ]
+    },
+    {
+      "channelName": "inferno",
+      "channelId": 179309,
+      "channelDescription": "Discussions and support for using and developing ONC's Inferno testing tool for FHIR API conformance and certification.",
+      "keywords": [
+        "Inferno",
+        "ONC certification",
+        "FHIR API testing",
+        "US Core",
+        "USCDI",
+        "SMART App Launch",
+        "Bulk Data",
+        "Da Vinci",
+        "CARIN BB",
+        "error messages",
+        "test scenarios",
+        "validation",
+        "conformance",
+        "Inferno validator",
+        "Inferno test kit"
+      ]
+    },
+    {
+      "channelName": "italy",
+      "channelId": 179184,
+      "channelDescription": "Italian-language discussions about implementing the HL7 FHIR standard in Italy. Focuses on sharing implementation experiences, Italian-specific profiles, and national projects related to FHIR.",
+      "keywords": [
+        "Italy",
+        "Italian",
+        "Implementation",
+        "Profiles",
+        "National Projects"
+      ]
+    },
+    {
+      "channelName": "javascript",
+      "channelId": 179169,
+      "channelDescription": "Discussion and support for developers using JavaScript to work with FHIR (Fast Healthcare Interoperability Resources). This includes topics such as FHIR client libraries, SMART on FHIR app development, resource validation, data conversion, and TypeScript support.",
+      "keywords": [
+        "javascript",
+        "FHIR client libraries",
+        "SMART on FHIR",
+        "typescript",
+        "resource conversion",
+        "validation",
+        "aggregate queries",
+        "authorization",
+        "npm packages"
+      ]
+    },
+    {
+      "channelName": "mapping-framework",
+      "channelId": 181579,
+      "channelDescription": "Discussion about the FHIR Mapping Language (FML) and the FHIR Mapping framework. This channel is for developers and implementers working on data transformations between FHIR and other healthcare data formats, including CDA, V2, X12, and custom formats. Topics include FML syntax, semantics, tooling, best practices, and real-world use cases.",
+      "keywords": [
+        "mapping framework",
+        "FHIR mapping language",
+        "structure map",
+        "data transformation",
+        "data mapping",
+        "clinical document architecture",
+        "HL7 version 2",
+        "X12"
+      ]
+    },
+    {
+      "channelName": "matchbox",
+      "channelId": 442012,
+      "channelDescription": "Open-source project for testing FHIR solutions and mapping healthcare data to FHIR using the FHIR Mapping Language.",
+      "keywords": [
+        "matchbox",
+        "FHIR Mapping Language",
+        "testing",
+        "validation",
+        "mapping"
+      ]
+    },
+    {
+      "channelName": "medmorph",
+      "channelId": 265512,
+      "channelDescription": "Standardization of data formatting and exchange processes to facilitate the use of electronic health record data for public health reporting and research. This involves defining data requirements, structuring data extracts, and defining mechanisms for secure data transmission.",
+      "keywords": [
+        "MedMorph",
+        "Public Health Reporting",
+        "Electronic Health Record data",
+        "PlanDefinition",
+        "Knowledge Artifact Repository",
+        "SMART Bulk data",
+        "Subscription",
+        "Data Collection Workflow",
+        "Central Cancer Registry Reporting"
+      ]
+    },
+    {
+      "channelName": "methodology",
+      "channelId": 211987,
+      "channelDescription": "Discussion and questions about the principles and processes used to design the FHIR specification, including data modeling, terminology binding, search parameter design, and versioning.",
+      "keywords": [
+        "FHIR methodology",
+        "resource design",
+        "data types",
+        "terminology",
+        "search parameters",
+        "versioning",
+        "UML diagrams",
+        "extensibility",
+        "breaking changes"
+      ]
+    },
+    {
+      "channelName": "netherlands",
+      "channelId": 179181,
+      "channelDescription": "Discussion and collaboration on the adoption and implementation of FHIR in the Netherlands, with a particular focus on national standards, profiles, and interoperability initiatives such as MedMij.",
+      "keywords": [
+        "netherlands",
+        "MedMij",
+        "Dutch Healthcare Information Model (HCIM)",
+        "Zorg Informatiebouwstenen (ZIB)",
+        "nationally defined profiles",
+        "Dutch healthcare data exchange",
+        "BgZ (Basic Data Set)"
+      ]
+    },
+    {
+      "channelName": "new zealand",
+      "channelId": 179178,
+      "channelDescription": "Discussions about the adoption and implementation of FHIR in New Zealand. This includes topics such as national terminology services, patient identifier systems (NHI), health provider information (HPI), and e-prescription services.",
+      "keywords": [
+        "new zealand",
+        "NHI",
+        "National Health Index",
+        "HPI",
+        "Health Provider Index",
+        "NZULM",
+        "New Zealand Universal List of Medicines",
+        "terminology services",
+        "e-prescribing"
+      ]
+    },
+    {
+      "channelName": "nordics",
+      "channelId": 194447,
+      "channelDescription": "Discussion and coordination of Fast Healthcare Interoperability Resources (FHIR) activities and initiatives within the Nordic countries (Finland, Norway, Denmark, Sweden, Iceland).",
+      "keywords": [
+        "nordics",
+        "Finland",
+        "Norway",
+        "Denmark",
+        "Sweden",
+        "Iceland",
+        "International Patient Summary",
+        "International Patient Access",
+        "national strategies"
+      ]
+    },
+    {
+      "channelName": "norway",
+      "channelId": 179226,
+      "channelDescription": "Discussions and resources for the Norwegian FHIR community. Topics include national base profiles, implementation guides, best practices, and specific projects. The primary language of discussion is Norwegian.",
+      "keywords": [
+        "Norway",
+        "Norwegian",
+        "HL7 Norway",
+        "national base profiles",
+        "implementation guides",
+        "best practices",
+        "FHIR fagforum"
+      ]
+    },
+    {
+      "channelName": "omop + fhir",
+      "channelId": 286658,
+      "channelDescription": "Mapping and harmonizing data between HL7 FHIR and the Observational Health Data Sciences and Informatics (OHDSI) OMOP Common Data Model (CDM). Discussions on aligning data models, terminologies, and use cases for research, analytics, and clinical data exchange.",
+      "keywords": [
+        "Observational Medical Outcomes Partnership",
+        "Fast Healthcare Interoperability Resources",
+        "OHDSI",
+        "OMOP Common Data Model",
+        "data mapping",
+        "terminology services",
+        "vocabulary mapping",
+        "clinical data research",
+        "oncology data harmonization"
+      ]
+    },
+    {
+      "channelName": "omop + fhir oncology",
+      "channelId": 302239,
+      "channelDescription": "Aligning oncology data elements and concepts between the HL7 FHIR and Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM) for observational research. This involves mapping vocabulary and data structures, and developing use cases and example datasets.",
+      "keywords": [
+        "omop common data model",
+        "fhir",
+        "oncology",
+        "observational research",
+        "vocabulary alignment",
+        "mcode",
+        "genomic data commons"
+      ]
+    },
+    {
+      "channelName": "ontology",
+      "channelId": 179186,
+      "channelDescription": "Discussions related to the use of ontologies, Resource Description Framework (RDF), and semantic web technologies with Fast Healthcare Interoperability Resources (FHIR). Topics include RDF representation of FHIR, reasoning over FHIR data, ontology development, and tooling.",
+      "keywords": [
+        "ontology",
+        "Resource Description Framework",
+        "turtle",
+        "RDF",
+        "semantic web",
+        "reasoning",
+        "ontology services",
+        "transitive closure"
+      ]
+    },
+    {
+      "channelName": "openehr",
+      "channelId": 179174,
+      "channelDescription": "Mapping and harmonizing healthcare data between the Fast Healthcare Interoperability Resources (FHIR) standard and the openEHR platform, including data types, clinical models, and architectural considerations.",
+      "keywords": [
+        "openehr",
+        "FHIR",
+        "mapping",
+        "alignment",
+        "archetypes",
+        "clinical models",
+        "data types",
+        "electronic health records",
+        "longitudinal records",
+        "terminology"
+      ]
+    },
+    {
+      "channelName": "pascal",
+      "channelId": 179281,
+      "channelDescription": "This channel is for software developers working with the Pascal Reference Implementation of FHIR, including its associated toolkit and server.",
+      "keywords": [
+        "pascal",
+        "reference implementation",
+        "toolkit",
+        "fhir server",
+        "docker",
+        "compile issues",
+        "build"
+      ]
+    },
+    {
+      "channelName": "patient administration WG",
+      "channelId": 179254,
+      "channelDescription": "Management of patient demographics, encounters, appointments, and related administrative data for healthcare operations. Covers topics such as patient identity, registration workflows, admission/discharge/transfer (ADT) processes, and healthcare service availability.",
+      "keywords": [
+        "Patient Administration",
+        "Patient Demographics",
+        "Master Patient Index (MPI)",
+        "Patient Matching",
+        "Admission, Discharge, Transfer (ADT)",
+        "Encounters",
+        "Appointments",
+        "Healthcare Services",
+        "Patient Identity Management"
+      ]
+    },
+    {
+      "channelName": "patient empowerment",
+      "channelId": 179262,
+      "channelDescription": "Patient Empowerment through access to medical data, online services, and participation in healthcare decisions. Focuses on real-world deployment of patient-facing technologies, advocacy for patient rights, and discussions about the social and ethical implications of patient empowerment.",
+      "keywords": [
+        "patient empowerment",
+        "patient access",
+        "patient engagement",
+        "patient data rights",
+        "patient corrections",
+        "health information exchange",
+        "electronic health records",
+        "patient portals",
+        "clinical trials access",
+        "privacy",
+        "security",
+        "consent fatigue",
+        "information blocking"
+      ]
+    },
+    {
+      "channelName": "python",
+      "channelId": 179218,
+      "channelDescription": "Discussion and support for using the Python programming language with FHIR. Topics include available Python FHIR libraries, code examples, tooling, and working with FHIR servers.",
+      "keywords": [
+        "python",
+        "FHIR client libraries",
+        "fhir.resources",
+        "fhirclient",
+        "fhirpath",
+        "jupyter notebooks",
+        "python FHIR servers",
+        "oauth2",
+        "smart-on-fhir",
+        "bulk data export"
+      ]
+    },
+    {
+      "channelName": "questionnaire",
+      "channelId": 179255,
+      "channelDescription": "Design and implementation issues related to the Questionnaire and QuestionnaireResponse resources, including rendering, automated prepopulation of questions, and extraction of structured data from responses.",
+      "keywords": [
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "form builder tools",
+        "Logical Launch Context (LHC) Forms",
+        "StructureDefinition for Clinical Data (SDC)",
+        "fhirpath",
+        "item population",
+        "definition-based extraction",
+        "enable when logic",
+        "questionnaire item control",
+        "terminology services",
+        "value sets"
+      ]
+    },
+    {
+      "channelName": "rdf",
+      "channelId": 279829,
+      "channelDescription": "Technical specifications and development of FHIR's RDF (Resource Description Framework) representation and associated tooling.",
+      "keywords": [
+        "RDF",
+        "Resource Description Framework",
+        "FHIR RDF",
+        "SHEX",
+        "SPARQL",
+        "Turtle",
+        "Jena",
+        "RDF Parser"
+      ]
+    },
+    {
+      "channelName": "registry.fhir.org",
+      "channelId": 179242,
+      "channelDescription": "Technical discussion about the FHIR Registry, a repository of FHIR artifacts like StructureDefinitions and ImplementationGuides. This channel covers topics like registry features, bugs, performance, and submission processes.",
+      "keywords": [
+        "FHIR registry",
+        "StructureDefinition",
+        "ImplementationGuide",
+        "package feeds",
+        "crawler",
+        "simplifier",
+        "validation"
+      ]
+    },
+    {
+      "channelName": "research",
+      "channelId": 179290,
+      "channelDescription": "This channel focuses on applying the HL7 FHIR standard to clinical research, covering topics such as representing study protocols, capturing research data, integrating research workflows with clinical systems, and exchanging research data with Electronic Data Capture (EDC) systems.",
+      "keywords": [
+        "research",
+        "clinical research",
+        "pre-clinical research",
+        "study protocols",
+        "schedule of activities",
+        "electronic data capture",
+        "adverse events",
+        "clinical trial management systems",
+        "real world evidence",
+        "patient recruitment"
+      ]
+    },
+    {
+      "channelName": "russia",
+      "channelId": 179187,
+      "channelDescription": "This channel serves as a hub for discussions and updates regarding FHIR (Fast Healthcare Interoperability Resources) adoption, implementation, and community events in Russia. Topics include national initiatives, local meetups, translation efforts, and the development of a Russian Core FHIR Implementation Guide.",
+      "keywords": [
+        "russia",
+        "FHIR adoption",
+        "Russian Core Implementation Guide",
+        "national working group",
+        "meetups",
+        "translation",
+        "laboratory interoperability"
+      ]
+    },
+    {
+      "channelName": "shorthand",
+      "channelId": 215610,
+      "channelDescription": "Discussion and support for the FHIR Shorthand (FSH) language and related tooling, used for defining and generating FHIR artifacts like StructureDefinitions, ValueSets, and CodeSystems.",
+      "keywords": [
+        "FHIR Shorthand",
+        "FSH",
+        "SUSHI",
+        "GoFSH",
+        "FSH Online",
+        "VS Code FSH Extension",
+        "FSH School"
+      ]
+    },
+    {
+      "channelName": "smart",
+      "channelId": 179170,
+      "channelDescription": "This channel focuses on the SMART on FHIR specification, enabling secure data access and application integration with Electronic Health Record (EHR) systems. It covers topics such as authorization flows, security considerations, scopes, and implementation challenges related to SMART on FHIR.",
+      "keywords": [
+        "SMART on FHIR",
+        "EHR Launch",
+        "authorization",
+        "scopes",
+        "security",
+        "OpenID Connect",
+        "patient access",
+        "application integration"
+      ]
+    },
+    {
+      "channelName": "smart/health-cards",
+      "channelId": 284830,
+      "channelDescription": "Development and implementation of SMART Health Cards, a standard for securely encoding and sharing health information, particularly vaccination and test results, as scannable QR codes. Discusses technical specifications, implementation guides, best practices, security, and real-world applications of SMART Health Cards.",
+      "keywords": [
+        "SMART Health Cards",
+        "QR Codes",
+        "Vaccination Records",
+        "Test Results",
+        "Digital Health Wallets",
+        "Issuer Metadata",
+        "Verification",
+        "SMART Health Links",
+        "Security",
+        "Privacy",
+        "FHIR Bundles",
+        "Terminology"
+      ]
+    },
+    {
+      "channelName": "smart/scheduling-links",
+      "channelId": 281612,
+      "channelDescription": "Standardizing how healthcare providers publish and consumers access real-time appointment availability data, with a focus on COVID-19 vaccination scheduling. Discusses the SMART Scheduling Links specification and its use in aggregating vaccine appointment data from various sources. ",
+      "keywords": [
+        "SMART Scheduling Links",
+        "appointment availability",
+        "vaccine scheduling",
+        "COVID-19 vaccinations",
+        "data aggregation",
+        "publisher",
+        "consumer",
+        "location",
+        "slot",
+        "schedule"
+      ]
+    },
+    {
+      "channelName": "snomed",
+      "channelId": 179244,
+      "channelDescription": "This channel is about the use of SNOMED CT terminology in FHIR. Discussions about SNOMED CT versioning, value sets, mappings, extensions, and terminology services.",
+      "keywords": [
+        "SNOMED CT",
+        "Systematized Nomenclature of Medicine - Clinical Terms",
+        "terminology binding",
+        "value sets",
+        "mappings",
+        "extensions",
+        "terminology services"
+      ]
+    },
+    {
+      "channelName": "social",
+      "channelId": 179160,
+      "channelDescription": "General discussion about the FHIR community, the Zulip chat platform, and trends in health information technology. This channel is for non-technical conversations, news sharing, and community interaction.",
+      "keywords": [
+        "social",
+        "FHIR community",
+        "Zulip",
+        "health information technology",
+        "health IT news",
+        "industry trends"
+      ]
+    },
+    {
+      "channelName": "startup",
+      "channelId": 179300,
+      "channelDescription": "This channel focuses on the practical application of FHIR in a startup environment. Discussions range from finding other FHIR startups to technical implementation questions and use case exploration.",
+      "keywords": [
+        "startup",
+        "FHIR implementation",
+        "FHIR use cases",
+        "healthcare startups",
+        "health tech startups"
+      ]
+    },
+    {
+      "channelName": "storage for FHIR",
+      "channelId": 179289,
+      "channelDescription": "Discussion and support for storing and querying FHIR (Fast Healthcare Interoperability Resources) data, including database selection, implementation, performance, and data management.",
+      "keywords": [
+        "storage for FHIR",
+        "FHIR databases",
+        "database selection",
+        "querying FHIR",
+        "data management",
+        "FHIR servers",
+        "data migration",
+        "SQL",
+        "NoSQL",
+        "graph databases"
+      ]
+    },
+    {
+      "channelName": "students",
+      "channelId": 179193,
+      "channelDescription": "This channel is for students who are learning or using Fast Healthcare Interoperability Resources (FHIR) to discuss, ask questions, and collaborate with other students. It is intended for students to help each other with FHIR concepts and problem-solving.",
+      "keywords": [
+        "students",
+        "learning FHIR"
+      ]
+    },
+    {
+      "channelName": "subscriptions",
+      "channelId": 179229,
+      "channelDescription": "Discussion and support for the FHIR Subscription resource, which enables real-time event notifications for changes in FHIR data. Covers topics such as notification channels, security, best practices, and implementation considerations.",
+      "keywords": [
+        "subscriptions",
+        "event notifications",
+        "webhooks",
+        "rest-hooks",
+        "message queues",
+        "reliable delivery",
+        "error handling",
+        "change detection",
+        "authorization"
+      ]
+    },
+    {
+      "channelName": "switzerland",
+      "channelId": 214781,
+      "channelDescription": "Discussions and collaboration related to HL7 FHIR implementation in Switzerland, including national profiles, implementation guides, events, and job opportunities. The channel welcomes discussions in German, English, Italian, French, and Rhaeto-Romanic.",
+      "keywords": [
+        "Switzerland",
+        "CH Core",
+        "CH EMED",
+        "CH VACD",
+        "Electronic Patient Record (EPR)",
+        "mobile health",
+        "Connectathon",
+        "Swiss implementation guides",
+        "national profiles",
+        "terminology services",
+        "Electronic Laboratory Reporting (ELR)"
+      ]
+    },
+    {
+      "channelName": "terminology",
+      "channelId": 179202,
+      "channelDescription": "Management and use of controlled vocabularies and terminologies within FHIR and other HL7 standards. Discusses terminology servers, code validation, code system updates, value set creation and binding, and related tools and services.",
+      "keywords": [
+        "terminology services",
+        "code systems",
+        "value sets",
+        "terminology server",
+        "code validation",
+        "code system updates",
+        "SNOMED CT",
+        "LOINC",
+        "DICOM",
+        "RxNorm"
+      ]
+    },
+    {
+      "channelName": "terminology / utg",
+      "channelId": 194616,
+      "channelDescription": "Development and maintenance of HL7's Unified Terminology Governance (UTG) project, the source of truth for HL7 terminologies. Discusses tooling, processes, and technical details related to code systems and value sets.",
+      "keywords": [
+        "Unified Terminology Governance",
+        "UTG",
+        "code systems",
+        "value sets",
+        "terminology release management",
+        "terminology tooling",
+        "publisher",
+        "steward",
+        "OID",
+        "object identifier",
+        "International Edition"
+      ]
+    },
+    {
+      "channelName": "terminology / v2 content in THO",
+      "channelId": 351594,
+      "channelDescription": "Management and cleanup of HL7 Version 2 (V2) terminology and vocabulary content within the FHIR Terminology Authority (THO) project. Discusses the transformation and representation of legacy V2 tables as FHIR CodeSystems and ValueSets, including versioning, error correction, and mapping to modern terminology standards.",
+      "keywords": [
+        "terminology",
+        "V2 content in THO",
+        "HL7 Version 2",
+        "V2 vocabulary",
+        "THO",
+        "Terminology Authority",
+        "CodeSystems",
+        "ValueSets",
+        "UTG",
+        "Unified Terminology Governance"
+      ]
+    },
+    {
+      "channelName": "test.fhir.org/internal",
+      "channelId": 301887,
+      "channelDescription": "Automated notifications and status updates for the public test.fhir.org FHIR server.",
+      "keywords": [
+        "test.fhir.org",
+        "FHIR server",
+        "notifications",
+        "status",
+        "server monitoring"
+      ]
+    },
+    {
+      "channelName": "testing",
+      "channelId": 231245,
+      "channelDescription": "Discussion and collaboration on methodologies, tools, and infrastructure for testing FHIR implementations. Topics include test automation, test case design, test reporting, and the use of testing resources like TestScript and TestPlan.",
+      "keywords": [
+        "testing",
+        "TestScript",
+        "TestPlan",
+        "touchstone",
+        "validation",
+        "Postman",
+        "TestReport",
+        "Gherkin",
+        "Connectathon testing"
+      ]
+    },
+    {
+      "channelName": "tooling",
+      "channelId": 179239,
+      "channelDescription": "Discussion and collaboration on software tools and technologies used for developing, validating, and implementing FHIR. This includes requirements gathering, architecture discussions, interoperability challenges, announcements of new tools, and troubleshooting existing tools.",
+      "keywords": [
+        "tooling",
+        "FHIR development tools",
+        "FHIR validation tools",
+        "FHIR implementation tools",
+        "software development kits",
+        "validators",
+        "code generators",
+        "terminology services",
+        "package registries",
+        "FHIR servers"
+      ]
+    },
+    {
+      "channelName": "tooling/Package Crawlers",
+      "channelId": 328836,
+      "channelDescription": "Automated reports and logs from software robots that scan FHIR Implementation Guide repositories. This channel is for technical updates, not human discussion.",
+      "keywords": [
+        "tooling",
+        "package crawlers",
+        "automation",
+        "fhir implementation guides",
+        "repository scanning"
+      ]
+    },
+    {
+      "channelName": "tooling/releases",
+      "channelId": 217600,
+      "channelDescription": "Announcements of new releases and updates to software tools for working with Fast Healthcare Interoperability Resources (FHIR) data. Includes notifications about validators, publishers, test cases, and software development kits.",
+      "keywords": [
+        "tooling releases",
+        "FHIR validator",
+        "IG publisher",
+        "Implementation Guide publisher",
+        "FHIR test cases",
+        ".NET SDK",
+        "Java"
+      ]
+    },
+    {
+      "channelName": "translations",
+      "channelId": 179168,
+      "channelDescription": "This channel focuses on the translation of Fast Healthcare Interoperability Resources (FHIR) specifications, documentation, and related artifacts into various languages. The discussions cover translation workflows, tools, challenges, and the process of hosting translated versions.",
+      "keywords": [
+        "translations",
+        "localization",
+        "internationalization",
+        "language support",
+        "multi-lingual FHIR"
+      ]
+    },
+    {
+      "channelName": "tx-fhir-org",
+      "channelId": 393375,
+      "channelDescription": "Administration and maintenance of the tx-fhir-org server. Discussions about server infrastructure, performance, and upgrades.",
+      "keywords": [
+        "tx-fhir-org",
+        "server administration",
+        "server infrastructure",
+        "server upgrades",
+        "server performance"
+      ]
+    },
+    {
+      "channelName": "tx.fhir.org/notification",
+      "channelId": 293812,
+      "channelDescription": "Automated notifications regarding the operational status and performance of the tx.fhir.org terminology service.",
+      "keywords": [
+        "tx.fhir.org",
+        "terminology service",
+        "service monitoring",
+        "automated notifications",
+        "system status"
+      ]
+    },
+    {
+      "channelName": "uk",
+      "channelId": 179189,
+      "channelDescription": "Discussions about the adoption and implementation of HL7 FHIR in the United Kingdom's National Health Service (NHS), including specific projects, profiles, validation, and interoperability challenges.",
+      "keywords": [
+        "United Kingdom",
+        "National Health Service",
+        "NHS Digital",
+        "Care Connect",
+        "UK Core",
+        "SNOMED CT UK Edition",
+        "dm+d",
+        "GP Connect",
+        "Transfer of Care",
+        "Electronic Prescription Service",
+        "ODS",
+        "ITK"
+      ]
+    },
+    {
+      "channelName": "united states",
+      "channelId": 179190,
+      "channelDescription": "Discussions about United States healthcare interoperability standards and implementation guidance, including regulatory requirements, national profiles and extensions, and issues specific to the US realm.",
+      "keywords": [
+        "united states",
+        "US Core",
+        "Office of the National Coordinator for Health Information Technology (ONC)",
+        "Centers for Medicare and Medicaid Services (CMS)",
+        "United States Core Data for Interoperability (USCDI)",
+        "Health Level Seven International (HL7)",
+        "Luhn Algorithm",
+        "National Provider Identifier (NPI)",
+        "Drug Enforcement Administration (DEA)",
+        "value set authority center (VSAC)",
+        "SMART Health Cards"
+      ]
+    },
+    {
+      "channelName": "united states/national directory",
+      "channelId": 283066,
+      "channelDescription": "Development of FHIR Implementation Guides for the United States National Directory of Healthcare Providers and Services (NDH). This channel focuses on technical implementation details, policy alignment, and testing related to the exchange of provider and healthcare service information across different trust frameworks and communities.",
+      "keywords": [
+        "united states",
+        "national directory",
+        "healthcare providers",
+        "healthcare services",
+        "implementation guides",
+        "trust frameworks",
+        "eHealth Exchange",
+        "Carequality",
+        "CommonWell",
+        "TEFCA",
+        "DirectTrust",
+        "endpoint directory",
+        "provider directory",
+        "patient administration"
+      ]
+    },
+    {
+      "channelName": "v2 German (d-a-ch)",
+      "channelId": 232924,
+      "channelDescription": "German-language discussions about HL7 Version 2 (v2) messaging, focusing on implementation details and best practices within the DACH region (Germany, Austria, and Switzerland).",
+      "keywords": [
+        "HL7 Version 2",
+        "Germany",
+        "Austria",
+        "Switzerland",
+        "DACH",
+        "message implementation",
+        "ADT messages",
+        "ORU messages",
+        "German HL7 guidance",
+        "data privacy"
+      ]
+    },
+    {
+      "channelName": "v2 to FHIR",
+      "channelId": 179188,
+      "channelDescription": "Guidance, support, and tools for converting HL7 version 2 (v2) messages and data to FHIR resources, including mapping specifications, best practices for handling data discrepancies, and discussions about real-world implementation challenges.",
+      "keywords": [
+        "v2 to FHIR conversion",
+        "HL7 message mapping",
+        "data transformation",
+        "clinical data exchange",
+        "electronic health records",
+        "laboratory data",
+        "pharmacy data",
+        "patient administration",
+        "terminology mapping",
+        "data de-duplication"
+      ]
+    },
+    {
+      "channelName": "versioned API",
+      "channelId": 179275,
+      "channelDescription": "Management of Fast Healthcare Interoperability Resources (FHIR) application programming interface (API) versions, including client and server behavior, data consistency across versions, and conversion processes.",
+      "keywords": [
+        "versioned API",
+        "FHIR API versioning",
+        "REST API semantics",
+        "client behavior",
+        "server behavior",
+        "data consistency",
+        "resource conversion"
+      ]
+    },
+    {
+      "channelName": "việtnam",
+      "channelId": 179246,
+      "channelDescription": "Discussions on implementing Fast Healthcare Interoperability Resources (FHIR) in Vietnam, addressing local healthcare data exchange challenges and sharing experiences.",
+      "keywords": [
+        "Vietnam",
+        "FHIR implementation",
+        "Vietnamese healthcare",
+        "HL7 Vietnam"
+      ]
+    },
+    {
+      "channelName": "who-smart-guidelines",
+      "channelId": 310477,
+      "channelDescription": "Developing and implementing the World Health Organization's SMART Guidelines, a framework for representing clinical guidelines and decision support logic in FHIR. Discussions cover data dictionaries, authoring tools, mobile app development, and implementation challenges.",
+      "keywords": [
+        "World Health Organization SMART Guidelines",
+        "Digital Adaptation Kits",
+        "clinical decision support systems",
+        "clinical algorithms",
+        "mobile health applications",
+        "antenatal care",
+        "immunization",
+        "HIV",
+        "sexually transmitted infections",
+        "family planning"
+      ]
+    },
+    {
+      "channelName": "work opportunities",
+      "channelId": 193771,
+      "channelDescription": "Job postings and contracting opportunities related to Fast Healthcare Interoperability Resources (FHIR).",
+      "keywords": [
+        "work opportunities",
+        "FHIR",
+        "Fast Healthcare Interoperability Resources",
+        "jobs",
+        "careers",
+        "contracting"
+      ]
+    },
+    {
+      "channelName": "workflow",
+      "channelId": 179196,
+      "channelDescription": "This channel discusses the use of Fast Healthcare Interoperability Resources (FHIR) resources and patterns for modeling clinical and administrative workflows. Topics include order fulfillment, task management, referral management, event notification, and data exchange patterns like messaging and subscriptions.",
+      "keywords": [
+        "workflow",
+        "FHIR workflow",
+        "task",
+        "service request",
+        "request orchestration",
+        "plan definition",
+        "activity definition",
+        "subscriptions",
+        "messaging",
+        "event notification",
+        "business process modeling notation",
+        "notified pull"
+      ]
+    },
+    {
+      "channelName": "中国 (china)",
+      "channelId": 179198,
+      "channelDescription": "Discussion of FHIR adoption in China, including translation of FHIR specifications and terminology, national FHIR projects, and events like Connectathons.",
+      "keywords": [
+        "China",
+        "FHIR adoption in China",
+        "Chinese translation",
+        "FHIR Connectathon",
+        "national FHIR projects"
+      ]
+    },
+    {
+      "channelName": "Patient Care WG",
+      "channelId": 294552,
+      "channelDescription": "Discussion and collaborative work on FHIR resources related to general patient care. Topics cover a wide range of clinical concepts, including patient problems, allergies, procedures, care planning, goals, and family history.",
+      "keywords": [
+        "Patient Care Workgroup",
+        "Condition",
+        "AllergyIntolerance",
+        "Procedure",
+        "CarePlan",
+        "CareTeam",
+        "Goal",
+        "FamilyMemberHistory",
+        "AdverseEvent",
+        "Communication",
+        "CommunicationRequest",
+        "ClinicalImpression",
+        "Linkage",
+        "Flag",
+        "ConditionDefinition"
+      ]
+    },
+    {
+      "channelName": "Patient Generated Health Data",
+      "channelId": 381040,
+      "channelDescription": "This channel discusses the capture, representation, and integration of healthcare data originating from patients and personal health devices. Topics include data originating from wearables, smartphones, smart homes, and personal health records.",
+      "keywords": [
+        "Patient Generated Health Data",
+        "sensor data",
+        "device data",
+        "personal health devices",
+        "wearables",
+        "smartphones",
+        "smart homes",
+        "personal health records",
+        "electronic health records",
+        "data integration"
+      ]
+    },
+    {
+      "channelName": "Physical Activity",
+      "channelId": 327137,
+      "channelDescription": "Standardization of healthcare data related to physical activity, including how to represent physical activity assessments, interventions, and data captured from monitoring devices.  Discussion covers terminology, workflows, and data exchange scenarios.",
+      "keywords": [
+        "physical activity",
+        "physical activity assessment",
+        "physical activity interventions",
+        "physical activity vital sign",
+        "remote patient monitoring",
+        "patient generated health data"
+      ]
+    },
+    {
+      "channelName": "Portugues",
+      "channelId": 179272,
+      "channelDescription": "A forum for the Portuguese-speaking FHIR community to discuss Fast Healthcare Interoperability Resources (FHIR) ideas, initiatives, and questions. Expect content in both Portuguese and English.",
+      "keywords": [
+        "Portuguese",
+        "Portuguese-speaking FHIR community",
+        "FHIR initiatives",
+        "FHIR questions",
+        "FHIR in Portugal",
+        "FHIR in Brazil"
+      ]
+    },
+    {
+      "channelName": "Post-Acute Care",
+      "channelId": 208867,
+      "channelDescription": "Developing and testing FHIR-based data exchange for care transitions from acute to post-acute care settings. Includes discussion of data requirements, workflows, implementation guides, and connectathon scenarios.",
+      "keywords": [
+        "post-acute care",
+        "care transitions",
+        "long-term services and supports",
+        "skilled nursing facility",
+        "PACIO project",
+        "functional assessment staging item",
+        "patient assessment instrument"
+      ]
+    },
+    {
+      "channelName": "Public Health",
+      "channelId": 379724,
+      "channelDescription": "Discussions related to interoperability in public health, including topics like immunization data exchange, international vaccine codes, and public health information systems.",
+      "keywords": [
+        "Public Health",
+        "immunization information systems",
+        "vaccine codes",
+        "public health interoperability"
+      ]
+    },
+    {
+      "channelName": "R4A/B/R5 Discussion",
+      "channelId": 250700,
+      "channelDescription": "Discussion about the process of releasing a staged version of FHIR between R4 and R5, addressing topics like timelines, versioning, and change management.",
+      "keywords": [
+        "R4A",
+        "R4B",
+        "R5",
+        "Staged Release",
+        "FHIR Release Management",
+        "Normative",
+        "Technical Corrections"
+      ]
+    },
+    {
+      "channelName": "SDPi+FHIR",
+      "channelId": 238811,
+      "channelDescription": "Integrating medical device data into clinical workflows using the IHE Service-oriented Device Point-of-care Interoperability (SDPi) and HL7 FHIR standards. Exploring topics like device discovery, patient association, data logging, security, and mapping of device data to FHIR resources.",
+      "keywords": [
+        "SDPi",
+        "FHIR",
+        "medical devices",
+        "device interoperability",
+        "BICEPS",
+        "point-of-care",
+        "device discovery",
+        "patient-device association",
+        "data logging",
+        "forensics",
+        "ICE",
+        "waveform data",
+        "security"
+      ]
+    },
+    {
+      "channelName": "SHARES",
+      "channelId": 436335,
+      "channelDescription": "Sharing substance use disorder and mental health records using HL7 FHIR.",
+      "keywords": [
+        "Substance Use Disorder",
+        "Mental Health",
+        "Record Sharing",
+        "Consent"
+      ]
+    },
+    {
+      "channelName": "Security and Privacy",
+      "channelId": 179247,
+      "channelDescription": "Discussion and development of security and privacy features within FHIR, including topics like digital signatures, OAuth scopes, security labeling, audit events, consent management, access control, and the Permission resource.",
+      "keywords": [
+        "Security and Privacy",
+        "digital signatures",
+        "OAuth scopes",
+        "security labeling",
+        "audit events",
+        "consent management",
+        "access control",
+        "Permission resource",
+        "XACML"
+      ]
+    },
+    {
+      "channelName": "Security and Privacy/OAuth Scopes",
+      "channelId": 392729,
+      "channelDescription": "Discussions about Open Authorization (OAuth) security scopes in FHIR. This includes defining minimum required scopes, developing guidance for scope requests, and exploring ways to improve scope management for developers.",
+      "keywords": [
+        "Security and Privacy",
+        "OAuth Scopes",
+        "OAuth 2.0",
+        "SMART on FHIR",
+        "User Data Access and Authorization Profile (UDAP)"
+      ]
+    },
+    {
+      "channelName": "Simplifier.net",
+      "channelId": 413744,
+      "channelDescription": "This channel is for users of the Simplifier.net platform and related tools (Forge and Firely Terminal) to discuss issues, ask questions, and share tips related to building, managing, and publishing FHIR Implementation Guides (IGs). Topics include working with profiles, packages, and custom IG templates.",
+      "keywords": [
+        "Simplifier.net",
+        "Forge",
+        "Firely Terminal",
+        "FHIR Implementation Guide",
+        "IG publication"
+      ]
+    },
+    {
+      "channelName": "Specialty Medications",
+      "channelId": 235647,
+      "channelDescription": "Electronic exchange of information for prescribing and dispensing specialty medications. Includes topics like prescription workflows, prior authorization processes, copay assistance programs, and using messaging and questionnaire resources for communication.",
+      "keywords": [
+        "specialty medications",
+        "prescription workflows",
+        "prior authorizations",
+        "copay assistance",
+        "messaging",
+        "questionnaires"
+      ]
+    },
+    {
+      "channelName": "Sweden on FHIR",
+      "channelId": 179267,
+      "channelDescription": "This channel focuses on the national use and adoption of HL7 FHIR (Fast Healthcare Interoperability Resources) in Sweden, including the development and implementation of Swedish base profiles, participation in international initiatives, and collaboration with Nordic countries. ",
+      "keywords": [
+        "Sweden on FHIR",
+        "HL7 FHIR",
+        "national use of FHIR",
+        "Swedish base profiles",
+        "Nordic cooperation",
+        "Inera",
+        "HSA",
+        "social security number"
+      ]
+    },
+    {
+      "channelName": "TEFCA FHIR",
+      "channelId": 378320,
+      "channelDescription": "Use of HL7 FHIR standards within the Trusted Exchange Framework and Common Agreement (TEFCA) for nationwide health information exchange.",
+      "keywords": [
+        "TEFCA",
+        "Trusted Exchange Framework and Common Agreement",
+        "health information exchange",
+        "nationwide health information network",
+        "qualified health information networks",
+        "healthcare interoperability",
+        "FHIR endpoint directory",
+        "UDAP",
+        "Connectathon testing"
+      ]
+    },
+    {
+      "channelName": "TSMG",
+      "channelId": 301245,
+      "channelDescription": "The HL7 Terminology Services Management Group (TSMG) is responsible for the governance and management of terminology artifacts (code systems and value sets) used in FHIR. The group discusses policies, procedures, and tooling related to terminology management, such as the Unified Terminology Governance (UTG) process for managing code system content, the Terminology Hierarchy Ontology (THO) project, and the Terminology Server for FHIR (tx.fhir.org).",
+      "keywords": [
+        "Terminology Services Management Group",
+        "Unified Terminology Governance",
+        "Terminology Hierarchy Ontology",
+        "Terminology Server for FHIR",
+        "code systems",
+        "value sets",
+        "terminology governance",
+        "terminology management",
+        "code system metadata"
+      ]
+    },
+    {
+      "channelName": "Teaching FHIR",
+      "channelId": 179299,
+      "channelDescription": "A forum for educators and trainers to discuss strategies and resources for teaching Fast Healthcare Interoperability Resources (FHIR). This includes sharing course materials, discussing teaching methodologies, and exploring tools for FHIR education.",
+      "keywords": [
+        "Teaching FHIR",
+        "FHIR education",
+        "FHIR courses",
+        "FHIR training materials",
+        "FHIR learning resources",
+        "FHIR curriculum development"
+      ]
+    },
+    {
+      "channelName": "Terminology Service Test Cases",
+      "channelId": 437028,
+      "channelDescription": "Standardized test cases for evaluating the behavior of terminology services in FHIR. Includes discussion of test case parameters, expected results, and how to handle various scenarios.",
+      "keywords": [
+        "terminology service test cases",
+        "value set expansion",
+        "code system validation",
+        "terminology service behavior",
+        "language support"
+      ]
+    },
+    {
+      "channelName": "TestScript Resource",
+      "channelId": 274423,
+      "channelDescription": "Developing and improving the FHIR TestScript resource for automated testing of FHIR APIs and conformance to implementation guides. Discussions include the design and capabilities of the TestScript resource, integration with implementation guides and the FHIR specification, and approaches to testing various aspects of FHIR systems.",
+      "keywords": [
+        "TestScript Resource",
+        "automated testing",
+        "FHIR API testing",
+        "conformance testing",
+        "TestScript design",
+        "implementation guide testing",
+        "FHIR specification testing"
+      ]
+    },
+    {
+      "channelName": "Touchstone",
+      "channelId": 179217,
+      "channelDescription": "The Touchstone channel focuses on the Touchstone Testing Platform, a widely used tool for conformance testing of FHIR servers. Discussions cover technical issues, test script development, connectathon support, and new feature announcements.",
+      "keywords": [
+        "Touchstone",
+        "conformance testing",
+        "test scripts",
+        "connectathon",
+        "FHIR server validation"
+      ]
+    },
+    {
+      "channelName": "UDS-Plus",
+      "channelId": 457699,
+      "channelDescription": "Connectathon track for testing implementations of the UDS-Plus standard.",
+      "keywords": [
+        "UDS-Plus",
+        "Connectathon",
+        "Uniform Data Set"
+      ]
+    },
+    {
+      "channelName": "UTG Submitters",
+      "channelId": 264653,
+      "channelDescription": "Guidance and support for using HL7's Unified Terminology Governance (UTG) tooling and processes to submit changes and additions to the HL7 Terminology (THO) repository.",
+      "keywords": [
+        "Unified Terminology Governance",
+        "UTG",
+        "HL7 Terminology",
+        "THO",
+        "Terminology Submission",
+        "Value Set Submission",
+        "Code System Submission"
+      ]
+    },
+    {
+      "channelName": "V2",
+      "channelId": 229447,
+      "channelDescription": "Discussions related to the Health Level Seven version 2 (HL7v2) messaging standard. Topics include message structures, segment usage, data types, conformance profiles, tooling, implementation challenges, and mappings to FHIR.",
+      "keywords": [
+        "HL7v2",
+        "Health Level Seven version 2",
+        "messaging standard",
+        "message structure",
+        "segments",
+        "data types",
+        "conformance profiles",
+        "tooling"
+      ]
+    },
+    {
+      "channelName": "Vital Records Birth & Fetal Death",
+      "channelId": 253316,
+      "channelDescription": "Exchanging electronic birth and fetal death records between healthcare providers and public health agencies, specifically focusing on workflows and data elements within electronic health records (EHRs).",
+      "keywords": [
+        "vital records",
+        "birth records",
+        "fetal death records",
+        "electronic birth registration systems",
+        "public health reporting",
+        "electronic health records"
+      ]
+    },
+    {
+      "channelName": "Vocabulary/committers",
+      "channelId": 330615,
+      "channelDescription": "Discussions related to the implementation and maintenance of the FHIR Terminology Module, including code systems, value sets, and concept maps. This channel is for committers of the Vocabulary workgroup and focuses on low-level technical details and processes related to applying changes to the specification.",
+      "keywords": [
+        "Vocabulary",
+        "Terminology",
+        "ConceptMap",
+        "CodeSystem",
+        "ValueSet",
+        "OID",
+        "Technical Correction",
+        "Ballot Reconciliation"
+      ]
+    },
+    {
+      "channelName": "Vulcan/RWD",
+      "channelId": 267892,
+      "channelDescription": "Using FHIR to represent real-world data for clinical trials and regulatory submissions in drug development, particularly for reporting concomitant medications. This includes discussions of mapping FHIR data to Clinical Data Interchange Standards Consortium (CDISC) Study Data Tabulation Model (SDTM) standards, extracting medication data from electronic health records, and working with regulatory agencies like the FDA.",
+      "keywords": [
+        "Vulcan",
+        "Real World Data",
+        "Clinical Trials",
+        "Regulatory Submissions",
+        "Concomitant Medications",
+        "CDISC",
+        "SDTM",
+        "FDA"
+      ]
+    },
+    {
+      "channelName": "Vulcan/SoA",
+      "channelId": 267893,
+      "channelDescription": "Standardization of clinical trial Schedule of Activities (SoA) using FHIR. Discusses representing planned study activities, timing, visit windows, milestones, and actions in clinical trial protocols.",
+      "keywords": [
+        "Vulcan",
+        "Schedule of Activities",
+        "clinical trial protocols",
+        "research studies",
+        "planned study activities",
+        "activity definitions",
+        "plan definitions",
+        "visit timing",
+        "visit windows",
+        "milestones"
+      ]
+    },
+    {
+      "channelName": "Vulcan/ePI",
+      "channelId": 296557,
+      "channelDescription": "Development and customization of electronic Product Information (ePI) using the HL7 FHIR Vulcan specification. Discusses implementation details, tooling, testing, and real-world use cases, with a focus on the Gravitate Health project.",
+      "keywords": [
+        "Vulcan",
+        "electronic Product Information",
+        "ePI",
+        "Gravitate Health",
+        "FHIR Connectathon",
+        "Composition",
+        "DocumentManifest",
+        "Medicinal Product Definition",
+        "ManufacturedItemDefinition",
+        "DeviceDefinition",
+        "NDC",
+        "National Drug Code"
+      ]
+    },
+    {
+      "channelName": "Women for FHIR!",
+      "channelId": 390112,
+      "channelDescription": "This channel is a space for women and allies in the FHIR community to discuss diversity, inclusivity, and women's experiences in healthcare and healthcare IT. It provides a platform for mutual support, networking, and advocating for improved representation of women's perspectives in the development of FHIR standards.",
+      "keywords": [
+        "Women for FHIR",
+        "diversity",
+        "inclusivity",
+        "women in healthcare",
+        "women's health",
+        "community building",
+        "mentorship",
+        "FHIR events",
+        "standards development"
+      ]
+    },
+    {
+      "channelName": "Zulip",
+      "channelId": 179238,
+      "channelDescription": "This channel is dedicated to discussions about the Zulip platform itself. This includes questions about how to use Zulip, troubleshooting technical issues, feature requests, and discussions about the software's functionality.",
+      "keywords": [
+        "Zulip",
+        "Zulip software",
+        "Zulip features",
+        "Zulip troubleshooting",
+        "Zulip configuration"
+      ]
+    },
+    {
+      "channelName": "analytics on FHIR",
+      "channelId": 179219,
+      "channelDescription": "Development of the SQL on FHIR specification, which enables querying and analyzing FHIR data using SQL. Topics include specification details, implementation approaches, testing, and use cases like mapping FHIR to OMOP.",
+      "keywords": [
+        "analytics on FHIR",
+        "SQL on FHIR",
+        "ViewDefinition",
+        "FHIRPath",
+        "OMOP",
+        "Parquet",
+        "database queries",
+        "data analysis",
+        "specification development",
+        "test cases",
+        "implementation examples",
+        "fhir-jq",
+        "connectathon"
+      ]
+    },
+    {
+      "channelName": "android",
+      "channelId": 276344,
+      "channelDescription": "Developing Android apps that use FHIR (Fast Healthcare Interoperability Resources). Discussion covers the Google Android FHIR SDK, Kotlin coroutines for network requests, data capture tools, and integrating with FHIR servers.",
+      "keywords": [
+        "Android",
+        "Google Android FHIR SDK",
+        "Kotlin Coroutines",
+        "Data Capture",
+        "FHIR Engine",
+        "SDC Library",
+        "CQL Evaluator",
+        "Resource Synchronization"
+      ]
+    },
+    {
+      "channelName": "argonaut",
+      "channelId": 179175,
+      "channelDescription": "Facilitating the adoption of HL7 FHIR standards for electronic health information exchange in the United States. This channel supports the Argonaut Project, a collaborative effort to enable interoperability between healthcare providers, patients, and applications.",
+      "keywords": [
+        "Argonaut Project",
+        "FHIR Adoption",
+        "United States Core Data for Interoperability (USCDI)",
+        "Health Level Seven International (HL7)",
+        "Office of the National Coordinator for Health Information Technology (ONC)",
+        "bulk data exchange",
+        "patient matching",
+        "subscriptions",
+        "clinical decision support (CDS)",
+        "continuous glucose monitoring (CGM)",
+        "social determinants of health (SDOH)"
+      ]
+    },
+    {
+      "channelName": "australia",
+      "channelId": 179173,
+      "channelDescription": "This channel is dedicated to discussions and information sharing related to the adoption and implementation of FHIR in Australia. Topics include implementation guides, conformance requirements, testing, and national-level initiatives.",
+      "keywords": [
+        "Australia",
+        "FHIR adoption",
+        "implementation guides",
+        "conformance",
+        "testing",
+        "AU Core",
+        "AU Base",
+        "eRequesting",
+        "patient summary",
+        "healthcare data exchange",
+        "HL7 Australia"
+      ]
+    },
+    {
+      "channelName": "austria tc",
+      "channelId": 179212,
+      "channelDescription": "Austrian (AT) country-specific discussion and implementation of HL7 FHIR standards, including national extensions and profiles for healthcare data exchange. Likely includes topics like patient identifiers, insurance, and regulatory requirements. ",
+      "keywords": [
+        "Austria",
+        "HL7 FHIR",
+        "Austrian eHealth",
+        "European Health Insurance Card",
+        "Patient Profile",
+        "National Identifier",
+        "Social Insurance Number",
+        "ELGA"
+      ]
+    },
+    {
+      "channelName": "biopharma",
+      "channelId": 179200,
+      "channelDescription": "Use of HL7 FHIR (Fast Healthcare Interoperability Resources) in the biopharmaceutical and clinical research domain, covering topics such as clinical trials, drug development, data exchange, and interoperability with standards like BRIDG and CDISC.",
+      "keywords": [
+        "biopharma",
+        "clinical trials",
+        "drug development",
+        "BRIDG",
+        "CDISC",
+        "research study",
+        "research subject",
+        "electronic data capture",
+        "adverse events"
+      ]
+    },
+    {
+      "channelName": "blockchain",
+      "channelId": 179216,
+      "channelDescription": "Exploring the intersection of Fast Healthcare Interoperability Resources (FHIR) and blockchain technology in healthcare. Discusses potential use cases, benefits, and challenges of combining these technologies for secure data exchange, patient control, and provenance tracking.",
+      "keywords": [
+        "blockchain",
+        "smart contracts",
+        "distributed ledger technology",
+        "healthcare data security",
+        "patient data control",
+        "provenance",
+        "audit events",
+        "health information exchange",
+        "OAuth2",
+        "Interplanetary File System"
+      ]
+    },
+    {
+      "channelName": "brasil",
+      "channelId": 357541,
+      "channelDescription": "Discussions in Portuguese about the use of FHIR (Fast Healthcare Interoperability Resources) in Brazil.",
+      "keywords": [
+        "Brasil",
+        "FHIR use in Brazil",
+        "Brazilian healthcare interoperability"
+      ]
+    },
+    {
+      "channelName": "bulk data",
+      "channelId": 179250,
+      "channelDescription": "Focuses on the FHIR Bulk Data Access specification. Discusses $export, $import, and related operations for large-scale data exchange in FHIR. Topics include technical implementation, authorization, security considerations, tooling, and specific use cases such as group export, patient data extraction, and public health reporting.",
+      "keywords": [
+        "bulk data",
+        "FHIR Bulk Data Access",
+        "data export",
+        "data import",
+        "large datasets",
+        "group export",
+        "patient data",
+        "public health reporting"
+      ]
+    },
+    {
+      "channelName": "canada",
+      "channelId": 179185,
+      "channelDescription": "This channel is for general discussion of FHIR (Fast Healthcare Interoperability Resources) adoption and implementation in Canada, including specific Canadian use cases, data standards, and national initiatives related to healthcare interoperability.",
+      "keywords": [
+        "canada",
+        "FHIR adoption in Canada",
+        "Canadian FHIR Community",
+        "Health Canada Drug Identification Number",
+        "Canadian Baseline FHIR profiles",
+        "Ontario Surgical Wait Time Information System",
+        "Infoway",
+        "Canadian SNOMED CT Edition",
+        "Synthea Patient Generator",
+        "e-Prescription Service"
+      ]
+    }
+  ]
+}
