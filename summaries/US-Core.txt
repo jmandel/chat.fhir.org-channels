@@ -1,0 +1,7 @@
+## US Core MedicationStatement (Retired)
+
+**TL;DR:** This guide explained how apps could share information about the medications a patient is taking with other healthcare systems. It described what information should be included when sharing this data, like the medication name, when it was taken, and if the information came from a prescription. 
+
+The US Core MedicationStatement Implementation Guide (IG) was designed to standardize how information about a patient's medications is shared between different healthcare systems. This included details like the medication name, the date it was taken, and whether the information came from a prescription or was reported by the patient. The guide aimed to make it easier for healthcare providers to see a complete and accurate list of their patient's medications.
+
+This IG has been retired and is no longer in use. The information here is for historical reference only. 

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@google-cloud/vertexai": "^1.7.0",
+    "node-html-parser": "^6.1.13",
     "zulip-js": "^2.0.9"
   }
 }
