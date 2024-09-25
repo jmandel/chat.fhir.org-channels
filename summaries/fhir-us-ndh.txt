@@ -1,0 +1,7 @@
+**TL;DR:** This guide defines a standardized way to share healthcare provider data across the US, making it easier to find accurate information about doctors, hospitals, services, and insurance plans.
+
+The National Directory of Healthcare Providers & Services (NDH) Implementation Guide aims to create a reliable, nationwide source of information about healthcare providers and related services. This includes details about individuals, organizations, the services they offer, their locations, insurance plans, and technical information for secure digital communication. 
+
+The guide addresses the fragmentation and inaccuracy often found in healthcare directories. It proposes a national system that collects and verifies data, acting as a "source of truth." Local directories and applications can access this information using standardized FHIR APIs (a common language for healthcare data exchange). This makes it easier for patients to find providers, for healthcare organizations to coordinate care, and for payers to manage claims.
+
+The NDH envisions a secure system where authorized entities can submit information, which is then validated and verified against official sources. It also includes mechanisms to restrict access to sensitive data, ensuring privacy and confidentiality. By streamlining data sharing and improving data quality, the NDH aims to benefit patients, providers, and payers, enabling more efficient and effective healthcare delivery. 

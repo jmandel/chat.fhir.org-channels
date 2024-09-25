@@ -1,0 +1,7 @@
+**TL;DR:** This guide helps different computer systems share information about radiation therapy.
+
+The CodeX™ Radiation Therapy Implementation Guide (IG) defines a standard way to represent and exchange information about a patient's radiation therapy treatment. This guide is for people who create computer systems for healthcare, like electronic health records (EHRs) and radiation oncology systems. 
+
+Currently, radiation treatment details are often stuck in the system used by the radiation oncology team. This makes it difficult for other doctors and the patient to get this important information. Also, summarizing radiation treatment often requires someone to type a lot of information by hand, which takes time and can lead to mistakes.
+
+This guide aims to solve these problems. It uses a common language called FHIR (Fast Healthcare Interoperability Resources) to structure information about radiation therapy. This common language allows different systems to understand and share this information, making it easier for everyone involved in a patient's care to see important details about their treatment. For example, a doctor outside the radiation oncology team could easily see the dose of radiation a patient received and the areas of the body that were treated. This helps with better care coordination. Patients can also benefit from this improved sharing of information to better understand their treatment. 

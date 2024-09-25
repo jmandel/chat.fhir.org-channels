@@ -1,0 +1,9 @@
+**TL;DR:** This guide improves how health and human services information is shared, especially for people who need many kinds of care, like help with food or housing along with their medical needs. It aims to make it easier to share information between different computer systems. 
+
+The guide promotes better ways to share information about patients between different computer systems in healthcare and human services.  It addresses the need for better data standards so that information can be easily understood and used by everyone involved in a person's care. This is especially important for people who need support beyond just medical care, such as help with housing, food assistance, or other social services.
+
+The guide focuses on expanding existing healthcare data standards (called FHIR) to include information relevant to human services. This means that information about a person's medical needs and their social service needs can be shared seamlessly between different organizations, like hospitals, clinics, and social service agencies. 
+
+By improving data sharing, this guide aims to enable a more complete picture of a person's health and well-being. This can lead to better coordination of care, more efficient delivery of services, and ultimately, better outcomes for people who need support. The guide also highlights some of the challenges in using these standards for social services and suggests ways to overcome them.
+
+For example, the guide suggests creating new data standards that can be used to describe information about human services programs, like the types of services offered and the eligibility requirements. It also emphasizes the importance of making sure that everyone involved in developing and using these standards, including human service providers and technology developers, is working together. 

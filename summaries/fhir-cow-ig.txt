@@ -1,0 +1,7 @@
+**TL;DR:** This guide explains how to use FHIR to improve the way healthcare providers share information about orders, like prescriptions or lab tests. It focuses on making sure order fillers, like pharmacists or labs, have all the details they need to carry out the order correctly. 
+
+The FHIR Clinical Ordering Workflow (COW) Implementation Guide helps healthcare systems exchange information about orders more effectively. It addresses the challenge of making sure that everyone involved in an order – the person placing it, the person receiving it, and the person fulfilling it – has access to the necessary information. The guide focuses on how to organize and share the content of an order, including details like what needs to be done, who it's for, and any special instructions. 
+
+One key aspect the guide tackles is how to give the order filler all the information they need to do their job. This can be done in a few ways, depending on the situation. Sometimes, all the information can be provided upfront. Other times, the order filler might need to request additional details. The guide explores different approaches to sharing this information, including techniques like using standardized queries and clearly defining who has permission to access what. 
+
+By following this guide, healthcare systems can improve the accuracy and efficiency of their ordering processes, ultimately leading to better patient care. 

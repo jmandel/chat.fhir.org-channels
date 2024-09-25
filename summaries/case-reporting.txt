@@ -1,0 +1,7 @@
+**TL;DR:** This guide helps healthcare providers automatically send reports to public health agencies when a patient might have a condition they need to know about. It also lets public health send information back to healthcare providers about what to do next. 
+
+The "Public Health Case Reporting FHIR Implementation Guide" helps healthcare providers share patient information with public health agencies. This is important for tracking and responding to health concerns in the community. The guide uses a standardized format called FHIR, which allows different computer systems to easily exchange information. 
+
+This guide defines how electronic health records (EHRs) can automatically identify patients with potentially reportable conditions, like Zika virus or Chlamydia, based on specific codes in their records. When a possible case is identified, the EHR sends an initial case report to the appropriate public health agency. The guide also defines how public health agencies can respond to these reports. The response tells healthcare providers whether the case needs to be reported, provides contact information for the agency, and gives guidance on next steps, like additional testing or treatment.
+
+This two-way communication helps ensure that public health agencies have the information they need to protect the community while also supporting healthcare providers in giving their patients the best possible care. 

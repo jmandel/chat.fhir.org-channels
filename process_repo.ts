@@ -7,10 +7,21 @@ if (!repoPath) {
   console.error('Please provide the repository path as an argument.');
   process.exit(1);
 }
+const igName = repoPath.split('/').pop();
 
 await fs.mkdir('summaries', { recursive: true });
 async function processRepo(repoPath: string) {
   const inputDir = path.join(repoPath, 'input');
+  const outputFile = path.join('summaries', `${igName}.txt`);
+
+  // Check if output file already exists
+  try {
+    await fs.access(outputFile);
+    console.log(`Summary for ${igName} already exists. Skipping this repo.`);
+    return;
+  } catch (error) {
+    // File doesn't exist, continue processing
+  }
 
   // Check if 'input' folder exists
   try {
@@ -29,24 +40,43 @@ async function processRepo(repoPath: string) {
 
 async function concatenateFiles(dir: string): Promise<string> {
   const allowedExtensions = ['.txt', '.md', '.plantuml', '.fsh'];
-  let content = '';
+  let allFiles: { path: string; depth: number; name: string; isIndex: boolean; isPageContent: boolean }[] = [];
 
-  async function processDirectory(currentDir: string) {
+  async function collectFiles(currentDir: string) {
     const entries = await fs.readdir(currentDir, { withFileTypes: true });
 
     for (const entry of entries) {
       const fullPath = path.join(currentDir, entry.name);
       if (entry.isDirectory()) {
-        await processDirectory(fullPath);
-      } else if (entry.isFile() && allowedExtensions.includes(path.extname(entry.name))) {
-        content += `---:${fullPath}---\n`;
-        content += await fs.readFile(fullPath, 'utf-8');
-        content += '\n';
+        await collectFiles(fullPath);
+      } else if (entry.isFile() && allowedExtensions.includes(path.extname(entry.name)) && entry.name !== 'ignoreWarnings.txt') {
+        const relativePath = path.relative(dir, fullPath);
+        const depth = relativePath.split(path.sep).length;
+        const isIndex = entry.name.toLowerCase().includes('index');
+        const isPageContent = relativePath.toLowerCase().includes('pagecontent');
+        allFiles.push({ path: fullPath, depth, name: entry.name, isIndex, isPageContent });
       }
     }
   }
 
-  await processDirectory(dir);
+  await collectFiles(dir);
+
+  // Sort all files once
+  allFiles.sort((a, b) => {
+    if (a.isPageContent !== b.isPageContent) return a.isPageContent ? -1 : 1;
+    if (a.depth !== b.depth) return a.depth - b.depth;
+    if (a.isIndex !== b.isIndex) return a.isIndex ? -1 : 1;
+    return a.name.length - b.name.length;
+  });
+
+  // Process sorted files
+  let content = '';
+  for (const file of allFiles) {
+    content += `<source path="${file.path}">\n`;
+    content += await fs.readFile(file.path, 'utf-8');
+    content += '</source>\n';
+  }
+
   return content;
 }
 
@@ -64,12 +94,12 @@ async function generateSummary(content: string) {
   });
 
   const promptInstructions = `# Direct IG Summary Prompt for Non-Experts
-Given the content of a FHIR Implementation Guide (IG), create a clear, concise summary for patients and non-experts. Follow these guidelines:
+Given the FHIR Implementation Guide (IG) source files above, create a clear, concise summary for patients and non-experts. Follow these guidelines:
 1. Start with a TL;DR. Example:
-**TL;DR:** This guide helps apps share data from continuous glucose monitors (CGMs) with electronic health records (EHRs). It explains how apps can send CGM summaries, glucose readings, and device information to EHRs in a standard way, so doctors and patients can easily access this information.
+**TL;DR:** This guide [...].
 
 2. Then provide direct statement of the IG's purpose and scope. Example:
-The Argo Continuous Glucose Monitoring Implementation Guide (IG) aims to improve the sharing of CGM data between different healthcare systems. It focuses on standardizing how information from CGM devices and apps is sent to EHRs, allowing for better integration and use of this data in patient care.
+The [name of IG] [...].
 
 2. Proceed to describe how the IG addresses specific healthcare ecosystem needs, explaining with clear, straightforward language.
 3. Define technical terms or acronyms in context.
@@ -88,17 +118,22 @@ The goal is to provide a straightforward, factual explanation of the IG's purpos
 
   const request = {
     contents: [
-      { role: 'user', parts: [{ text: promptInstructions }] },
-      { role: 'user', parts: [{ text: content }] }
+      { role: 'user', parts: [{ text: content + "\n\n" + promptInstructions }] },
     ]
   };
+
+  // Create prompts directory if it doesn't exist
+  await fs.mkdir('prompts', { recursive: true });
+
+  // Write the full prompt request to a file
+  await fs.writeFile(path.join('prompts', `${igName}.txt`), JSON.stringify(request, null, 2));
 
   try {
     const response = await generativeModel.generateContent(request);
     const summary = await response.response;
     console.log('Summary:', summary.candidates?.[0].content.parts[0].text);
-    // Optionally, you can save the summary to a file in the repo
-    await fs.writeFile(path.join('summaries', `${repoPath.split('/').pop()}.txt`), summary.candidates?.[0].content.parts[0].text || "");
+    // Save the summary to a file in the summaries directory
+    await fs.writeFile(path.join('summaries', `${igName}.txt`), summary.candidates?.[0].content.parts[0].text || "");
   } catch (error) {
     console.error('Error generating summary:', error);
   }
