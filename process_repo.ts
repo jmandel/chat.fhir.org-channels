@@ -110,25 +110,17 @@ async function generateSummary(content: string) {
     }
   });
 
-  const promptInstructions = `# Direct IG Summary Prompt for Non-Experts
-Given the FHIR Implementation Guide (IG) source files above, create a clear, concise summary for patients and non-experts. Follow these guidelines:
-1. Aim for 150 words total, simple paragraphs of plain text without formatting.
-2. Describe how the IG addresses specific healthcare ecosystem needs, explaining with clear, straightforward language.
-3. Define technical terms or acronyms in context, if you need them.
-4. Do not enumerate the files or profiles, just explain the important content.
-Tone and Style Guide:
-- Use clear, precise language without unnecessary elaboration.
-- Maintain an objective, informative tone throughout.
-- Focus on explaining the IG's content and purpose, not its format or nature as a document.
-- Present information factually, including both capabilities and limitations.
-- Use third-person neutral perspective, referring to "patients," "healthcare providers," or specific user groups relevant to the IG.
-- Do not make claims about benefits or claims that the IG is the best or only solution.
-- Assume the user is aware of FHIR and aware that this IG uses FHIR.
-- Write for 9th grade reading level.
-- Avoid promotional language or unverified claims about benefits
-The goal is to provide a straightforward, factual explanation of the IG's purpose, content, and applications in healthcare, helping non-experts understand its role in health information technology without unnecessary commentary.`;
+  const promptInstructions = `# FHIR IG Analysis
+Given the FHIR Implementation Guide (IG) source files above, provide a structured analysis addressing the following questions:
+
+1. What is this IG trying to do? Articulate its objectives without using jargon.
+2. How are the problems this IG addresses handled today, and what are the limitations of current practices?
+3. What new approaches does this IG introduce, and how does it work in terms of technicial approach?
+
+Provide concise, factual responses to each question based on the content of the IG. Aim for clarity and precision in your analysis. Begin with "# $igName: Analysis"`;
 
   const request = {
+    systemInstruction: "You are a health information technology expert.",
     contents: [
       { role: 'user', parts: [{ text: content + "\n\n" + promptInstructions }] },
     ]
@@ -142,46 +134,74 @@ The goal is to provide a straightforward, factual explanation of the IG's purpos
 
   try {
     const response = await generativeModel.generateContent(request);
-    let summary = response.response.candidates?.[0].content.parts[0].text || "";
-    console.log('InitialSummary:', summary);
+    let analysis = response.response.candidates?.[0].content.parts[0].text || "";
+    console.log('Initial Analysis:', analysis);
 
-    // New step: Refine the summary
-    const refinementQuestions = [
-      "Open with 'This guide ...'",
-      "Use only the abbreviation 'FHIR', since the reader knows what FHIR is.",
-      "Expand any acronyms or technical terms except FHIR",
-      "The user already understand waht FHIR is, so no explanation is needed.",
-      "Explain what the IG does and how it works in direct terms; you do not need to justify it in broad or ultimate terms.",
-      "Write at 12th grade reading level",
-      "Write in the third person",
-      "Combine summary into a single paragraph that will give the reader a good idea of the IG's purpose",
-    ];
+    // Create analysis directory if it doesn't exist
+    await fs.mkdir('analysis', { recursive: true });
 
+    // Save the initial analysis to a file in the analysis directory
+    await fs.writeFile(path.join('analysis', `${igName}.md`), analysis);
+
+    // Refinement stage
     const refinementPrompt = `
-Excellent examples for reference:
-1. This guide explains how patients can get and share their health insurance claims information using the FHIR standard. It provides detailed instructions for insurance companies on how to structure and share claim specifics, including patient demographics, service dates, diagnoses, procedures, and costs. Patients can use this information to understand their healthcare expenses and share their data with applications that help them manage their health. The guide focuses specifically on sharing claims and encounter information, rather than clinical data like doctor's notes or lab results, and does not specify how patients should provide consent for data sharing, leaving that to the individual applications and insurance providers. 
-2. This guide defines "hooks," which are specific points within electronic health record systems where external decision support services can be integrated. These hooks, such as viewing a patient's medical chart, initiating a patient encounter, ordering medications, or scheduling appointments, allow external services to access relevant patient information and provide tailored advice. By specifying the data available at each hook, such as patient allergies when prescribing medication, the guide enables the development of decision support services that enhance the quality and efficiency of healthcare delivery, and it can adapt to different versions of the FHIR standard.
+Here is the analysis of a FHIR Implementation Guide:
 
-Original summary that needs refinement :
-${summary}
+${analysis}
 
-Please refine the original summary to address the following points:
-${refinementQuestions.join('\n')}
+Use the analysis to create a plain language summary of the guide that adheres to these guidelines:
+1. Explain the IG's purpose and how it works.
+2. Write ~200 words in a single paragraph.
+3. Abbreviations other than FHIR, IG, and EHR should be expanded for clarity, and technical terms should be explained.
+4. Write in clear prose without jargon.
+5. Use third-person perspective.
+6. Maintain an objective, informative tone throughout.
+7. Present information factually, including both capabilities and limitations.
+8. Avoid promotional language or unverified claims about benefits.
 
 Provide only the refined summary as your response, without any additional explanations or comments.`;
 
     const refinementRequest = {
+      systemInstruction: "You are a skilled communicator with expertise in health information technology and a knack for clear, concise writing.",
       contents: [
         { role: 'user', parts: [{ text: refinementPrompt }] },
       ]
     };
 
+    await fs.writeFile(path.join('prompts', `${igName}-refinement.txt`), JSON.stringify(refinementRequest, null, 2));
     const refinementResponse = await generativeModel.generateContent(refinementRequest);
-    const refinedSummary = refinementResponse.response.candidates?.[0].content.parts[0].text || summary;
+    let refinedSummary = refinementResponse.response.candidates?.[0].content.parts[0].text || analysis;
 
-    console.log('Refined Summary:', refinedSummary);
+    // Check if the refinedSummary contains explanations of FHIR, IG, or EHR
+    const needsFinalRefinement = /(Fast Healthcare Interoperability Resources|Implementation Guide|Electronic Health Record)/i.test(refinedSummary);
+
+    if (needsFinalRefinement) {
+      // Additional refinement to avoid explaining FHIR, IG, and EHR
+      const finalRefinementPrompt = `
+Here's a summary of a FHIR Implementation Guide:
+
+${refinedSummary}
+
+Please revise this summary to adhere to the following additional guideline:
+- Do not explain or expand the acronyms FHIR, IG, or EHR. Just use the acronyms and assume the reader is familiar with these terms.
+
+Provide only the final refined summary as your response, without any additional explanations or comments.`;
+
+      const finalRefinementRequest = {
+        systemInstruction: "You are a skilled communicator with expertise in health information technology and a knack for clear, concise writing.",
+        contents: [
+          { role: 'user', parts: [{ text: finalRefinementPrompt }] },
+        ]
+      };
+
+      await fs.writeFile(path.join('prompts', `${igName}-final-refinement.txt`), JSON.stringify(finalRefinementRequest, null, 2));
+      const finalRefinementResponse = await generativeModel.generateContent(finalRefinementRequest);
+      refinedSummary = finalRefinementResponse.response.candidates?.[0].content.parts[0].text || refinedSummary;
+    }
+
+    console.log('Final Refined Summary:', refinedSummary);
     
-    // Save the refined summary to a file in the summaries directory
+    // Save the final refined summary to a file in the summaries directory
     await fs.writeFile(path.join('summaries', `${igName}.md`), refinedSummary);
   } catch (error) {
     console.error('Error generating or refining summary:', error);
