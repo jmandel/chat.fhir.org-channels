@@ -116,7 +116,7 @@ Given the FHIR Implementation Guide (IG) source files above, provide a structure
 1. What is this IG trying to do? Articulate its objectives without using jargon.
 2. How were the problems this IG addresses handled previously, and what limitations led to the development of this IG? (Only use information provided in the input files; do not speculate or make assumptions.)
 3. What approaches does this IG introduce, and how does it work in terms of technicial approach?
-4. What are important scope decisions, design choices, or contextual factors?
+4. What are important scope decisions, design choices, or contextual factors? (Only use information provided in the input files; do not speculate or make assumptions.)
 
 Provide concise, factual responses to each question based on the content of the IG. Aim for clarity and precision in your analysis. Begin with "# $igName: Analysis"`;
 
@@ -152,13 +152,12 @@ ${analysis}
 
 Use the analysis to create a plain language summary of the guide that adheres to these guidelines:
 1. Explain the IG's purpose and how it works.
-2. Write ~200 words in a single paragraph.
-3. Abbreviations other than FHIR, IG, and EHR should be expanded for clarity, and technical terms should be explained.
-4. Write in clear prose without jargon.
-5. Use third-person perspective.
-6. Maintain an objective, informative tone throughout.
-7. Present information factually, including capabilities and (if any are defined in the analysis) limitations.
-8. Avoid promotional language or unverified claims about benefits.
+2. Write ~200 words in a single paragraph for a general audience.
+3. Write in clear prose without jargon.
+4. Use third-person perspective.
+5. Maintain an objective, informative tone throughout.
+6. Present information factually, including capabilities and (if any are noted in the analysis) limitations.
+7. Avoid promotional language or unverified claims about benefits.
 
 Provide only the refined summary as your response, without any additional explanations or comments.`;
 
