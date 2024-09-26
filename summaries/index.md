@@ -1,968 +1,968 @@
-# [bser](https://github.com/HL7/bser)
+# [bser](https://build.fhir.org/ig/HL7/bser) ([source](https://github.com/HL7/bser))
 
 The BSeR IG aims to improve how healthcare providers refer patients to other providers or community organizations for specific health needs, such as diabetes prevention or tobacco cessation. Currently, referrals often involve sharing a patient's entire medical history, which can be inefficient and raise privacy concerns. This IG leverages FHIR to create a structured approach for referrals, ensuring that only the minimum necessary information is shared. It defines what data is needed for different referral types and uses FHIR resources to manage the referral process, track its status, and link requests with feedback. The guide supports various methods for exchanging information and is designed to align with existing health information technology standards and HIPAA regulations on patient privacy. While the IG aims to improve provider engagement and care coordination by enabling the sharing of patient outcomes, its actual impact may vary depending on implementation and adoption across healthcare systems. The guide is designed to be adaptable for future referral types, but its long-term effectiveness will depend on ongoing updates and industry support. 
 
 ---
 
-# [bulk-data](https://github.com/HL7/bulk-data)
+# [bulk-data](https://build.fhir.org/ig/HL7/bulk-data) ([source](https://github.com/HL7/bulk-data))
 
 The Bulk Data Access IG defines a standardized method for exchanging large healthcare datasets between computer systems using FHIR. It addresses the limitations of existing approaches, which often involve complex and inefficient custom processes. The IG introduces a specific API operation called "$export" that enables clients, such as EHRs or health information exchanges, to request bulk data exports. The process is asynchronous: a client initiates a request and periodically checks its status until the data is ready for download. The data is then provided as files in a structured format like newline-delimited JSON. The IG emphasizes secure data exchange using Transport Layer Security (TLS) and OAuth 2.0 for authorization, along with robust access controls. It offers flexibility by allowing servers to define their data packaging strategies and provides options for filtering and including related data. While the asynchronous approach is designed to handle large datasets efficiently, the IG also acknowledges potential limitations, such as partial export failures. Servers are encouraged to clearly document their bulk data export capabilities to facilitate client integration. 
 
 ---
 
-# [cancer-reporting](https://github.com/HL7/cancer-reporting)
+# [cancer-reporting](https://build.fhir.org/ig/HL7/cancer-reporting) ([source](https://github.com/HL7/cancer-reporting))
 
 This IG defines a standardized way to exchange electronic information about cancer pathology (laboratory analysis of tissues potentially affected by cancer) between healthcare systems using FHIR. It aims to replace older, less flexible methods with a modern approach that allows computer systems to easily understand and process the data. The guide specifies how to structure cancer pathology data using FHIR and draws on existing standards like the Standard for Sharing Cancer Data on FHIR and MedMorph to ensure compatibility with different systems, including pathology labs, hospitals and clinics (EHRs), and central cancer registries. The guide focuses on using structured data from electronic Cancer Protocols, which are digital checklists used by pathologists, to enable automated analysis and reporting. It acknowledges ongoing discussions about specific terminology choices and is primarily designed for the US healthcare context. While the guide offers a potential solution for more efficient data sharing in cancer care, it currently relies on specific data sources and may require further development to address broader needs. 
 
 ---
 
-# [capstmt](https://github.com/HL7/capstmt)
+# [capstmt](https://build.fhir.org/ig/HL7/capstmt) ([source](https://github.com/HL7/capstmt))
 
 This IG addresses challenges in how healthcare software systems describe their capabilities when exchanging information using FHIR. Currently, the FHIR CapabilityStatement, which lists what a system can do, is becoming overly complex and lacks detail. This IG introduces a new approach called the Application Feature Framework. Instead of just basic descriptions, systems can now use a predefined set of "features" – essentially codes that represent specific functions – and their associated values to describe what they can do. This allows systems to directly ask each other about specific features using a new operation called "$feature-query," and it enables automatic compatibility checks before data exchange. The framework relies on standardized terminology to ensure all systems understand the features in the same way. While this approach offers a more efficient and detailed way to describe system capabilities, it also necessitates that systems negotiate which features they require before exchanging information, as they may not list all features by default. The framework is designed to be flexible, allowing features to describe capabilities at different levels of detail, and it can be extended to include new features as needed. 
 
 ---
 
-# [CardX-HTN-MNG](https://github.com/HL7/CardX-HTN-MNG)
+# [CardX-HTN-MNG](https://build.fhir.org/ig/HL7/CardX-HTN-MNG) ([source](https://github.com/HL7/CardX-HTN-MNG))
 
 The CardX Hypertension Management IG aims to improve the way patients and healthcare providers share and manage blood pressure information. It addresses the limitations of traditional blood pressure monitoring, which often relies on infrequent measurements taken during clinic visits. This IG introduces a standardized method for electronically exchanging home blood pressure readings, also known as self-measured blood pressure (SMBP), between patients' devices, health tracking applications, and EHR systems. By using FHIR, the IG enables the secure and reliable transfer of SMBP data. This allows healthcare providers to access a more comprehensive view of a patient's blood pressure patterns, potentially leading to more timely and informed treatment decisions. While the IG promotes a more proactive approach to hypertension management, it's important to note that its effectiveness depends on factors such as patient adherence to home monitoring and the integration of FHIR-compatible systems within healthcare settings. The IG's future iterations plan to incorporate additional elements relevant to hypertension management, including lifestyle modifications and medication adherence. 
 
 ---
 
-# [cardx-ig](https://github.com/HL7/cardx-ig)
+# [cardx-ig](https://build.fhir.org/ig/HL7/cardx-ig) ([source](https://github.com/HL7/cardx-ig))
 
 The CardX Hypertension Management IG aims to enhance how hypertension is diagnosed and managed. It focuses on enabling the seamless and standardized exchange of SMBP. The IG achieves this by defining FHIR profiles for structuring SMBP data, including readings, measurement times, and patient identifiers. These profiles ensure that data is consistently formatted, allowing different systems like blood pressure devices, health apps, and EHRs to understand and exchange information. The IG leverages the FHIR standard for exchanging healthcare information electronically. By promoting interoperability, the IG aims to improve the quality and frequency of data available to healthcare professionals, enabling more effective monitoring of patients' blood pressure, timely adjustments to treatment plans, and ultimately, better management of hypertension. While the IG focuses on core SMBP data exchange, it acknowledges that future versions might incorporate additional data elements and functionalities to support more comprehensive hypertension care. It builds upon existing standards and aligns with established hypertension management guidelines, emphasizing patient involvement and a vendor-neutral approach to ensure broad applicability across various healthcare settings and technologies. 
 
 ---
 
-# [carin-bb](https://github.com/HL7/carin-bb)
+# [carin-bb](https://build.fhir.org/ig/HL7/carin-bb) ([source](https://github.com/HL7/carin-bb))
 
 The CARIN Consumer Directed Payer Data Exchange IG aims to improve how patients access and use their health insurance information. It defines a standard way for insurance companies to share patient claims and encounter data with third-party applications authorized by the patient, like smartphone apps or online tools. This is achieved through the HL7 FHIR standard, a modern approach to exchanging healthcare data electronically. The IG specifies how this data should be structured and accessed through secure APIs, ensuring that only approved apps can retrieve the information. It also addresses challenges like managing proprietary codes, handling missing data, and ensuring the information is understandable by both computers and humans. While the IG promotes interoperability and patient access to data, it's important to note that some aspects, like data licensing for certain codes, might require attention from app developers. By aligning with regulations and industry standards, this IG strives to make it easier for patients to utilize their health data for managing expenses, understanding benefits, and making informed healthcare decisions through the applications they choose. 
 
 ---
 
-# [carin-digital-insurance-card](https://github.com/HL7/carin-digital-insurance-card)
+# [carin-digital-insurance-card](https://build.fhir.org/ig/HL7/carin-digital-insurance-card) ([source](https://github.com/HL7/carin-digital-insurance-card))
 
 The CARIN for Digital Insurance Card IG aims to create a standardized way to represent and exchange health insurance information digitally, moving away from traditional physical cards. It leverages FHIR to structure insurance card data, enabling patients to display their information digitally through mobile apps and share verifiable cards with healthcare providers using scannable QR codes or SMART Health Links. This approach addresses challenges associated with physical cards, such as loss, manual data entry errors, and lack of standardization. The IG focuses on common data elements found on United States insurance cards, empowering patients to manage their information while promoting interoperability between healthcare systems. However, it doesn't encompass all possible data elements and primarily caters to the US healthcare context. By using FHIR and SMART Health Cards, the IG aims to ensure secure and verifiable exchange of insurance information while adhering to privacy regulations like HIPAA. The guide acknowledges that it covers the most frequent data elements (80/20 rule) but allows for future expansion through the use of FHIR extensions. 
 
 ---
 
-# [case-reporting](https://github.com/HL7/case-reporting)
+# [case-reporting](https://build.fhir.org/ig/HL7/case-reporting) ([source](https://github.com/HL7/case-reporting))
 
 The eCR FHIR IG seeks to improve how healthcare providers report cases of certain diseases to public health agencies. It leverages FHIR to create a more efficient and automated reporting process. Traditionally, reporting involved manual methods like fax or online forms, leading to delays and inefficiencies. This IG introduces a standardized approach using FHIR, potentially enabling automated case detection within EHR systems based on diagnosis codes. It defines what information should be included in reports, ensuring consistency and the ability to exchange data seamlessly. The IG also enables public health agencies to send standardized responses back to providers. While it aims for automation, it acknowledges that a phased approach may be necessary, allowing for both automated and manual reporting methods. The IG aligns with existing health data standards in the United States and is a collaborative effort involving various stakeholders. It anticipates future developments to further harmonize FHIR resources for public health reporting. 
 
 ---
 
-# [ccda-on-fhir](https://github.com/HL7/ccda-on-fhir)
+# [ccda-on-fhir](https://build.fhir.org/ig/HL7/ccda-on-fhir) ([source](https://github.com/HL7/ccda-on-fhir))
 
 This IG addresses the challenge of exchanging patient information between healthcare systems that use different data standards: the older Consolidated Clinical Document Architecture (C-CDA) and the newer FHIR. It provides a method for translating clinical documents from C-CDA to FHIR and vice versa. This is achieved by creating specialized FHIR structures that mirror C-CDA document types and by defining detailed rules for converting specific data elements between the two standards. The IG leverages existing standards like the US Core FHIR profiles and focuses initially on common clinical areas like problems, allergies, medications, and immunizations. While the guide aims to automate the translation process, it acknowledges that perfect conversion may not always be possible due to inherent differences between C-CDA and FHIR. The IG represents a collaborative effort and will be updated as needed to accommodate the evolution of both standards. It offers a practical approach to improve the sharing of patient data, but it's crucial to understand that the translation process may not be entirely lossless in all cases. 
 
 ---
 
-# [CDA-ccda-2.1-sd](https://github.com/HL7/CDA-ccda-2.1-sd)
+# [CDA-ccda-2.1-sd](https://build.fhir.org/ig/HL7/CDA-ccda-2.1-sd) ([source](https://github.com/HL7/CDA-ccda-2.1-sd))
 
 The C-CDA 3.0 IG aims to improve how digital health information, specifically clinical notes, is shared between different healthcare systems. Currently, clinical notes are often stored as unstructured text, making it difficult for computer systems to understand and use the information effectively. C-CDA 3.0 addresses this by introducing a standardized format based on the HL7 Clinical Document Architecture (CDA) standard. It uses a set of templates that define the structure and content of different types of clinical notes, such as discharge summaries and progress notes. These templates encourage the use of structured data, which involves representing clinical information with codes from standard terminologies, making it easier for computers to process. While C-CDA 3.0 promotes structured data, it also retains a human-readable narrative section for clinicians to access. This IG aligns with the United States Core Data for Interoperability (USCDI), a set of data elements for health information exchange, and emphasizes documenting the source and author of information. Although C-CDA 3.0 seeks to improve interoperability by providing a common format for clinical notes, it's essential to note that successful implementation depends on factors like the adoption of the standard by vendors and healthcare organizations and the ability of these systems to accurately map their existing data to the C-CDA 3.0 structure. 
 
 ---
 
-# [CDA-ccda-2.2](https://github.com/HL7/CDA-ccda-2.2)
+# [CDA-ccda-2.2](https://build.fhir.org/ig/HL7/CDA-ccda-2.2) ([source](https://github.com/HL7/CDA-ccda-2.2))
 
 The Consolidated Clinical Document Architecture (C-CDA) 3.0 IG aims to improve how EHRs share patient information, specifically clinical notes, in the United States. It achieves this by creating a standardized structure and format for these documents, facilitating easier exchange between different EHR systems. Currently, EHRs often use varying methods for representing and sharing data, hindering interoperability and making it difficult for healthcare providers to access information from different sources. C-CDA 3.0 addresses this by using a standardized approach based on the HL7 Clinical Document Architecture (CDA) standard and a library of templates to structure clinical notes. These templates define the overall structure of different note types (e.g., Consultation Note), organize content into sections (e.g., Allergies, Medications), and represent specific data elements within those sections. This structure also incorporates the U.S. Core Data for Interoperability (USCDI) standards and emphasizes clear documentation practices, including human-readable text alongside structured data. While C-CDA 3.0 promotes consistency and data exchange, challenges may arise in ensuring adherence to template definitions and maintaining backward compatibility with older C-CDA versions. The guide relies on community input for ongoing development and improvement. 
 
 ---
 
-# [CDA-ccda](https://github.com/HL7/CDA-ccda)
+# [CDA-ccda](https://build.fhir.org/ig/HL7/CDA-ccda) ([source](https://github.com/HL7/CDA-ccda))
 
 The C-CDA IG aims to improve how EHRs share patient information. It provides a standardized way to create digital documents like discharge summaries and progress notes, ensuring that different EHR systems can understand and exchange this information. The guide uses a structured format called C-CDA, which defines templates for different medical document types, specifying the necessary information and how it should be organized. This creates a common language for EHRs, allowing them to generate and interpret these documents consistently. The guide also aligns with national standards for data exchange, supports older document formats, and offers flexibility for including additional information. While it promotes clear and accurate data exchange, the guide's effectiveness relies on consistent implementation across different EHR systems. It also acknowledges that some information may be missing or unknown and provides ways to represent this. Overall, the C-CDA IG offers a technical framework for improving the interoperability of health information, but its success depends on widespread adoption and adherence to its specifications. 
 
 ---
 
-# [CDA-core-sd](https://github.com/HL7/CDA-core-sd)
+# [CDA-core-sd](https://build.fhir.org/ig/HL7/CDA-core-sd) ([source](https://github.com/HL7/CDA-core-sd))
 
 This IG aims to improve the sharing and understanding of clinical documents, such as medical records, between different EHR systems. It achieves this by leveraging FHIR to represent the Clinical Document Architecture (CDA), a widely used format for clinical documents. The guide provides a way to structure these documents using a standardized language called Extensible Markup Language (XML) and links the information within them to a common medical model, ensuring that different systems interpret the data consistently. While the guide facilitates validation and querying of CDA documents using FHIR tools, it's important to note that it doesn't replace CDA itself. Clinical Document Architecture remains the primary standard, and understanding it is still necessary. The guide acknowledges that CDA is designed for human readability and offers flexibility for extensions to accommodate specific needs. It also emphasizes the importance of backward compatibility, security, and the ongoing efforts to achieve complete understanding of the meaning of clinical information across systems. The guide serves as a bridge between existing CDA practices and newer FHIR-based approaches, potentially enabling smoother exchange and processing of clinical data. 
 
 ---
 
-# [cda-eyecare](https://github.com/HL7/cda-eyecare)
+# [cda-eyecare](https://build.fhir.org/ig/HL7/cda-eyecare) ([source](https://github.com/HL7/cda-eyecare))
 
 The CDA-EyeCare IG aims to improve how EHRs store and share eye care information. It focuses on creating a standardized way to represent data from common eye exams, such as visual acuity tests, refraction measurements, and assessments of the back of the eye. Currently, many eye care EHRs collect this information, but the lack of a common format makes it difficult to exchange data between different systems. This IG addresses this issue by using the Health Level Seven (HL7) Clinical Document Architecture (CDA) standard, a widely adopted format for exchanging healthcare data. It defines templates based on the CDA Physical Exam section to capture specific eye care data in a structured way. This approach ensures that different eye care systems can easily understand and share information, which can improve efficiency, reduce data loss, and minimize errors when transferring patient records or coordinating care. While the IG leverages existing standards and terminology, it primarily focuses on specialty eye care, which has not always been a priority in broader healthcare data exchange efforts. The CDA-EyeCare IG offers a practical solution for improving interoperability in eye care by providing a structured, standardized approach for representing and exchanging common eye exam data. 
 
 ---
 
-# [CDA-IPS](https://github.com/HL7/CDA-IPS)
+# [CDA-IPS](https://build.fhir.org/ig/HL7/CDA-IPS) ([source](https://github.com/HL7/CDA-IPS))
 
 This IG defines a standard way to exchange a basic set of patient information, known as the International Patient Summary (IPS), between different healthcare systems. The guide aims to improve the sharing of crucial patient data, especially during emergencies or international travel, by creating a consistent and understandable format for electronic health records. It uses Health Level Seven Clinical Document Architecture Release 2 (HL7 CDA R2), a widely accepted standard for health information, to structure the IPS content. The guide specifies how to organize essential patient details, like allergies, medications, and past diagnoses, within the document. It also encourages the use of standard medical terminologies, like Systematized Nomenclature of Medicine -- Clinical Terms (SNOMED CT) and Logical Observation Identifiers Names and Codes (LOINC), to ensure clear communication across different languages and systems. The IPS is intentionally concise, focusing on information needed for unplanned or immediate care, and it is designed to be relevant regardless of the patient's specific medical condition or the healthcare provider's specialty. While it aims to be globally applicable, the guide acknowledges that it may not cover every possible medical scenario or data element. It also emphasizes the importance of documenting the origin of the information and supports the inclusion of translated text for better accessibility. 
 
 ---
 
-# [cdmh](https://github.com/HL7/cdmh)
+# [cdmh](https://build.fhir.org/ig/HL7/cdmh) ([source](https://github.com/HL7/cdmh))
 
 The CDMH IG aims to simplify health data research by enabling researchers to more easily access and analyze data from various sources. Currently, health data is often stored in different formats, making it challenging to combine and study. This IG addresses this issue by providing a standardized method for translating data from four common health data formats (Sentinel, PCORnet Common Data Model, Informatics for Integrating Biology and the Bedside, and Observational Medical Outcomes Partnership) into the FHIR standard. The IG achieves this by defining mappings between the data elements in each format and corresponding FHIR resources, including instructions on handling specific data types like dates and medical terminologies. It leverages existing standards like US Core profiles and the Biomedical Research Integrated Domain Group (BRIDG) model as an intermediary step in the translation process. While primarily focused on observational research data rather than clinical data, the IG promotes the development of open-source tools to automate data translation and acknowledges the potential future use of FHIR as the primary intermediary model for data harmonization. This initiative complements other efforts like the Data Access Framework for Research IG, which outlines broader workflows for data extraction and querying. By facilitating easier access to and analysis of diverse health datasets, the CDMH IG can potentially accelerate research progress and improve healthcare outcomes. 
 
 ---
 
-# [cds-hooks-library](https://github.com/HL7/cds-hooks-library)
+# [cds-hooks-library](https://build.fhir.org/ig/HL7/cds-hooks-library) ([source](https://github.com/HL7/cds-hooks-library))
 
 The CDS Hooks Library IG aims to create a standard way for clinical decision support (CDS) tools to work with EHRs. Currently, integrating these tools, which provide advice during healthcare decisions, requires custom programming for each EHR. This IG introduces a standardized approach using "hooks," which are specific points in the clinical workflow where a CDS tool can be activated. For example, a hook could be triggered when a doctor is signing an order or viewing a patient's chart. When a hook is triggered, the EHR sends a request to the CDS tool with relevant patient information using the FHIR standard. The CDS tool then processes the request and provides recommendations or advice back to the EHR, which displays it to the clinician. The IG defines a maturity model for hooks, indicating their level of development and adoption, and allows for different versions of FHIR to be used. It focuses on specific workflow steps where CDS can be most effective and was developed through an open community process. The guide also includes a process for retiring outdated hooks. While CDS Hooks offers a standardized approach to improve interoperability between CDS tools and EHRs, its widespread adoption and ultimate impact on healthcare decisions depend on implementation by EHR vendors and CDS developers.
 
 ---
 
-# [cds-hooks](https://github.com/HL7/cds-hooks)
+# [cds-hooks](https://build.fhir.org/ig/HL7/cds-hooks) ([source](https://github.com/HL7/cds-hooks))
 
 The CDS Hooks IG aims to standardize how clinical decision support (CDS) tools, which provide doctors with advice during patient care, integrate with EHRs and other health information technology systems. Currently, connecting these tools requires significant custom work, creating expense and compatibility challenges. This IG introduces a new approach called "CDS Hooks," which offers a standardized way for EHRs and CDS tools to communicate. It defines specific points in the EHR workflow, called "hooks," that trigger CDS tools to provide recommendations. When triggered, the EHR sends relevant patient data to the CDS tool, which processes it and returns advice to the EHR for display to the clinician. This approach includes features like a system for CDS tools to advertise their capabilities, the ability for EHRs to provide necessary patient data to the tools, and the use of "cards" to display CDS tool recommendations within the EHR. CDS Hooks emphasizes secure data exchange and aims to be flexible enough to accommodate a wide range of tools and systems. While it promotes easier integration and broader adoption of CDS tools, successful implementation depends on factors like ensuring CDS tools respond quickly and maintaining robust security measures. The IG leverages the FHIR standard for data exchange and is being developed with input from various stakeholders. 
 
 ---
 
-# [cgm](https://github.com/HL7/cgm)
+# [cgm](https://build.fhir.org/ig/HL7/cgm) ([source](https://github.com/HL7/cgm))
 
 The Argo Continuous Glucose Monitoring IG seeks to standardize how continuous glucose monitoring (CGM) data is shared between different computer systems like patient apps, EHR systems, and research databases. It addresses the current limitations of data sharing, such as manual processes and incompatible formats, which can lead to information being isolated in specific systems, inefficient workflows for healthcare providers, and difficulties in conducting large-scale research. The IG leverages the FHIR standard to establish a common data format and API for secure data exchange. It defines specific FHIR profiles for representing various types of CGM data and outlines a standardized workflow for data submission, including authorization, patient identification, and data preparation. Notably, the IG utilizes SMART Health Links for ad-hoc sharing with systems that may not have full FHIR integration. While aiming to use standardized codes for observations and reports, the IG acknowledges limitations in existing code sets and employs temporary solutions. It supports both scheduled and manual data submissions, offering flexibility for different use cases, and accommodates both tightly and loosely coupled system integrations through API-based and SMART Health Links approaches. By understanding the IG's design choices and capabilities, implementers can make informed decisions when developing systems for exchanging CGM data. 
 
 ---
 
-# [cimi-labs](https://github.com/HL7/cimi-labs)
+# [cimi-labs](https://build.fhir.org/ig/HL7/cimi-labs) ([source](https://github.com/HL7/cimi-labs))
 
 The CIMI Laboratory Sub-Types IG seeks to standardize the exchange of common laboratory test results between electronic health systems. It addresses the challenge of varying data formats across different systems by leveraging FHIR. The IG defines specific templates, called profiles, for common lab test types like blood tests and urine tests, ensuring consistent representation of quantitative, qualitative, narrative, and ordinal results. It uses LOINC to uniquely identify each test and establishes controlled vocabularies to ensure uniform terminology for findings. While the IG focuses on the US healthcare context and does not cover microbiology tests, it mandates support for core data elements to ensure interoperability. For document-based results, it utilizes the DiagnosticReport resource instead of Observation due to limitations in handling attachments. The IG emphasizes adherence to FHIR security and privacy guidelines for protecting sensitive patient data but does not address all potential security and privacy concerns. By adopting the IG's recommendations, electronic health systems can improve the exchange and interpretation of lab results, potentially enhancing patient care and research capabilities.
 
 ---
 
-# [cimi-vital-signs](https://github.com/HL7/cimi-vital-signs)
+# [cimi-vital-signs](https://build.fhir.org/ig/HL7/cimi-vital-signs) ([source](https://github.com/HL7/cimi-vital-signs))
 
 The Clinical Information Modeling Initiative (CIMI) Vital Signs IG aims to improve how healthcare systems record and exchange common vital signs like heart rate, blood pressure, and temperature. Currently, different systems may use varying methods, making it difficult to share and compare this data. This IG addresses the issue by using FHIR to create a consistent way to represent vital signs. It defines specific FHIR profiles for each vital sign, including standard Logical Observation Identifiers Names and Codes (LOINC) for clear identification, mandatory data elements like the patient and time of measurement, and extensions for additional information like body position and device used. While currently focused on the US healthcare system, the IG emphasizes the importance of using standardized terminology and provides guidance on tracking data origin. It also includes profiles for blood pressure panels and average blood pressure measurements, recognizing common clinical practices and the increasing use of home monitoring devices. The IG aims to improve interoperability, particularly with wearable devices and EHRs, but it is limited in scope to the US and relies on the implementation of "must support" elements by all systems for optimal effectiveness.
 
 ---
 
-# [codex-radiation-therapy](https://github.com/HL7/codex-radiation-therapy)
+# [codex-radiation-therapy](https://build.fhir.org/ig/HL7/codex-radiation-therapy) ([source](https://github.com/HL7/codex-radiation-therapy))
 
 The CodeX™ Radiation Therapy IG aims to improve how radiation therapy information is shared between different computer systems in healthcare, such as EHRs and specialized oncology systems. Currently, these systems often store information in incompatible formats, making it difficult to exchange data. This IG leverages the FHIR standard to define a consistent way to represent and exchange information about radiation therapy treatments. By using FHIR resources and extensions, the IG enables the exchange of structured data about treatment prescriptions, plans, and summaries. The IG builds upon existing standards like minimal Common Oncology Data Elements (mCODE) and aligns with specifications from Integrating the Healthcare Enterprise – Radiation Oncology (IHE-RO). It also adheres to US Core data standards, promoting broader interoperability. While the IG aims to facilitate automated data exchange and improve the accuracy of information sharing, its success depends on the adoption and implementation by various healthcare systems and software vendors. 
 
 ---
 
-# [Content-Management-Infrastructure-IG](https://github.com/HL7/Content-Management-Infrastructure-IG)
+# [Content-Management-Infrastructure-IG](https://build.fhir.org/ig/HL7/Content-Management-Infrastructure-IG) ([source](https://github.com/HL7/Content-Management-Infrastructure-IG))
 
 The Content-Management-Infrastructure IG seeks to address challenges in managing and sharing digital healthcare knowledge, such as clinical guidelines, quality measures, and patient questionnaires. It proposes a standardized approach using FHIR to represent this knowledge consistently. This involves defining profiles for different knowledge types, implementing version control to track changes, and enabling the packaging of related resources for easier sharing. The IG also suggests the use of specialized servers called artifact repositories to store and manage these resources, promoting discoverability and reusability. While the IG aims to improve consistency and interoperability, its reliance on FHIR and the adoption of its principles require careful consideration. Additionally, the decentralized nature of the proposed ecosystem may present challenges in coordinating updates and ensuring widespread adoption. The IG's success depends on its ability to overcome these challenges and foster collaboration among healthcare organizations and technology developers. 
 
 ---
 
-# [cqf-measures](https://github.com/HL7/cqf-measures)
+# [cqf-measures](https://build.fhir.org/ig/HL7/cqf-measures) ([source](https://github.com/HL7/cqf-measures))
 
 This IG aims to standardize the creation and sharing of digital quality measures (dQMs), which are electronic rules used to assess healthcare quality. It addresses limitations of previous formats like the Health Quality Measures Format, which lacked the precision needed for electronic systems. The guide leverages FHIR and Clinical Quality Language (CQL), a language for expressing clinical logic. By combining FHIR and CQL, the IG enables the creation of dQMs that are machine-readable, shareable, and precise. The guide focuses on making dQMs computable to automate evaluation and reporting, aligning with existing standards for broader adoption. It also employs a layered approach to accommodate different implementation capabilities and provides guidance on managing medical terminologies and defining data requirements for dQM evaluation. While it promotes consistency and automation, the guide's reliance on specific technologies may present challenges for organizations lacking the necessary infrastructure or expertise. Overall, the IG aims to improve data collection, accuracy in quality reporting, and ultimately enhance healthcare quality, though its success depends on widespread adoption and effective implementation. 
 
 ---
 
-# [cqf-recommendations](https://github.com/HL7/cqf-recommendations)
+# [cqf-recommendations](https://build.fhir.org/ig/HL7/cqf-recommendations) ([source](https://github.com/HL7/cqf-recommendations))
 
 This IG aims to improve healthcare by enabling computers to understand and use clinical practice guidelines (CPGs), which are recommendations for treating specific health conditions. Currently, these guidelines are often written in plain language, making it difficult for EHRs and other computer systems to utilize them effectively. This IG addresses this challenge by introducing a standardized way to represent CPGs using the FHIR standard. This involves creating structured templates for different parts of a CPG, like recommendations and patient characteristics, and using a common language for clinical concepts to ensure everyone understands them the same way. It also involves representing the decision-making logic of guidelines in a computer-readable format called Clinical Quality Language (CQL). By packaging these components together, the IG facilitates the sharing and implementation of CPGs across different healthcare systems, potentially leading to more consistent and efficient care. However, successful implementation depends on factors like the technical capabilities of healthcare systems and the involvement of various stakeholders, including guideline developers and healthcare providers, in the process. The IG acknowledges that different organizations may have varying levels of readiness for adopting these new approaches and aims to support a range of implementation complexities. 
 
 ---
 
-# [cql-ig](https://github.com/HL7/cql-ig)
+# [cql-ig](https://build.fhir.org/ig/HL7/cql-ig) ([source](https://github.com/HL7/cql-ig))
 
 This IG defines a standard way to use the Clinical Quality Language (CQL) with FHIR to represent and share rules for processing EHR. It aims to improve consistency and interoperability in healthcare by ensuring that different computer systems can understand and apply the same logic when analyzing patient data. The guide achieves this by packaging CQL rules as FHIR "Library" resources, clearly defining the data needed to apply these rules, and leveraging FHIR profiles for detailed data modeling. It also addresses practical challenges like handling missing information and managing changes to rules over time. While the IG focuses on quality measures, its principles are broadly applicable to various healthcare scenarios. It assumes familiarity with CQL and FHIR and emphasizes the importance of standardized terminologies. However, the effectiveness of this approach relies on widespread adoption and consistent implementation across different healthcare systems. 
 
 ---
 
-# [cql](https://github.com/HL7/cql)
+# [cql](https://build.fhir.org/ig/HL7/cql) ([source](https://github.com/HL7/cql))
 
 This IG focuses on standardizing how clinical knowledge, such as guidelines for medical decisions and healthcare performance evaluations, is written and shared electronically. Currently, inconsistent methods for representing this knowledge hinder its widespread use and exchange between different computer systems. This IG introduces the Clinical Quality Language (CQL), a human-readable language for writing clinical knowledge, and the Expression Logical Model (ELM), a machine-readable format for that knowledge. CQL is translated into ELM, enabling knowledge sharing across systems regardless of the original language. This approach offers flexibility by being compatible with various data models and aligning with existing standards like the Health Quality Measures Format and the Knowledge Artifact Specification. Notably, CQL integrates with FHIR and utilizes FHIRPath, a language for navigating FHIR data. However, the IG acknowledges that implementation variations are possible due to optional features, and the interpretation of knowledge can change over time depending on how medical terminology is updated. The evaluation of CQL expressions also depends on the specific context, such as the patient or practitioner involved. 
 
 ---
 
-# [crmi-ig](https://github.com/HL7/crmi-ig)
+# [crmi-ig](https://build.fhir.org/ig/HL7/crmi-ig) ([source](https://github.com/HL7/crmi-ig))
 
 The FHIR IG for Canonical Resource Management Infrastructure aims to improve the management and sharing of healthcare knowledge artifacts like questionnaires, clinical guidelines, and quality measures. These artifacts are often built using medical terminologies that change over time, leading to potential inconsistencies. The IG introduces standardized ways to package these artifacts with clear information about their dependencies, including specific versions of terminologies. This ensures that everyone using an artifact, such as EHR systems, understands its content and intended use, even as terminologies evolve. The IG also defines ways to create packages tailored to specific needs, for example, by including only necessary components or adapting to environments with limited access to terminology services. Additionally, it proposes standard ways for systems to store and share these artifacts, promoting interoperability between different platforms. While the IG aims to improve consistency and reliability, it's important to note that widespread adoption and implementation are needed to realize these potential benefits. The IG does not mandate a central authority for managing artifacts, instead encouraging a decentralized ecosystem of interoperable repositories, which may pose challenges for coordination and governance. 
 
 ---
 
-# [data-access-policies](https://github.com/HL7/data-access-policies)
+# [data-access-policies](https://build.fhir.org/ig/HL7/data-access-policies) ([source](https://github.com/HL7/data-access-policies))
 
 This IG defines a standardized approach to controlling access to healthcare data, aiming to improve consistency and interoperability across different systems. It leverages the FHIR standard, specifically the "Permission" resource, to establish granular rules about who can access what data and under what conditions. These rules can be based on factors like a user's role (e.g., doctor or nurse), the intended purpose of data use (e.g., treatment or research), the type of data being accessed, and patient consent preferences. The guide also explores incorporating security labels to categorize data sensitivity and using attribute-based access control for more fine-grained permissions based on specific attributes or the context of a request. It addresses how to combine multiple access rules, manage exceptions like emergency access, and align with overarching organizational policies. However, the reliance on FHIR necessitates familiarity with this standard, and the guide acknowledges that contextual factors like the relationship between the data requester and the patient can influence access decisions, which may require additional considerations beyond the scope of the technical implementation. 
 
 ---
 
-# [davinci-alerts](https://github.com/HL7/davinci-alerts)
+# [davinci-alerts](https://build.fhir.org/ig/HL7/davinci-alerts) ([source](https://github.com/HL7/davinci-alerts))
 
 The Da Vinci Unsolicited Notifications IG aims to standardize how healthcare systems share real-time patient updates, such as hospital admissions, transfers, and discharges. It leverages FHIR to structure these notifications, ensuring they are easily understood by computer systems. The IG focuses on "unsolicited notifications," meaning updates are automatically sent without the recipient needing to request them. It prioritizes sending essential information initially, allowing recipients to request further details if needed. While it currently centers on admit/transfer/discharge events, the framework can be expanded to other notification types. The IG acknowledges the potential of FHIR subscriptions for managing event-based notifications and plans to incorporate them in the future. It also emphasizes secure communication, data privacy, and reliable message delivery. However, the IG primarily addresses technical aspects and doesn't fully explore the practical implications of widespread implementation, such as the potential impact on workflow or the resources required for adoption by healthcare providers. It also relies on the broader adoption of FHIR, which is still evolving within the healthcare landscape. 
 
 ---
 
-# [davinci-atr](https://github.com/HL7/davinci-atr)
+# [davinci-atr](https://build.fhir.org/ig/HL7/davinci-atr) ([source](https://github.com/HL7/davinci-atr))
 
 The Da Vinci Member Attribution IG aims to standardize the exchange of patient lists, known as Member Attribution Lists, between healthcare payers (insurance companies) and providers (doctors, hospitals). These lists are crucial for value-based care, where providers are responsible for the health outcomes and costs of a defined group of patients. Currently, these lists are often shared through inefficient and error-prone methods like spreadsheets. The IG introduces a standardized approach using the FHIR standard, specifying the necessary data elements (patient demographics, insurance information, etc.), methods for retrieving the lists (through APIs), and secure data exchange protocols. This standardized approach aims to automate the exchange process, reduce errors, and facilitate integration with providers' EHR systems, ultimately improving care coordination and reporting for patients under value-based care agreements. While the IG offers a structured framework, it acknowledges variations in payer and provider workflows and primarily employs an asynchronous exchange method for handling large datasets. The IG emphasizes the importance of data security and privacy but does not guarantee specific outcomes like cost reduction or quality improvement. 
 
 ---
 
-# [davinci-crd](https://github.com/HL7/davinci-crd)
+# [davinci-crd](https://build.fhir.org/ig/HL7/davinci-crd) ([source](https://github.com/HL7/davinci-crd))
 
 The Da Vinci Coverage Requirements Discovery (CRD) IG seeks to improve how healthcare providers determine insurance coverage for their patients. It aims to provide real-time coverage information directly within EHR systems during the treatment decision-making process. Currently, providers often rely on manual and time-consuming methods, such as phone calls or payer websites, to obtain this information. The CRD IG leverages FHIR to facilitate communication between provider EHR systems and payer systems. The provider's EHR sends a request for coverage information, and the payer's system responds with details about covered services, pre-authorization requirements, and necessary documentation, ideally within five seconds. This information is presented to the provider through alerts within the EHR and can be used to update orders automatically. While the CRD IG has the potential to streamline workflows and improve accuracy, challenges remain, including ensuring data accuracy, protecting patient privacy, and achieving widespread adoption among payers and providers. The initiative is still under development and will require ongoing collaboration to meet the needs of all stakeholders. 
 
 ---
 
-# [davinci-deqm](https://github.com/HL7/davinci-deqm)
+# [davinci-deqm](https://build.fhir.org/ig/HL7/davinci-deqm) ([source](https://github.com/HL7/davinci-deqm))
 
 The DEQM IG aims to improve how healthcare data is shared for assessing and reporting the quality of care. It addresses the challenges of traditional methods by establishing a standardized framework using FHIR. The DEQM IG defines how common healthcare data elements should be structured, enabling consistent understanding across different systems. It outlines scenarios for providers to send patient data to entities like payers and quality organizations or respond to requests for specific data. Additionally, it standardizes how quality measure results are reported, both for individual patients and groups. The DEQM IG also supports identifying and addressing gaps in care by comparing recommended care with actual care provided. While the IG leverages existing standards and promotes efficient data exchange, it does not specify detailed security measures, leaving those to implementers. It also acknowledges that different organizations may use different versions of FHIR and offers guidance for compatibility. By promoting standardized data exchange, the DEQM IG aims to facilitate more accurate, timely, and efficient quality measurement, ultimately contributing to improved healthcare quality. 
 
 ---
 
-# [davinci-dtr](https://github.com/HL7/davinci-dtr)
+# [davinci-dtr](https://build.fhir.org/ig/HL7/davinci-dtr) ([source](https://github.com/HL7/davinci-dtr))
 
 The Da Vinci Documentation Templates and Rules (DTR) IG aims to improve the process of gathering medical documentation needed by health insurance payers. Currently, healthcare providers often manually fill out forms to meet these requirements, which is time-consuming and can lead to errors. DTR introduces a new approach using a standardized, digital format called FHIR questionnaires. These questionnaires can be pre-filled with information from the patient's EHR, reducing manual data entry. They also incorporate logic and rules to ensure the information collected meets payer requirements. DTR leverages Clinical Quality Language (CQL) to automatically extract relevant information from EHRs and guide users through the questionnaires. This functionality can be integrated into EHR systems as an app or built-in feature. While DTR offers a streamlined approach, payers may still have unique requirements, and the guide supports flexibility to accommodate these variations. DTR also emphasizes data security and aligns with regulations for protecting patient health information. The guide promotes standardization and aims to simplify the exchange of medical documentation for prior authorization and other healthcare processes. It's important to note that while DTR offers potential benefits, its effectiveness depends on factors such as adoption by payers and healthcare providers and successful integration with existing systems. 
 
 ---
 
-# [davinci-ecdx](https://github.com/HL7/davinci-ecdx)
+# [davinci-ecdx](https://build.fhir.org/ig/HL7/davinci-ecdx) ([source](https://github.com/HL7/davinci-ecdx))
 
 The Da Vinci CDex IG aims to standardize how payers and providers share patient clinical data using FHIR. It seeks to replace older methods like fax and portals with three FHIR-based approaches: Direct Query, where payers can directly request data from provider systems; a Task-Based Approach for requests requiring human review; and Attachments, enabling standardized document exchange. The IG acknowledges that some exchanges may still require human intervention and aims to be compatible with existing processes while encouraging a gradual shift towards automated methods like Direct Query. It also emphasizes clear communication about the purpose of data requests to ensure patient privacy and data security, including guidance on electronic signatures. While the IG offers potential benefits like streamlined claims processing and prior authorization, its widespread adoption and impact will depend on factors like industry collaboration and technological advancements. 
 
 ---
 
-# [davinci-ehrx](https://github.com/HL7/davinci-ehrx)
+# [davinci-ehrx](https://build.fhir.org/ig/HL7/davinci-ehrx) ([source](https://github.com/HL7/davinci-ehrx))
 
 The Da Vinci HREx IG aims to improve how healthcare information is shared between different parties in the US healthcare system, such as insurance companies, doctors, hospitals, and patients. It addresses the limitations of current methods like fax and paper records by using FHIR, which provides a common language for health data. The IG defines standardized ways to structure information like patient demographics, insurance coverage, and consent for data sharing. It also includes methods for matching patients across different systems, managing patient consent, and enabling secure data exchange. While the IG focuses specifically on the US healthcare system and aligns with its regulations, it acknowledges that FHIR standards are constantly evolving and provides guidance on managing different versions. The Da Vinci HREx IG aims to create a more efficient and secure way to exchange health information, but its success depends on widespread adoption and implementation across the healthcare industry. 
 
 ---
 
-# [davinci-epdx](https://github.com/HL7/davinci-epdx)
+# [davinci-epdx](https://build.fhir.org/ig/HL7/davinci-epdx) ([source](https://github.com/HL7/davinci-epdx))
 
 The Da Vinci Payer Data Exchange (PDex) IG aims to improve how payers and healthcare providers share patient health information, as well as how payers share data amongst themselves with patient consent. It uses a standardized approach based on FHIR. Currently, data exchange often relies on outdated methods like fax and mail, leading to slow and potentially inaccurate information sharing. PDex defines how payers should format common types of patient data like allergies and medications according to national standards. It also specifies how this data can be securely accessed through computer systems using APIs and how to manage patient consent. While PDex aims for broad compatibility, it acknowledges that some systems may not fully support the latest FHIR version and offers ways to handle these situations. The guide also emphasizes secure data transfer and plans to transition to newer, more robust security frameworks in the future. PDex is still under development and will be refined based on real-world implementation experiences. 
 
 ---
 
-# [davinci-pas](https://github.com/HL7/davinci-pas)
+# [davinci-pas](https://build.fhir.org/ig/HL7/davinci-pas) ([source](https://github.com/HL7/davinci-pas))
 
 The Da Vinci Prior Authorization Support (PAS) IG aims to improve the process of getting approval from insurance companies for medical treatments, known as prior authorization. Currently, this process often involves slow, manual steps like phone calls and faxes. PAS introduces a new approach using FHIR, which allows healthcare providers to send electronic prior authorization requests directly from their EHR systems. These requests, along with patient medical records, are sent in a standardized format that insurance companies can easily process. While regulations currently require the use of a different standard (X12) for communication with payers, PAS acts as a translator between FHIR and X12 to ensure compliance. The guide also works with other guides that help determine if prior authorization is needed and provide guidance on required documentation. PAS focuses on automation to minimize manual work and speed up the process, including the ability to update requests and check their status. It also follows guidelines to ensure patient data is handled securely and confidentially. Although PAS can improve efficiency, it's important to note that it relies on the adoption of FHIR by both healthcare providers and payers, and the transition may take time. 
 
 ---
 
-# [davinci-pcde](https://github.com/HL7/davinci-pcde)
+# [davinci-pcde](https://build.fhir.org/ig/HL7/davinci-pcde) ([source](https://github.com/HL7/davinci-pcde))
 
 The Da Vinci Payer Coverage Decision Exchange (PCDE) IG aims to streamline the transfer of patient treatment information when they change health insurance providers. It establishes a standardized way to share details about active treatments, prior authorizations, and supporting clinical documents using FHIR, a common language for exchanging healthcare information electronically. This process begins when a new payer requests a patient's Coverage Transition Document from the old payer. This document contains a structured summary of the patient's ongoing treatments. The exchange may be initiated after patient authorization and relies on existing mechanisms like the Health Record Exchange and Payer Data Exchange frameworks for secure information transfer. While the PCDE IG promotes automation, it acknowledges that human review may still be necessary, especially during initial implementation. The guide prioritizes information related to active treatments, aiming to minimize gaps in care during the transition. It builds upon existing standards, allowing flexibility for future enhancements and payer-specific needs while emphasizing data security and privacy. Although the PCDE IG seeks to improve efficiency and reduce administrative burden, its full impact will depend on widespread adoption and ongoing refinement based on real-world experience.
 
 ---
 
-# [davinci-pct](https://github.com/HL7/davinci-pct)
+# [davinci-pct](https://build.fhir.org/ig/HL7/davinci-pct) ([source](https://github.com/HL7/davinci-pct))
 
 The Da Vinci Patient Cost Transparency IG aims to standardize how healthcare providers and insurance companies share cost information with patients, primarily focusing on upfront cost estimates for planned medical services. It achieves this by defining a common format, using FHIR, for sharing Good Faith Estimates (GFEs), which are upfront cost estimates, and Advanced Explanation of Benefits (AEOBs), which are detailed breakdowns of costs after service. The IG promotes using secure APIs for exchanging this information between providers, payers, and patient-authorized applications. While it outlines workflows for providers to submit GFEs and payers to generate AEOBs, it also acknowledges that other delivery methods for AEOBs may be used. The IG's development is influenced by the No Surprises Act, which mandates providing GFEs and AEOBs to patients. It builds upon existing healthcare data standards and incorporates security and privacy best practices. It is important to note that the IG primarily addresses cost estimates for future services and does not cover areas like eligibility checks or claim submissions. Additionally, a workflow for coordinating GFEs when multiple providers are involved is still under development.
 
 ---
 
-# [davinci-pdex-formulary](https://github.com/HL7/davinci-pdex-formulary)
+# [davinci-pdex-formulary](https://build.fhir.org/ig/HL7/davinci-pdex-formulary) ([source](https://github.com/HL7/davinci-pdex-formulary))
 
 The DaVinci PDex US Drug Formulary IG aims to create a standardized way for health insurers in the US to share drug formulary information electronically using FHIR. A drug formulary is a list of prescription medications that a health insurance plan will cover. This IG seeks to improve the way patients and consumers access and understand drug formulary information, enabling them to compare costs and coverage details across different insurance plans and potentially find more affordable medication options. It addresses limitations of previous methods like PDF documents and website drug search forms by defining specific data structures and standardized ways to search and exchange formulary data. The IG leverages RxNorm codes to identify drugs uniquely and supports both authenticated access for members viewing their plan's formulary and unauthenticated access for consumers comparing plans. It acknowledges the variability in how drug tiers and pharmacy benefit types are defined across different payers and offers flexibility while promoting standardization. While the IG aims to provide detailed coverage information, it does not address the complexities of identifying therapeutic alternatives or provide precise, individual-level cost estimates, as actual costs can vary. 
 
 ---
 
-# [davinci-pdex-plan-net](https://github.com/HL7/davinci-pdex-plan-net)
+# [davinci-pdex-plan-net](https://build.fhir.org/ig/HL7/davinci-pdex-plan-net) ([source](https://github.com/HL7/davinci-pdex-plan-net))
 
 The PDEX Payer Network Implementation Guide aims to create a standardized way for health insurance companies in the United States to share information about their plans and the healthcare providers in their networks. It uses  to define how this information should be structured and shared. The guide focuses on allowing applications to search and retrieve provider network data, such as which doctors and hospitals are part of a specific insurance plan. It assumes that the application already knows where to find the insurance company's data and does not require user logins to access the information. To protect privacy, it recommends against including personally identifiable information about patients. The guide prioritizes data consistency by specifying which data elements must be included and requires a timestamp indicating when the information was last updated. This approach enables the creation of user-friendly tools that help patients and healthcare providers easily find in-network providers, making it easier for patients to access appropriate and affordable care. While the guide primarily targets the US healthcare system and assumes a specific technical setup, it represents a significant step towards improving the transparency and accessibility of provider network information. 
 
 ---
 
-# [davinci-pr](https://github.com/HL7/davinci-pr)
+# [davinci-pr](https://build.fhir.org/ig/HL7/davinci-pr) ([source](https://github.com/HL7/davinci-pr))
 
 The Da Vinci Postable Remittance Implementation Guide defines a standardized method for healthcare providers to electronically request and receive remittance advice, which are explanations of payments from insurance payers. Currently, providers often rely on inefficient and time-consuming methods like payer portals, phone calls, or faxes to obtain these documents. This Implementation Guide enables providers to search for remittances based on criteria such as claim information, patient details, or payment data. Providers can then download the remittance electronically, typically as an 835 document or a Portable Document Format (PDF). While the Implementation Guide aims to automate remittance retrieval, it does acknowledge limitations. For example, the guide does not specify how to handle situations where multiple entities share the same Tax Identification Number or define standardized error handling procedures. Additionally, the ability to download a specific format is subject to payer capabilities. Despite these limitations, the Da Vinci Postable Remittance Implementation Guide offers a potential solution for streamlining the remittance process, potentially reducing manual effort and improving efficiency for healthcare providers. 
 
 ---
 
-# [davinci-ra](https://github.com/HL7/davinci-ra)
+# [davinci-ra](https://build.fhir.org/ig/HL7/davinci-ra) ([source](https://github.com/HL7/davinci-ra))
 
 The Da Vinci Risk Adjustment  aims to standardize the exchange of information about potential gaps in medical coding for chronic conditions between health insurance companies (payers) and healthcare providers. This is particularly relevant for programs like Medicare Advantage, where accurate coding impacts payments. The  offers three approaches for generating reports on these coding gaps: one using existing payer systems and converting the data to a standard format, another where payers create the reports directly in the standard format, and a third that leverages advanced capabilities for automated report generation. The  utilizes the  standard, specifically the `MeasureReport` resource, and introduces specialized elements to capture details about the coding gaps. While it primarily focuses on Medicare Advantage, its principles are applicable to other risk adjustment programs. The  recognizes varying levels of technical capability among payers and aims to support a gradual transition to more automated approaches. It emphasizes providing comprehensive data to providers, allowing them to filter and prioritize information, and enabling a feedback loop for improved accuracy. While the  promotes a standardized approach to improve coding accuracy and efficiency, its successful implementation depends on the adoption and technical capabilities of both payers and providers. 
 
 ---
 
-# [davinci-vbpr](https://github.com/HL7/davinci-vbpr)
+# [davinci-vbpr](https://build.fhir.org/ig/HL7/davinci-vbpr) ([source](https://github.com/HL7/davinci-vbpr))
 
 The Da Vinci Value-Based Performance Reporting  aims to standardize how healthcare payers share performance data with healthcare providers participating in value-based care contracts, which reward providers for the quality and efficiency of care they deliver. This  defines a common format for these reports, allowing providers to easily understand their performance across different payers. Previously, the lack of a standard format made it difficult for providers to compare reports, track overall performance, and efficiently identify areas for improvement. The  achieves standardization by using  to create specific data structures for performance reports, quality measures, and contract details. It also defines standard terminologies for performance metrics and payment models, ensuring that payers and providers interpret data consistently. While the  promotes flexibility by allowing customization for specific needs, it also mandates that certain key elements must be supported by all implementations to ensure basic interoperability. Currently, the  focuses on reports sent from payers to providers, with future versions potentially addressing provider-to-payer reporting. By establishing a common language for performance reporting, the  seeks to reduce administrative burdens, improve data consistency, and ultimately enhance the effectiveness of value-based care. 
 
 ---
 
-# [dental-data-exchange](https://github.com/HL7/dental-data-exchange)
+# [dental-data-exchange](https://build.fhir.org/ig/HL7/dental-data-exchange) ([source](https://github.com/HL7/dental-data-exchange))
 
 The HL7 FHIR Implementation Guide for Dental Data Exchange seeks to create a standardized method for sharing dental information electronically between medical and dental providers. It addresses the limitations of previous methods like paper forms and emails, which were inefficient and prone to errors. This Implementation Guide leverages FHIR to define how dental data should be structured and shared. It builds upon existing standards like the FHIR US Core and defines specialized profiles for dental information, such as dental referrals and treatment plans. Additionally, it provides guidance on using standardized codes for dental concepts and ensuring compatibility with different systems. By promoting the use of structured, machine-readable data, this Implementation Guide aims to improve the efficiency and accuracy of dental data exchange, though its widespread adoption and impact on patient care remain to be seen. 
 
 ---
 
-# [DeviceAlerting](https://github.com/HL7/DeviceAlerting)
+# [DeviceAlerting](https://build.fhir.org/ig/HL7/DeviceAlerting) ([source](https://github.com/HL7/DeviceAlerting))
 
 The "DeviceAlerting" IG is a developing standard that aims to improve the management of alerts from medical devices within healthcare settings by leveraging FHIR. Although the IG is in its early stages, it intends to define how patient information and device alerts are handled using FHIR resources, potentially allowing for more efficient responses to critical events. Currently, the IG defines a basic patient profile, extending the standard FHIR patient profile to ensure the inclusion of patient names. While the use of FHIR promotes interoperability and allows the IG to build upon existing tools, the full scope and functionality of the IG are not yet fully defined. Further development is needed to specify how device alerts will be represented and integrated with patient data within the FHIR framework. The "DeviceAlerting" IG demonstrates a promising approach to address the growing need for robust device alert management in healthcare, but its practical implementation and benefits remain to be fully realized as the guide matures. 
 
 ---
 
-# [dicom-sr](https://github.com/HL7/dicom-sr)
+# [dicom-sr](https://build.fhir.org/ig/HL7/dicom-sr) ([source](https://github.com/HL7/dicom-sr))
 
 This IG addresses the challenge of sharing medical imaging information between systems that use different data standards. Specifically, it focuses on translating imaging measurements stored in the Digital Imaging and Communications in Medicine (DICOM) Structured Report format into the FHIR format, which is commonly used by EHRs and other healthcare systems. The guide achieves this by providing a detailed mapping between elements within a specific type of DICOM report (called a Measurement Report) and corresponding elements in FHIR resources, primarily the FHIR "Observation" resource. This mapping enables the conversion of DICOM data into a format that FHIR-based systems can understand. However, the guide has some limitations. It only addresses the conversion from DICOM to FHIR, not the reverse. It also focuses on a specific type of DICOM report and does not cover all possible imaging observations. Additionally, it assumes that relevant patient and imaging information already exists in the FHIR system. While the guide primarily uses the "Observation" resource, it acknowledges that some context might be lost during the translation. Despite these limitations, the guide represents a significant step towards improving the interoperability of imaging data and enabling broader sharing of these results within the healthcare ecosystem. 
 
 ---
 
-# [dme-orders](https://github.com/HL7/dme-orders)
+# [dme-orders](https://build.fhir.org/ig/HL7/dme-orders) ([source](https://github.com/HL7/dme-orders))
 
 The Post-Acute Orders (PAO) IG defines a standardized method for healthcare providers to electronically exchange orders for services and equipment needed by patients transitioning from an acute care setting (like a hospital) to post-acute care. It addresses the current lack of standardization in exchanging orders for things like Durable Medical Equipment (e.g., wheelchairs, oxygen tanks), associated medications, and home health services, which often relies on inefficient and error-prone manual processes. The PAO IG leverages the FHIR standard to structure the exchange of this information. It outlines specific data structures and extensions for common FHIR resources like DeviceRequest, ServiceRequest, and MedicationRequest to meet the specific requirements of post-acute care ordering. The guide supports both real-time exchange through RESTful Application Programming Interfaces (APIs) and message-based exchange using FHIR Messaging, catering to different technical capabilities. It also defines the roles of different participants, including ordering providers, rendering providers, and intermediaries, and how they interact using these methods. While the current version primarily focuses on Durable Medical Equipment and home health, it aims to expand to other post-acute services in the future. It also acknowledges the importance of processes like prior authorization and clarifies its relationship with other relevant standards like Bidirectional Services eReferrals (BSeR). The PAO IG represents a significant step towards streamlining the post-acute care ordering process, potentially leading to faster delivery of necessary services and equipment for patients. 
 
 ---
 
-# [ebm](https://github.com/HL7/ebm)
+# [ebm](https://build.fhir.org/ig/HL7/ebm) ([source](https://github.com/HL7/ebm))
 
 The EBMonFHIR IG seeks to improve how computers understand and share scientific knowledge, particularly in healthcare. It addresses limitations of older methods like traditional citations, which lack flexibility and machine-readability. This IG leverages FHIR, a framework for exchanging healthcare information electronically. It defines new FHIR structures for representing research articles, datasets, and other scientific materials, along with details about research studies and their findings. The IG also standardizes terminology for describing research methods and concepts, making it easier for computers to analyze and compare information from different sources. While it aims to support a wide range of research designs and evidence-based medicine principles, the EBMonFHIR IG is still under development and may not cover all potential use cases. It strives for compatibility with different FHIR versions to ensure smooth information exchange between systems. The guide focuses on representing scientific knowledge in a computable format, enabling automated analysis and potentially supporting decision-making based on the best available evidence. 
 
 ---
 
-# [efss](https://github.com/HL7/efss)
+# [efss](https://build.fhir.org/ig/HL7/efss) ([source](https://github.com/HL7/efss))
 
 The "MyPatient" IG aims to enhance the sharing and utilization of health and human services data by creating a more comprehensive view of an individual's needs.  Traditionally, healthcare data and information about social service needs like housing or food assistance have been stored separately, making it difficult to gain a complete understanding of a person's well-being. This IG seeks to address this issue by utilizing FHIR, a widely adopted framework for exchanging healthcare information electronically. By extending FHIR to encompass social service data, the IG enables a more holistic approach to care. The "MyPatient" profile likely builds upon the standard FHIR "Patient" resource to include relevant social service information. This initiative aligns with broader efforts by the US Department of Health and Human Services to improve data sharing across health and human services, including developing new data standards and addressing existing gaps. While the IG leverages the benefits of an established standard like FHIR, it also acknowledges the complexities of implementing it within social service settings and offers guidance to address these challenges. 
 
 ---
 
-# [ehrsfm-ig](https://github.com/HL7/ehrsfm-ig)
+# [ehrsfm-ig](https://build.fhir.org/ig/HL7/ehrsfm-ig) ([source](https://github.com/HL7/ehrsfm-ig))
 
 The Electronic Health Record System Functional Model Release 2.1 IG aims to improve how EHRs work together. It does this by creating a standardized list of functions that all EHRs should be able to perform, such as managing patient records, scheduling appointments, and handling billing. This list is organized in a way that allows healthcare providers to easily understand and use it. Additionally, the guide allows for customization based on the specific needs of different healthcare settings, like hospitals or clinics. To ensure that EHR systems actually meet these standards, the guide includes specific criteria for each function. The EHR-S FM R2.1 IG utilizes the FHIR standard, which helps with validating and managing different versions of the guide. While the IG promotes better communication and information sharing between different EHR systems, it's important to note that it focuses on what EHRs should be able to do, not on the specific technology used to achieve it. The guide also acknowledges that it may need to be updated in the future to keep up with changes in technology and healthcare practices. 
 
 ---
 
-# [ehrs-rle-ig](https://github.com/HL7/ehrs-rle-ig)
+# [ehrs-rle-ig](https://build.fhir.org/ig/HL7/ehrs-rle-ig) ([source](https://github.com/HL7/ehrs-rle-ig))
 
 The "EHR Functional Model - Record Lifecycle Events - FHIR IG" aims to create a standard way for EHRs and other health IT systems to track changes made to patient health information. It addresses the limitations of inconsistent practices in managing health records by introducing a standardized method for documenting actions like creating, updating, viewing, sharing, archiving, and deleting health records. The guide defines specific events called "Record Lifecycle Events" (RLEs) and uses FHIR to specify how these events should be recorded. It leverages FHIR resources like "Provenance" and "AuditEvent" to capture detailed information about each event, including who performed it, what happened, when it occurred, and why. By promoting consistent documentation of these events, the guide aims to improve the reliability, trustworthiness, and interoperability of health data, though it acknowledges that the specific events and associated metadata may need to be extended in the future to accommodate evolving needs in healthcare.
 
 ---
 
-# [eLTSS](https://github.com/HL7/eLTSS)
+# [eLTSS](https://build.fhir.org/ig/HL7/eLTSS) ([source](https://github.com/HL7/eLTSS))
 
 The eLTSS IG aims to enhance how EHR systems manage information related to long-term services and supports (LTSS), which are a range of services that help individuals with chronic illnesses or disabilities live independently. It achieves this by standardizing the structure and exchange of LTSS data between different computer systems using the FHIR standard. The guide specifies how to represent key LTSS data elements consistently, enabling seamless sharing of information between healthcare providers, caregivers, and patients. It also aligns with other important health data initiatives, such as the US Core FHIR profiles, and promotes patient-centered care by incorporating mechanisms to capture patient preferences and goals. While the eLTSS IG facilitates better care coordination and improves interoperability for LTSS data, it's important to note that its successful implementation depends on the adoption and integration within various EHR systems. Additionally, the guide primarily focuses on technical aspects of data exchange and may require further development to address broader challenges related to LTSS care delivery. 
 
 ---
 
-# [emedicinal-product-info](https://github.com/HL7/emedicinal-product-info)
+# [emedicinal-product-info](https://build.fhir.org/ig/HL7/emedicinal-product-info) ([source](https://github.com/HL7/emedicinal-product-info))
 
 This IG focuses on improving how computer systems share information about medicines, making it easier for both patients and healthcare providers to access reliable details about medications. Traditionally, medicine information has been provided in formats like PDF documents, which are difficult to search, not user-friendly, and hard to integrate with digital tools like EHRs. This IG introduces a new approach using the FHIR standard, a modern framework for exchanging healthcare information electronically. It structures medicine information using FHIR resources, ensuring consistency through standardized codes and terms, and offers flexibility for regional variations. Developed through global collaboration, the IG prioritizes interoperability, accessibility for people with disabilities, and defines different types of electronic Product Information (ePI) documents to cater to various needs. While the FHIR-based approach offers significant improvements in making medicine information more accessible and machine-readable, challenges related to global adoption and consistent implementation across different healthcare systems may still need to be addressed. 
 
 ---
 
-# [fetal_records](https://github.com/HL7/fetal_records)
+# [fetal_records](https://build.fhir.org/ig/HL7/fetal_records) ([source](https://github.com/HL7/fetal_records))
 
 This IG provides a standardized way to represent and exchange information about a fetus during pregnancy using FHIR. Previously, healthcare systems lacked a consistent method for handling fetal data, leading to difficulties in sharing information between hospitals, clinics, and labs. This IG addresses the issue by introducing a way to represent a fetus as a distinct entity within EHRs, enabling better tracking of fetal data throughout pregnancy and across different healthcare settings. The guide recommends using a specific extension to the FHIR standard called "Patient with fetal status extension" to identify and link fetal information, such as observations, procedures, and diagnoses. While the IG focuses on data exchange, it acknowledges the need for data linkage and suggests that fetal data can be connected to the mother's record. However, it does not address legal or ethical considerations related to fetal data or prescribe specific data storage methods. Implementing this IG may require updates to existing healthcare systems to ensure they can understand and process the new fetal data representation. The guide aims to improve communication of fetal information but does not replace national guidelines for birth and fetal death reporting. 
 
 ---
 
-# [fhir-ae-care-ig](https://github.com/HL7/fhir-ae-care-ig)
+# [fhir-ae-care-ig](https://build.fhir.org/ig/HL7/fhir-ae-care-ig) ([source](https://github.com/HL7/fhir-ae-care-ig))
 
 The Adverse Event Clinical Care IG aims to improve how healthcare professionals document and exchange information about adverse events during patient care. It creates a standardized method for recording event details, including the affected individual, cause, and response. The IG utilizes FHIR to define the "AdverseEvent Clinical Care" profile, guiding how to organize data elements like patient demographics, event description, suspected cause, and actions taken. Tailored for clinical settings like hospitals and clinics, the IG recognizes that adverse event reporting may involve a two-step process, such as initial reporting by a nurse and subsequent review by a physician. It acknowledges that complete information might not be available immediately and allows for updates. By using FHIR, the IG promotes interoperability, enabling the exchange of adverse event data between different EHR systems and healthcare organizations. However, the IG does not explicitly address how adverse event reporting was handled previously or the limitations of those approaches. 
 
 ---
 
-# [fhir-ae-research-backport-ig](https://github.com/HL7/fhir-ae-research-backport-ig)
+# [fhir-ae-research-backport-ig](https://build.fhir.org/ig/HL7/fhir-ae-research-backport-ig) ([source](https://github.com/HL7/fhir-ae-research-backport-ig))
 
 The Adverse Event Research Backport IG aims to standardize the collection and sharing of adverse event information, particularly in clinical trials. Adverse events are negative side effects or health problems occurring during medical treatment or research. Using FHIR, this IG enables different computer systems, like EHRs and patient portals, to easily exchange information about adverse events. Previously, inconsistent data formats required manual entry, leading to potential errors and delays. This IG addresses this by creating a specific format for adverse event data within FHIR, including details like severity, suspected causes (e.g., drug or procedure), likelihood of causality, and mitigating steps. It also considers different research stages, various sources of adverse event information, and regulations from agencies like the FDA. Based on the upcoming FHIR version (R5) but available in the current version (R4), this IG will also support future electronic reporting to the FDA's MedWatch system, which tracks adverse events related to drugs and medical devices. 
 
 ---
 
-# [fhir-ae-research-ig](https://github.com/HL7/fhir-ae-research-ig)
+# [fhir-ae-research-ig](https://build.fhir.org/ig/HL7/fhir-ae-research-ig) ([source](https://github.com/HL7/fhir-ae-research-ig))
 
 The Adverse Event Research IG aims to standardize the collection and exchange of adverse event (AE) information in clinical research. It achieves this by establishing a common format for representing AE data, regardless of its source, such as EHRs or patient-reported outcomes. This standardization facilitates easier sharing of AE information between different systems used in research, including those used by hospitals, pharmaceutical companies, and regulatory agencies. The IG leverages the FHIR standard to create a specific profile for representing AEs, defining necessary data elements and their format to ensure consistency. It also outlines potential workflows for collecting and reporting AEs during clinical trials and post-market surveillance. While the IG promotes interoperability and considers regulatory requirements, it acknowledges the need for future expansion, particularly regarding integration with the FDA's safety reporting program, MedWatch. The IG emphasizes the importance of tailoring the foundational profile to specific use cases and provides real-world examples to demonstrate its practical application. 
 
 ---
 
-# [fhir-bfdr](https://github.com/HL7/fhir-bfdr)
+# [fhir-bfdr](https://build.fhir.org/ig/HL7/fhir-bfdr) ([source](https://github.com/HL7/fhir-bfdr))
 
 The Birth and Fetal Death Reporting (BFDR) IG establishes a standardized method for exchanging electronic birth and fetal death records among healthcare providers, state vital records offices, and the Centers for Disease Control and Prevention (CDC) using FHIR. It aims to improve the efficiency and accuracy of reporting by defining how specific data elements should be structured and transmitted. The guide utilizes FHIR resources like "bundles" to package the report and associated information and "compositions" to specify the content's organization. To handle situations where standard options don't apply, it introduces categories with codes that allow for indicating the absence of certain conditions or procedures. The guide also incorporates mechanisms for data validation and clarifies how to represent complex scenarios like mother-baby relationships and multiple births. While the BFDR IG aims for comprehensive data exchange, it acknowledges that individual recipients may have unique requirements for completeness. Conformance to the guide ensures standardized formatting but does not guarantee a successful transmission, as the document must also adhere to the recipient's specific business rules. The guide clarifies how missing data should be interpreted, promoting consistent understanding across different systems.
 
 ---
 
-# [fhir-breast-radiology-ig](https://github.com/HL7/fhir-breast-radiology-ig)
+# [fhir-breast-radiology-ig](https://build.fhir.org/ig/HL7/fhir-breast-radiology-ig) ([source](https://github.com/HL7/fhir-breast-radiology-ig))
 
 The Breast Radiology IG defines a standardized way to represent breast imaging reports using FHIR, enabling the exchange of healthcare information electronically. It aims to improve communication of breast imaging findings, assessments, and recommendations between healthcare providers and systems. The IG achieves this by creating specific templates (called profiles) for different types of observations commonly found in breast imaging reports, like those from mammograms, magnetic resonance imaging (MRI), ultrasounds, and others. These templates capture details about abnormalities, including their location, size, and characteristics. Additionally, the guide uses existing medical terminologies like RadLex, SNOMED CT, and LOINC, and introduces new codes where needed, to ensure that the information is understood consistently across different systems. It also provides a structure for the entire report, including sections for findings, impressions, and recommendations for follow-up care. By adhering to this guide, healthcare providers can share breast imaging information in a structured and machine-readable format, which can potentially improve the efficiency and quality of breast cancer diagnosis and treatment. 
 
 ---
 
-# [fhircast-docs](https://github.com/HL7/fhircast-docs)
+# [fhircast-docs](https://build.fhir.org/ig/HL7/fhircast-docs) ([source](https://github.com/HL7/fhircast-docs))
 
 The FHIRcast IG defines a standard approach for synchronizing healthcare applications in real time. This means that when a user interacts with different healthcare apps, such as an EHR or a medical imaging system, all applications will display the same patient or clinical information simultaneously. FHIRcast uses a central coordinator, called a "Hub," which manages subscriptions from different applications and broadcasts events when changes occur. For instance, if a doctor opens a patient's chart in one application, the Hub sends a notification to all other subscribed applications, ensuring they also display the same patient's information. FHIRcast leverages existing web technologies like WebSockets and the SMART on FHIR authorization framework to enable secure and efficient communication between applications. It also defines an Event Maturity Model to ensure that new events are thoroughly tested and vetted by the community before widespread adoption. FHIRcast also addresses challenges like managing multiple open applications and recovering from synchronization errors, providing guidance on how applications should behave in these situations. By standardizing how healthcare applications share context and synchronize information, FHIRcast aims to improve clinician workflow and reduce the risk of errors caused by outdated or inconsistent information. 
 
 ---
 
-# [fhir-cdisc-mapping](https://github.com/HL7/fhir-cdisc-mapping)
+# [fhir-cdisc-mapping](https://build.fhir.org/ig/HL7/fhir-cdisc-mapping) ([source](https://github.com/HL7/fhir-cdisc-mapping))
 
 As you have not provided the FHIR IG source files needed for analysis, I cannot create a plain language summary. Please provide the IG content so I can accurately analyze its purpose, scope, and technical details and then create the summary according to your guidelines. I need the actual IG content to understand its objectives, the problems it addresses, its technical approach, and any important contextual factors, all of which are crucial for creating an accurate and informative plain language summary. 
 
 ---
 
-# [fhir-central-cancer-registry-reporting-ig](https://github.com/HL7/fhir-central-cancer-registry-reporting-ig)
+# [fhir-central-cancer-registry-reporting-ig](https://build.fhir.org/ig/HL7/fhir-central-cancer-registry-reporting-ig) ([source](https://github.com/HL7/fhir-central-cancer-registry-reporting-ig))
 
 The Central Cancer Registry Reporting IG defines a standardized way to electronically send cancer case information from healthcare providers like clinics and physician offices to central cancer registries. Historically, this reporting was often done manually, leading to delays and inconsistencies. The IG leverages FHIR to automate and improve this process. Central cancer registries establish the specific criteria for reporting cancer cases, such as the types of cancer and treatments that should trigger a report. These criteria are made available to healthcare providers through a central repository. When a patient encounter in an EHR system meets these criteria, a specialized application extracts the relevant patient information using FHIR application programming interfaces (APIs). This information is then packaged into a standardized report and sent securely to the central cancer registry. The guide focuses on making cancer reporting from ambulatory care settings, where electronic reporting is less common, more efficient and accurate. It also builds upon existing standards and frameworks for healthcare data exchange and emphasizes the importance of complying with patient privacy regulations like HIPAA. By adopting this IG, healthcare providers and registries can move toward a more streamlined and reliable system for reporting cancer cases, which is crucial for effective cancer surveillance and public health initiatives. 
 
 ---
 
-# [fhir-clinical-document](https://github.com/HL7/fhir-clinical-document)
+# [fhir-clinical-document](https://build.fhir.org/ig/HL7/fhir-clinical-document) ([source](https://github.com/HL7/fhir-clinical-document))
 
 This IG defines a standard way to represent clinical documents, such as discharge summaries and progress notes, using FHIR. It aims to improve how healthcare systems exchange these documents digitally by creating a common, consistent format. Previously, many different methods existed, leading to challenges in sharing information between different EHR systems. This IG establishes a clear approach using a FHIR "bundle," which acts like a container for the document. It includes a "composition" resource that serves as a table of contents and header information, along with the main content of the document, ensuring it can be easily read in a web browser. The guide also provides instructions on converting documents from an older standard called Clinical Document Architecture (CDA) to this new FHIR format. It prioritizes human readability, considers security risks, and defines how to manage document updates and errors. This IG aims to be a foundation for more specific clinical document types in the future and is open to feedback on its design choices. While it focuses on representing header information from CDA in this version, it may expand its scope in future updates. 
 
 ---
 
-# [fhir-consent-management](https://github.com/HL7/fhir-consent-management)
+# [fhir-consent-management](https://build.fhir.org/ig/HL7/fhir-consent-management) ([source](https://github.com/HL7/fhir-consent-management))
 
 This Consent Management IG aims to standardize how healthcare systems handle patient consent for accessing their EHRs. It addresses limitations in existing standards by detailing how to manage the entire consent process, including how patients are informed about and decide on data access. The IG introduces standardized scenarios for common consent actions like requesting, reviewing, and revoking consent, along with specialized data structures and APIs for exchanging consent information. It focuses on consent for data access, not treatment or other healthcare decisions. The IG emphasizes user-friendliness for patients and the need to track consent decisions for accountability. It does not cover user authentication or broader authorization, assuming these are handled elsewhere. By promoting consistent and interoperable methods for managing patient consent, the IG aims to improve patient control over their health information and facilitate secure data sharing across healthcare organizations. 
 
 ---
 
-# [fhir-COVID19Library-ig](https://github.com/HL7/fhir-COVID19Library-ig)
+# [fhir-COVID19Library-ig](https://build.fhir.org/ig/HL7/fhir-COVID19Library-ig) ([source](https://github.com/HL7/fhir-COVID19Library-ig))
 
 The COVID-19 Library IG offers a standardized way to exchange information about COVID-19 electronically, aiming to improve patient care, public health reporting, and research. This IG does not define how to send data for official case reporting to public health agencies, nor is it designed for one specific use case. Instead, it acts as a library of standard data elements, including templates for specific types of data like laboratory results and lists of standardized codes for symptoms or diagnoses, which can be used in various situations like research or billing. Built using the FHIR standard, it draws upon existing standards such as the United States Core Data for Interoperability (US Core) and Centers for Disease Control and Prevention (CDC) Electronic Initial Case Report (eICR) IG to ensure compatibility. Developed with input from various organizations, it is intended to be open and collaborative, allowing the guide to adapt over time based on user needs and feedback. 
 
 ---
 
-# [fhir-cow-ig](https://github.com/HL7/fhir-cow-ig)
+# [fhir-cow-ig](https://build.fhir.org/ig/HL7/fhir-cow-ig) ([source](https://github.com/HL7/fhir-cow-ig))
 
 The FHIR Cow IG aims to improve how healthcare systems exchange information about orders, such as prescriptions or lab requests, between those who place the orders (like doctors) and those who fulfill them (like pharmacies or labs). It addresses the challenge of ensuring that order fillers receive all the necessary details to process orders accurately. The guide proposes three main methods for sharing order information: providing all required information upfront, enabling order fillers to request specific details through a standardized query process, and defining clear access permissions to ensure appropriate information sharing. The IG acknowledges that the type and amount of information needed can vary based on the order, the relationship between the ordering and fulfilling entities, and the specific clinical situation. It aims to create a standardized approach for handling order information, which can enhance compatibility between different healthcare systems and reduce confusion in order processing. By outlining these methods, the FHIR Cow IG seeks to improve the clarity and efficiency of order fulfillment in healthcare settings. 
 
 ---
 
-# [fhir-cross-version](https://github.com/HL7/fhir-cross-version)
+# [fhir-cross-version](https://build.fhir.org/ig/HL7/fhir-cross-version) ([source](https://github.com/HL7/fhir-cross-version))
 
 This IG addresses the challenge of exchanging health information between systems using different versions of FHIR, such as R4 and R5. It aims to facilitate seamless data sharing by providing a standardized method for translating data elements between these versions. The guide achieves this through comprehensive mapping tables that show the corresponding elements in different FHIR versions for each resource and data type, indicating whether elements are equivalent, modified, or removed/added. Detailed instructions explain how to handle specific mapping scenarios, including changes in data types, cardinality, and terminology. The guide also includes practical examples demonstrating the data transformation process between versions. Developed with input from the FHIR community, the IG prioritizes interoperability between major FHIR versions and will be updated as the FHIR standard evolves. The guide focuses on enabling communication between systems using different FHIR versions, but it does not cover all possible mapping scenarios or address the complexities of migrating entire EHR systems between versions. 
 
 ---
 
-# [fhir-directory-attestation](https://github.com/HL7/fhir-directory-attestation)
+# [fhir-directory-attestation](https://build.fhir.org/ig/HL7/fhir-directory-attestation) ([source](https://github.com/HL7/fhir-directory-attestation))
 
 The National Directory Attestation and Verification IG aims to improve how healthcare provider information is managed and shared across the US healthcare system. It addresses the current challenges of fragmented and inaccurate provider directories by establishing a standardized way to exchange information using a common set of rules and definitions. This IG leverages FHIR to define how information about healthcare providers, organizations, services, and insurance networks should be structured and transmitted. The guide promotes using secure, web-based communication (through APIs) to submit, validate, and verify provider data. It acknowledges the need for flexibility in how organizations attest to and verify information, recognizing that different stakeholders may have varying roles and processes. Additionally, the IG considers the sensitive nature of some directory information and includes guidance on managing data access and privacy. By promoting standardization and interoperability, the IG seeks to reduce the administrative burden and costs associated with managing provider directories, while also improving the accuracy and reliability of the information available to healthcare stakeholders. 
 
 ---
 
-# [fhir-directory-exchange](https://github.com/HL7/fhir-directory-exchange)
+# [fhir-directory-exchange](https://build.fhir.org/ig/HL7/fhir-directory-exchange) ([source](https://github.com/HL7/fhir-directory-exchange))
 
 The National Healthcare Directory IG aims to improve the sharing of healthcare provider information by creating a standardized way for a central directory to exchange data with local healthcare systems, such as those used by hospitals, clinics, insurance companies, and health information exchanges. It addresses the challenges of outdated and inconsistent information caused by traditional methods that require providers to register with multiple, separate directories. The guide utilizes the FHIR standard to define how specific information about healthcare providers, organizations, and locations should be structured and shared. This includes defining the essential data elements that should be included and how to search for specific information. The guide promotes using a central directory that verifies information against authoritative sources like state licensing boards and then makes it available to other systems through a standardized API. It also considers the need to include a broad range of healthcare providers and support staff, not just doctors, and addresses how to handle sensitive information and potential data inconsistencies. While designed with a national system in mind, the guide's principles can also be applied to smaller, regional directories. 
 
 ---
 
-# [fhir-directory-query](https://github.com/HL7/fhir-directory-query)
+# [fhir-directory-query](https://build.fhir.org/ig/HL7/fhir-directory-query) ([source](https://github.com/HL7/fhir-directory-query))
 
 The National Healthcare Directory IG aims to improve how healthcare provider information is shared and accessed across the US healthcare system by creating a standardized, central directory. It leverages FHIR to exchange healthcare data electronically. The guide defines how to structure this central directory and ensures all provider data is consistently formatted. It enables other systems, such as those used by hospitals or insurance companies, to easily access the directory through an API and provides robust search capabilities to find specific provider information. The guide also supports efficient transfer of large datasets and allows systems to stay updated with changes to provider data through subscriptions. The IG considers the need for data security, accommodates various directory sizes and levels of access, and addresses challenges like redundant data. While initially focused on the US healthcare system and its specific requirements, like the National Provider Identifier (NPI), the guide is based on international FHIR standards and aims to align with the US Core FHIR IG for broader interoperability. 
 
 ---
 
-# [fhir-exchange-routing-ig](https://github.com/HL7/fhir-exchange-routing-ig)
+# [fhir-exchange-routing-ig](https://build.fhir.org/ig/HL7/fhir-exchange-routing-ig) ([source](https://github.com/HL7/fhir-exchange-routing-ig))
 
 The FHIR Exchange Routing IG defines a standardized method for healthcare systems to exchange electronic health information using FHIR, even when intermediaries like clearinghouses or HIEs are involved. It aims to simplify the process for sending systems by allowing them to send FHIR requests as if they were communicating directly with the recipient, regardless of whether an intermediary is present. This approach, known as the "hybrid" model, relies on the recipient system having a public web address that senders always use. Intermediaries act passively, routing requests and responses without altering their content or participating in security measures like authentication. The guide supports standard FHIR data exchange methods and ensures that errors are communicated back to the sender consistently. This version focuses on passive intermediaries and assumes direct trust establishment between sender and receiver. It does not cover scenarios involving active intermediaries, trust mediated by intermediaries, or the FHIR Messaging framework. The guide's principles are applicable internationally and can be expanded in the future to accommodate additional scenarios and intermediary roles, promoting a flexible and scalable approach to FHIR-based health information exchange. 
 
 ---
 
-# [fhir-extensions](https://github.com/HL7/fhir-extensions)
+# [fhir-extensions](https://build.fhir.org/ig/HL7/fhir-extensions) ([source](https://github.com/HL7/fhir-extensions))
 
 This IG establishes a standardized way to exchange healthcare information more comprehensively by defining custom extensions, providing standard terminology, and defining validation rules within the FHIR framework. Custom extensions allow the inclusion of additional information not part of the core FHIR specification, enabling more detailed data exchange within EHRs. To ensure consistent meaning and interpretation of healthcare data, the IG introduces code systems and value sets, which are collections of codes used to represent medical concepts like diagnoses or procedures. Additionally, the guide outlines how to create custom validation rules for questionnaires, ensuring data quality and consistency by specifying criteria that the data must meet. This is achieved through a central registry for extensions, standardized terminology resources, and leveraging FHIR's constraint framework for defining validation rules. By adhering to this IG, healthcare systems can improve data exchange, reduce ambiguity, and enhance the quality and consistency of information shared between different EHR systems. 
 
 ---
 
-# [fhir-eyecare-ig](https://github.com/HL7/fhir-eyecare-ig)
+# [fhir-eyecare-ig](https://build.fhir.org/ig/HL7/fhir-eyecare-ig) ([source](https://github.com/HL7/fhir-eyecare-ig))
 
 The Ophthalmology IG aims to standardize electronic eye care data representation and sharing. It addresses challenges in exchanging information between systems like EHRs and diagnostic devices by defining profiles for common eye care data elements, ensuring consistent recording. It also establishes standardized vocabularies and codes using ValueSets and CodeSystems. The IG leverages existing standards like SNOMED CT, ICD-10, and CPT. Use Cases illustrate its application, such as sharing cataract surgery outcomes or managing glaucoma patients. By enabling seamless data exchange, the IG aims to facilitate benchmarking, research, care coordination, and tracking patient journeys. The guide acknowledges the increasing role of artificial intelligence in eye care and the need for collaborative care models. 
 
 ---
 
-# [fhir-for-fair](https://github.com/HL7/fhir-for-fair)
+# [fhir-for-fair](https://build.fhir.org/ig/HL7/fhir-for-fair) ([source](https://github.com/HL7/fhir-for-fair))
 
 This IG explains how healthcare researchers and data scientists can better organize and share their data using FHIR. The guide addresses challenges with finding and reusing research data by suggesting data be structured with FHIR. It provides instructions on how to map existing data elements to FHIR resources, which are like templates for different types of health information. The guide also recommends creating profiles that specify which FHIR elements are essential for particular research needs and using extensions to add details like licensing or the data's origin. It emphasizes using FHIR's built-in search capabilities to help researchers find relevant data. The guide acknowledges that making research data more accessible and reusable is a continuous process and encourages a step-by-step approach. It also highlights the importance of collaboration within the research community to define relevant details, develop FHIR profiles, and create IGs for specific use cases. The main focus of this guide is on situations where FHIR is used directly to represent data. 
 
 ---
 
-# [fhir-gender-harmony](https://github.com/HL7/fhir-gender-harmony)
+# [fhir-gender-harmony](https://build.fhir.org/ig/HL7/fhir-gender-harmony) ([source](https://github.com/HL7/fhir-gender-harmony))
 
 The HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation aims to enhance how EHRs store and exchange information about a person's sex and gender. Recognizing that sex (biological traits) and gender (identity) are distinct concepts, the guide promotes a more comprehensive approach than the traditional binary model. It provides instructions for healthcare systems to record a patient's gender identity, sex for clinical use (biological information relevant to medical decisions), recorded sex or gender from legal documents, preferred name, and pronouns. This is achieved by using standardized terminology and extensions within existing health information standards like FHIR, HL7 Version 2, and Clinical Document Architecture (CDA). The guide acknowledges that current systems often conflate sex and gender, leading to limitations in data accuracy and inclusivity. By implementing the recommendations, healthcare providers can capture a broader range of sex and gender information, potentially fostering more respectful and appropriate care for transgender, gender-diverse, and intersex individuals. The guide also addresses the sensitive nature of this information, emphasizing the importance of privacy and security. While it offers minimum value sets for concepts like gender identity and pronouns, it recognizes that these might need adjustments based on local cultural contexts. The guide aims to improve data quality and support more inclusive healthcare practices, but its actual impact on individual patient care or health outcomes is not explicitly defined. 
 
 ---
 
-# [fhir-health-care-surveys-reporting-ig](https://github.com/HL7/fhir-health-care-surveys-reporting-ig)
+# [fhir-health-care-surveys-reporting-ig](https://build.fhir.org/ig/HL7/fhir-health-care-surveys-reporting-ig) ([source](https://github.com/HL7/fhir-health-care-surveys-reporting-ig))
 
 The Health Care Surveys Reporting IG aims to improve the process of gathering data for national health surveys in the United States. It focuses on automating the way information is extracted from EHRs and sent securely to the National Center for Health Statistics (NCHS). The IG utilizes the FHIR standard, along with the US Core profiles, which specify how common clinical concepts are represented in FHIR. It also leverages the MedMorph Reference Architecture, a framework for automated reporting. When the NCHS needs data for a specific survey, it defines the requirements and shares them electronically. A Health Data Exchange App then uses these requirements to set up automatic notifications within a healthcare provider's EHR system. When a relevant event happens, like a patient visit being completed, the app retrieves the necessary data from the EHR using standard methods. Finally, the app formats the data into a standardized report and transmits it securely to the NCHS. This approach is intended to simplify data collection for surveys like the National Ambulatory Medical Care Survey and the National Hospital Care Survey, which traditionally relied on manual methods or less detailed claims data. The IG primarily targets hospital and ambulatory care settings and does not cover areas like nursing homes or data quality checks. Its effectiveness depends on the adoption of FHIR and the MedMorph architecture by both EHR vendors and healthcare providers. 
 
 ---
 
-# [fhir-ichom-breast-cancer-ig](https://github.com/HL7/fhir-ichom-breast-cancer-ig)
+# [fhir-ichom-breast-cancer-ig](https://build.fhir.org/ig/HL7/fhir-ichom-breast-cancer-ig) ([source](https://github.com/HL7/fhir-ichom-breast-cancer-ig))
 
 The ICHOM Breast Cancer IG aims to standardize how EHR systems store and share breast cancer treatment outcome data. It structures information like patient demographics, tumor details, treatment history, and patient-reported outcomes using the FHIR standard. The IG uses FHIR questionnaires to collect patient and clinician reported outcomes and maps data from the ICHOM Breast Cancer Set to specific FHIR resources like Patient and Condition. This allows for detailed representation of clinical information. Additionally, the IG uses standard medical terminologies to ensure data consistency across systems. The IG focuses on data representation and does not define how this data should be used or exchanged. It aligns with other relevant FHIR standards to promote compatibility. While the IG does not specify security measures, implementers are responsible for secure data handling. By providing a standardized structure for breast cancer outcome data, this IG aims to improve data sharing and comparison, potentially enhancing care quality and patient outcomes. 
 
 ---
 
-# [fhir-icsr-ae-reporting](https://github.com/HL7/fhir-icsr-ae-reporting)
+# [fhir-icsr-ae-reporting](https://build.fhir.org/ig/HL7/fhir-icsr-ae-reporting) ([source](https://github.com/HL7/fhir-icsr-ae-reporting))
 
 This IG focuses on improving the way we report side effects, also known as adverse events, that may occur after receiving biological products like vaccines or blood transfusions. It aims to help EHRs automatically detect these potential side effects and create standardized reports that can be easily sent to regulatory agencies like the FDA. Traditionally, reporting these side effects has been a manual process, leading to underreporting and a lack of detailed information. This guide tackles these issues by providing a two-part solution. First, it offers a set of algorithms that can analyze data within EHRs to identify possible side effects. These algorithms are designed to produce results comparable to those obtained from insurance claims data. Second, the guide defines standardized templates for creating comprehensive reports using FHIR, which enables easy sharing of healthcare information. These templates ensure the reports include all the necessary details required by the FDA. This guide specifically addresses side effects related to vaccinations and blood transfusions, using structured information like diagnosis codes and immunization records from EHRs. It was developed as part of the FDA's Biologics Effectiveness and Safety initiative to enhance the monitoring of the safety of biological products. 
 
 ---
 
-# [fhir-identity-matching-ig](https://github.com/HL7/fhir-identity-matching-ig)
+# [fhir-identity-matching-ig](https://build.fhir.org/ig/HL7/fhir-identity-matching-ig) ([source](https://github.com/HL7/fhir-identity-matching-ig))
 
 The Identity Matching IG provides a standardized method for healthcare organizations to accurately match patient records across different systems. It addresses the limitations of traditional matching methods that relied on potentially inconsistent demographic data like names and birthdates. The guide introduces the concept of Identity Assurance Levels (IALs) to establish confidence in patient identities based on verification evidence and promotes the use of Digital Identifiers, which are unique, verifiable electronic IDs tied to individuals. It also defines how healthcare systems can request and respond to patient matches using FHIR standards, including assigning weights to patient attributes to improve match accuracy. The IG primarily focuses on matching between separate healthcare organizations, not within a single system, and prioritizes robust identity verification as a foundation for accurate data exchange. It also considers situations where traditional identity verification methods might not be equitable and aligns with the National Institute of Standards and Technology (NIST) guidelines for digital identity and authentication. The guide acknowledges that identity matching is an evolving field and anticipates future updates to address areas like exception handling and the potential use of artificial intelligence in matching processes. 
 
 ---
 
-# [FHIR-IG-Human-Services-Directory](https://github.com/HL7/FHIR-IG-Human-Services-Directory)
+# [FHIR-IG-Human-Services-Directory](https://build.fhir.org/ig/HL7/FHIR-IG-Human-Services-Directory) ([source](https://github.com/HL7/FHIR-IG-Human-Services-Directory))
 
 The Human Services Directory IG aims to improve the sharing of information about social services, such as food banks or housing assistance, between different computer systems. It addresses previous challenges where information was scattered, inconsistent, and difficult to exchange due to a lack of standardization. The IG achieves this by using FHIR to create a common way to represent and exchange data about organizations, locations, and services. It maps its data elements to the Human Services Data Specification, ensuring compatibility with existing systems. The IG enables systems to search for services based on criteria like location or service type using a standardized API. Currently, it focuses on allowing systems to read information from a single directory at a time, without the ability to update it. It also allows flexibility in the choice of service classification systems and prioritizes privacy by prohibiting the transmission of personally identifiable information during searches. By promoting a standardized approach, the Human Services Directory IG aims to facilitate easier access to social services and improve coordination between healthcare providers, insurance companies, and individuals seeking support. 
 
 ---
 
-# [fhir-ipa](https://github.com/HL7/fhir-ipa)
+# [fhir-ipa](https://build.fhir.org/ig/HL7/fhir-ipa) ([source](https://github.com/HL7/fhir-ipa))
 
 The International Patient Access (IPA) IG defines a standardized way for patients to access their health information electronically, regardless of where the data is stored. It aims to solve the problem of fragmented health data by enabling applications, such as personal health record apps, to retrieve patient information like medical history, medications, and lab results from different healthcare systems. IPA leverages the FHIR standard to define a common set of data elements and a secure way for apps to access them. It utilizes the FHIR RESTful API and the SMART App Launch framework, which is based on the OAuth 2.0 authorization framework, to ensure secure access to patient records. IPA focuses on a core set of essential patient data, primarily supporting read-only access, with the expectation that countries and regions may build upon this foundation with their specific requirements. It complements the International Patient Summary standard, which provides a concise overview of patient data, by enabling access to the full patient record. IPA is designed to be an evolving standard, incorporating feedback from implementers and users to enhance interoperability and address challenges in accessing health information globally. 
 
 ---
 
-# [fhir-ips](https://github.com/HL7/fhir-ips)
+# [fhir-ips](https://build.fhir.org/ig/HL7/fhir-ips) ([source](https://github.com/HL7/fhir-ips))
 
 The FHIR-IPS IG defines a standardized way to create and share concise summaries of EHRs for patients needing unplanned care in international settings. This IG focuses on a core set of essential patient data, such as demographics, allergies, medical conditions, and medications, ensuring that healthcare providers in different countries can readily understand a patient's critical information regardless of their local EHR systems or languages. It achieves this by structuring the patient summary as a FHIR "bundle" containing a "composition" or main document, along with specific requirements for how different data elements are represented using standardized codes and terminology, notably SNOMED CT. The guide also addresses practical considerations like handling missing information and enabling the translation of human-readable summaries into multiple languages. By promoting the use of FHIR and standardized terminologies, the FHIR-IPS IG aims to improve the seamless exchange of vital patient information across borders, facilitating better care coordination for individuals in unplanned care situations.
 
 ---
 
-# [fhir-mCODE-ig](https://github.com/HL7/fhir-mCODE-ig)
+# [fhir-mCODE-ig](https://build.fhir.org/ig/HL7/fhir-mCODE-ig) ([source](https://github.com/HL7/fhir-mCODE-ig))
 
 The mCODE IG aims to improve the way EHRs handle cancer patient information. It creates a standard format for storing and sharing this data, which has historically been difficult because different health systems used different methods. mCODE achieves standardization by defining how to represent key pieces of cancer patient information, like diagnosis, treatment, and outcomes, using FHIR. It draws on existing medical terminologies to ensure consistency and makes sure it aligns with broader health data standards in the United States. mCODE also addresses specific needs in oncology, like representing different cancer staging systems and incorporating genomic data. It focuses on a core set of essential information rather than trying to capture everything, making it more practical to implement. The guide was developed with input from doctors, technology experts, and EHR vendors to ensure it is both useful and feasible to put into practice. By making cancer data easier to share and analyze, mCODE aims to support better cancer care and research. 
 
 ---
 
-# [fhir-mdi-ig](https://github.com/HL7/fhir-mdi-ig)
+# [fhir-mdi-ig](https://build.fhir.org/ig/HL7/fhir-mdi-ig) ([source](https://github.com/HL7/fhir-mdi-ig))
 
 The Medicolegal Death Investigation (MDI) IG aims to standardize how information about death investigations is shared in the United States. It uses FHIR to ensure that medical examiners, coroners, laboratories, and vital records offices can easily share information. Previously, these organizations relied on outdated methods like paper and fax, making it difficult to share data efficiently. The MDI IG defines specific ways to structure information related to death investigations, such as sharing findings between medical examiner/coroner offices and vital records offices, transmitting forensic toxicology results from laboratories, and exchanging reports. It is designed to be flexible and work with a variety of existing computer systems in the United States. The guide also recognizes the importance of the Vital Records Death Reporting (VRDR) IG, which focuses on reporting deaths nationally, and aims to support the data sharing processes that occur before information is sent to the national level. While the MDI IG focuses on key aspects of death investigations, it acknowledges the need for future development to support additional data sharing needs and expand the vocabulary used, particularly for forensic toxicology results. 
 
 ---
 
-# [fhir-medication-rems-ig](https://github.com/HL7/fhir-medication-rems-ig)
+# [fhir-medication-rems-ig](https://build.fhir.org/ig/HL7/fhir-medication-rems-ig) ([source](https://github.com/HL7/fhir-medication-rems-ig))
 
 The Medication Risk Evaluation and Mitigation Strategy (REMS) IG aims to improve how healthcare providers interact with REMS programs, which are special safety requirements mandated by the FDA for certain medications with serious risks. The IG promotes a standardized way to exchange REMS information electronically using the FHIR standard, specifically by leveraging CDS Hooks and SMART App Launch. CDS Hooks enable REMS program administrators to send alerts and guidance to providers within their EHR systems, while SMART App Launch allows providers to access interactive applications that streamline REMS tasks like patient enrollment. When a provider encounters a REMS medication in a patient's record, the EHR can communicate with the REMS administrator's system to provide necessary information and guide the provider through the required steps. This approach aims to reduce manual processes, improve communication between healthcare providers and REMS administrators, and ultimately enhance patient safety by ensuring REMS requirements are met efficiently. The current version of the IG focuses on the needs of prescribers and their interactions with REMS administrators, acknowledging the variability of REMS programs and the importance of integrating with existing e-prescribing workflows and EHR systems. It prioritizes flexibility and does not mandate specific workflows or require all REMS steps to be electronic. 
 
 ---
 
-# [fhir-medmorph](https://github.com/HL7/fhir-medmorph)
+# [fhir-medmorph](https://build.fhir.org/ig/HL7/fhir-medmorph) ([source](https://github.com/HL7/fhir-medmorph))
 
 The MedMorph Reference Architecture IG aims to streamline the process of collecting and sharing healthcare data for public health reporting and research. It proposes a standardized, automated approach to reduce manual work for healthcare providers and improve the quality and speed of data transfer. The guide introduces a framework called "MedMorph" that utilizes machine-readable instructions, known as Knowledge Artifacts, to define what data to collect and how to format it. A Health Data Exchange App (HDEA) acts as a background application within a healthcare setting, automatically extracting and submitting data based on these instructions. The framework also incorporates a Trust Service Provider for de-identifying patient data to ensure privacy. By leveraging the FHIR standard, the IG promotes interoperability between different healthcare systems. The MedMorph framework allows public health agencies and research organizations to define their data needs, while healthcare systems can automate the process of fulfilling these requests in a secure and standardized manner. The IG acknowledges that implementing this approach may require a phased rollout and emphasizes the importance of collaboration with other initiatives to ensure harmonization and avoid duplication of efforts. 
 
 ---
 
-# [fhir-medmorph-research-dex-ig](https://github.com/HL7/fhir-medmorph-research-dex-ig)
+# [fhir-medmorph-research-dex-ig](https://build.fhir.org/ig/HL7/fhir-medmorph-research-dex-ig) ([source](https://github.com/HL7/fhir-medmorph-research-dex-ig))
 
 The MedMorph Research Data Exchange IG defines a standardized way to share patient data for research, specifically between healthcare organizations (data sources) and research networks (data marts). It aims to simplify the process of adding new data partners to research networks by creating a consistent method for extracting, transforming, and loading (ETL) data. Previously, variations in data formats and transfer methods made this onboarding process complex and time-consuming, taking anywhere from weeks to months. This IG leverages the FHIR standard, building upon existing standards like the US Core Data for Interoperability (USCDI) and the Common Data Model for Healthcare (CDMH). It defines specific data elements to be shared, uses SMART on FHIR for secure data access, and employs knowledge artifacts to guide the ETL process, which is automated by the Health Data Exchange Application. While the IG focuses on exchanging large sets of structured patient data for research, it does not cover aspects like state and local data sharing policies, data quality checks, or the use of unstructured data like images. It was developed collaboratively by several organizations to address the challenges research networks face in efficiently onboarding data partners and accessing the data they need. 
 
 ---
 
-# [fhir-military-service](https://github.com/HL7/fhir-military-service)
+# [fhir-military-service](https://build.fhir.org/ig/HL7/fhir-military-service) ([source](https://github.com/HL7/fhir-military-service))
 
 The Military Service History and Status IG defines a standardized way to exchange information about a person's military service using FHIR. It aims to improve healthcare for veterans by enabling healthcare providers, veterans, and other organizations to easily access and share military service information, such as deployments and job roles. Previously, the U.S. Department of Veterans Affairs (VA) relied on a custom system that was difficult for other systems to interact with. This new guide leverages FHIR profiles to specify the necessary data elements for representing military service information, extensions to add data to existing records, and standardized terminologies to ensure clear communication between systems. It also defines a FHIR-based API to verify veteran status and retrieve military history, replacing the older VA system. The guide focuses on sharing information for administrative and clinical purposes within the United States but is designed to be adaptable for other countries. It addresses known gaps in existing medical terminologies and provides instructions for testing and implementing the FHIR API. 
 
 ---
 
-# [fhir-mmm-ig](https://github.com/HL7/fhir-mmm-ig)
+# [fhir-mmm-ig](https://build.fhir.org/ig/HL7/fhir-mmm-ig) ([source](https://github.com/HL7/fhir-mmm-ig))
 
 The Longitudinal Maternal & Child Health Information for Research FHIR IG aims to improve research on maternal and child health by standardizing how this clinical information is shared and accessed. It provides a common framework for representing and exchanging data about pregnant individuals and their children using the FHIR standard. The IG leverages existing standards like the US Core profiles and defines a process where researchers can query EHR systems and other data sources for specific information, such as details on individuals who died within a year of pregnancy or those with high blood pressure during pregnancy. Researchers can then use this standardized data to investigate factors related to maternal mortality and child health outcomes. The IG focuses specifically on maternal care during pregnancy and after delivery, including the period before pregnancy, and emphasizes the importance of linking maternal and child health records to study their interconnectedness. This initiative responds to the critical need for better data sharing and standardization in maternal health research, particularly given the rising maternal mortality rates. 
 
 ---
 
-# [fhir-nhsn-ade-ig](https://github.com/HL7/fhir-nhsn-ade-ig)
+# [fhir-nhsn-ade-ig](https://build.fhir.org/ig/HL7/fhir-nhsn-ade-ig) ([source](https://github.com/HL7/fhir-nhsn-ade-ig))
 
 The NHSN Adverse Drug Event (ADE) FHIR IG aims to create a standardized method for hospitals to electronically report data on patients experiencing low or high blood sugar (hypoglycemia or hyperglycemia) during their hospital stay to the Centers for Disease Control and Prevention's National Healthcare Safety Network (NHSN). This guide facilitates the electronic exchange of healthcare information by defining how hospitals should structure data about blood sugar levels, medication administration, and relevant patient details (diagnoses, procedures, etc.) using the FHIR standard. The IG focuses specifically on hypo- and hyperglycemia events that occur during inpatient hospital stays and requires reporting data at the individual patient level, including each blood glucose measurement and medication administration, which allows for a detailed analysis of the relationship between medications and blood sugar fluctuations. The guide leverages FHIR Composition resources to package all relevant patient data for each encounter and aligns with existing quality reporting metrics from the National Quality Forum, ensuring the collected data's relevance to national quality improvement efforts. It is designed to enable hospitals to use their EHRs as the primary data source, simplifying the reporting process. The IG intends to improve data comparison across hospitals and identify areas for improvement on a national scale by standardizing data reporting. 
 
 ---
 
-# [fhir-omop-ig](https://github.com/HL7/fhir-omop-ig)
+# [fhir-omop-ig](https://build.fhir.org/ig/HL7/fhir-omop-ig) ([source](https://github.com/HL7/fhir-omop-ig))
 
 The FHIR to Observational Medical Outcomes Partnership (OMOP) IG provides a standardized method for converting EHR data from the FHIR format into the OMOP format, which is widely used in medical research. This IG focuses on streamlining the process of transferring data from systems using FHIR to those using OMOP, addressing a previous gap in interoperability efforts that primarily focused on the reverse direction. It achieves this by defining clear mappings between FHIR resources and OMOP data tables, along with instructions and tools for handling different data types and code systems. The guide leverages existing standards and resources like the OMOP Common Data Model version 5.4 and the International Patient Access FHIR profiles, concentrating on a core set of common EHR data elements. This approach aims to reduce the time and effort required for data transformation, improve data quality and consistency, and ultimately facilitate research by enabling easier access to and analysis of data from diverse sources. The guide's development was informed by the Vulcan FHIR Accelerator project, emphasizing community collaboration and practical applicability for a wider impact. 
 
 ---
 
-# [fhir-order-catalog](https://github.com/HL7/fhir-order-catalog)
+# [fhir-order-catalog](https://build.fhir.org/ig/HL7/fhir-order-catalog) ([source](https://github.com/HL7/fhir-order-catalog))
 
 The Order Catalog IG defines a standardized way to represent and exchange information about medical products, such as medications and devices, using FHIR. This allows different EHR systems and other healthcare applications to easily share and understand product information, which can improve tasks like browsing catalogs, searching for specific products, and accessing detailed product descriptions. The IG achieves this by using FHIR resources like Composition, DeviceDefinition, and MedicationKnowledge to structure catalog information. It provides ways to represent entire catalogs and individual product details, including device characteristics and medication usage information. The IG also supports efficient searching within catalogs and offers flexibility in how catalogs are structured and accessed. Additionally, it considers jurisdictional differences in device regulations by including mappings to databases like the Global Unique Device Identification Database (GUDID) in the United States and the European Union Medical Device Regulation database (EUDAMED). By promoting a common way to represent medical product catalogs, the Order Catalog IG aims to improve the interoperability and exchange of product information across healthcare systems.
 
 ---
 
-# [fhir-pacio-adi](https://github.com/HL7/fhir-pacio-adi)
+# [fhir-pacio-adi](https://build.fhir.org/ig/HL7/fhir-pacio-adi) ([source](https://github.com/HL7/fhir-pacio-adi))
 
 The Patient Advance Care Information and Directives (FHIR-PACIO-ADI) IG defines a standardized way to create, share, and access digital healthcare directives, commonly known as living wills or advance directives. These directives allow individuals to document their preferences for medical treatment if they become unable to communicate them due to illness or injury. The guide utilizes the FHIR standard to structure this information digitally. This enables healthcare providers to easily access and understand a patient's wishes, regardless of their location or healthcare system. The guide supports various formats for storing advance directives, including scanned documents, pre-existing digital documents, and those created directly within FHIR-compliant systems. It also specifies how to exchange these documents securely between different systems and how to ensure the information accessed is the most up-to-date version. While the guide promotes the use of digital signatures for enhanced security, it's not a mandatory requirement. The guide recognizes the importance of capturing the nuances of individual preferences, therefore emphasizing the inclusion of human-readable text alongside standardized codes. It also offers flexibility by supporting the exchange of both complete directive documents and individual sections, catering to different needs and workflows. 
 
 ---
 
-# [fhir-pacio-cognitive-status](https://github.com/HL7/fhir-pacio-cognitive-status)
+# [fhir-pacio-cognitive-status](https://build.fhir.org/ig/HL7/fhir-pacio-cognitive-status) ([source](https://github.com/HL7/fhir-pacio-cognitive-status))
 
 The PACIO Cognitive Status IG aims to improve the sharing of information about a patient's cognitive abilities between different healthcare providers. It addresses the problem of inconsistent information exchange during transitions between care settings, such as when a patient moves from a hospital to a nursing home. The IG leverages FHIR to define a common format for representing cognitive assessments. This means that different EHR systems can understand and share this information. The guide focuses on standardizing data from commonly used assessment tools and promotes the use of established coding systems. While initially focused on post-acute care settings like nursing homes, the IG is designed to be adaptable and could potentially expand to other areas of healthcare. It also emphasizes the importance of data security and patient privacy, supporting secure data sharing mechanisms and patient access to their own information. 
 
 ---
 
-# [fhir-pacio-functional-status](https://github.com/HL7/fhir-pacio-functional-status)
+# [fhir-pacio-functional-status](https://build.fhir.org/ig/HL7/fhir-pacio-functional-status) ([source](https://github.com/HL7/fhir-pacio-functional-status))
 
 This IG aims to standardize how healthcare providers share information about a patient's functional status, including activities like moving around, self-care, and managing household chores. Sharing this information is especially important during transitions between care settings, such as from a hospital to a nursing home. The guide uses FHIR to structure this information, making it easier for different EHR systems to exchange it. Specifically, it defines what data elements to collect, such as a patient's ability to walk or dress themselves, and uses standard codes for consistent representation. Initially, the guide focuses on sharing functional status information when patients transition to post-acute care settings like skilled nursing facilities and home health agencies. It utilizes a secure method for exchanging information, ensuring patient privacy. The guide's approach is designed to be adaptable and expandable, allowing it to accommodate different types of assessments and future advancements in how we understand and measure functional status. 
 
 ---
 
-# [fhir-pacio-pfe](https://github.com/HL7/fhir-pacio-pfe)
+# [fhir-pacio-pfe](https://build.fhir.org/ig/HL7/fhir-pacio-pfe) ([source](https://github.com/HL7/fhir-pacio-pfe))
 
 The "FHIR Patient Assessment and Care Outcomes (PACIO) Post-Acute Functioning and Engagement" IG defines a standardized way to electronically share information about a patient's ability to perform daily activities and participate in their community. This includes details about physical abilities (like walking or eating), cognitive abilities (like memory or communication), and the support a patient needs to live independently. The IG uses the FHIR standard to structure this information. It leverages the International Classification of Functioning, Disability and Health (ICF) categories to organize the data and make it easier to understand. The guide focuses on sharing this information between different healthcare providers, especially those in post-acute care settings like nursing homes and home health agencies, but does not specify how the information should be collected or displayed in EHR systems. The goal is to improve care coordination by ensuring that healthcare providers have access to complete and accurate information about a patient's functional abilities, which can lead to better care transitions and reduce the need to repeat assessments. This IG is particularly relevant because of legislation that mandates the standardization of patient assessments in post-acute care. 
 
 ---
 
-# [fhir-pacio-rt](https://github.com/HL7/fhir-pacio-rt)
+# [fhir-pacio-rt](https://build.fhir.org/ig/HL7/fhir-pacio-rt) ([source](https://github.com/HL7/fhir-pacio-rt))
 
 This IG defines a standardized way to organize healthcare data for patients receiving long-term care, such as in home health or skilled nursing facilities. It addresses the challenge of managing large amounts of data that accumulate during extended care admissions by introducing the concept of "re-assessment timepoints." These timepoints, determined by formal assessments conducted at specific intervals, divide the overall admission into smaller, manageable periods. Each timepoint is represented as a separate encounter within the patient's EHR, creating a chronological timeline of the patient's care journey. By linking clinical data, such as observations and diagnoses, to specific timepoints, the IG enables easier access to relevant information for a particular period, improving the efficiency of data retrieval and analysis. The guide focuses on post-acute care settings where extended admissions are common and utilizes the FHIR standard for data exchange. It also defines search parameters to facilitate querying for specific timepoints based on criteria like the patient, date range, or assessment type, enhancing the usability of patient data for clinicians, insurance providers, and other stakeholders. The IG aligns with the US Core IG, ensuring compatibility with existing healthcare data exchange standards in the United States. 
 
 ---
 
-# [FHIRPath](https://github.com/HL7/FHIRPath)
+# [FHIRPath](https://build.fhir.org/ig/HL7/FHIRPath) ([source](https://github.com/HL7/FHIRPath))
 
 This IG defines FHIRPath, a language designed to access and analyze healthcare data stored using FHIR. Similar to using an address to find a house, FHIRPath provides a standardized way to locate specific pieces of information within complex health records, regardless of how that data is stored. It achieves this by representing the data as a hierarchical structure and allowing users to navigate through it using a simple, chainable syntax. FHIRPath is designed to be easy to read and write, especially when dealing with the repeating elements often found in healthcare data like lists of medications or diagnoses. It can be used in various contexts, including validating the accuracy of data, identifying groups of patients who meet specific criteria, and supporting clinical decision-making. By offering a platform-independent and standardized approach to expressing logic in healthcare data, FHIRPath aims to address the growing need for seamless data exchange and analysis across different healthcare systems and technologies.
 
 ---
 
-# [fhir-patient-correction](https://github.com/HL7/fhir-patient-correction)
+# [fhir-patient-correction](https://build.fhir.org/ig/HL7/fhir-patient-correction) ([source](https://github.com/HL7/fhir-patient-correction))
 
 The Patient Correction IG defines a standard way for patients to electronically request changes to their medical records using FHIR. This IG aims to replace older methods with a streamlined, digital process. It outlines how patient applications can communicate with provider systems, like EHRs, to send correction requests, updates, and supporting information. The guide also describes how healthcare providers can review these requests and communicate back to patients with resolutions. It uses the FHIR Task resource to track the progress of each request. While the IG focuses on the communication between patients and providers, it doesn't dictate the internal processes healthcare providers use to manage corrections. Currently, patients need to actively check for updates on their requests, but future versions may include automatic notifications. The IG also highlights the importance of secure communication and data privacy, aligning with regulations like HIPAA and GDPR. 
 
 ---
 
-# [fhir-pdmp](https://github.com/HL7/fhir-pdmp)
+# [fhir-pdmp](https://build.fhir.org/ig/HL7/fhir-pdmp) ([source](https://github.com/HL7/fhir-pdmp))
 
 The US Prescription Drug Monitoring Program (PDMP) FHIR IG defines a standardized way for healthcare providers to electronically request and receive a patient's controlled substance prescription history from state-run PDMPs. These databases track prescriptions to help prevent misuse and improve patient safety. Previously, accessing this information involved various methods with limited compatibility. This IG introduces a modern approach using FHIR, enabling providers to request and receive PDMP data in a structured and consistent format. It offers flexibility by supporting both detailed data and links to formatted reports, accommodating different implementation needs and state regulations. The IG also incorporates mechanisms for integrating this information into existing EHR systems and clinical workflows. While focused specifically on the exchange of PDMP requests and responses between providers and state databases, it aims to improve the efficiency and reliability of accessing crucial patient information, potentially enhancing patient care and addressing prescription drug misuse. The guide primarily targets the US healthcare system, considering its specific pharmacy practices and regulations, including strict security and privacy considerations. 
 
 ---
 
-# [fhir-qi-core](https://github.com/HL7/fhir-qi-core)
+# [fhir-qi-core](https://build.fhir.org/ig/HL7/fhir-qi-core) ([source](https://github.com/HL7/fhir-qi-core))
 
 The QI-Core IG aims to standardize healthcare data for quality improvement initiatives, such as measuring hospital performance or providing doctors with alerts about best practices within EHRs. QI-Core leverages the FHIR standard and builds upon the US Core, a set of FHIR profiles specific to the US healthcare system. QI-Core focuses on how data is structured, using profiles to specify the format of FHIR resources, extensions to add necessary information for quality measures and clinical decision support, and standardized terminology to ensure consistent coding of medical concepts. It addresses challenges posed by previous, separate data models by creating a common structure, which can streamline the development of tools that both measure healthcare quality and support clinical decisions. While QI-Core primarily aligns with US standards, it acknowledges the need for broader applicability. The guide focuses on essential data elements for interoperability and includes a standardized approach to representing the absence of a medical action, which is crucial for accurate quality assessment. It is important to note that QI-Core focuses on data representation and does not define the logic for quality measures or decision support rules themselves. 
 
 ---
 
-# [fhir-radiation-dose-summary-ig](https://github.com/HL7/fhir-radiation-dose-summary-ig)
+# [fhir-radiation-dose-summary-ig](https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig) ([source](https://github.com/HL7/fhir-radiation-dose-summary-ig))
 
 The Radiation Dose Summary IG provides a standardized method for computer systems to exchange summaries of radiation doses patients receive during medical imaging exams like Computed Tomography (CT) scans, X-rays, and Nuclear Medicine procedures. It addresses the challenge of accessing essential dose information from systems that collect and manage this data, such as Radiology Information Systems, and making it readily available to other systems, such as EHRs. Previously, detailed dose information was often stored in a complex format called DICOM Radiation Structured Reports, which many systems could not easily interpret. This IG leverages a modern standard for exchanging healthcare information called FHIR to define a simpler and more accessible way to represent these summaries. It specifies how standard FHIR components should be used to structure the dose data, making it easier for systems like EHRs to retrieve and display this information in patient reports or potentially use it for other purposes like tracking radiation exposure over time. However, it is important to note that this guide focuses on summarizing doses per exam, not cumulative doses, and does not address radiation therapy or doses received by healthcare practitioners. 
 
 ---
 
-# [fhir-registry-protocols-ig](https://github.com/HL7/fhir-registry-protocols-ig)
+# [fhir-registry-protocols-ig](https://build.fhir.org/ig/HL7/fhir-registry-protocols-ig) ([source](https://github.com/HL7/fhir-registry-protocols-ig))
 
 The FHIR Registry Protocols IG aims to streamline the process of submitting data to clinical registries, which are systems that collect and analyze healthcare information for research and quality improvement. The IG addresses challenges associated with inconsistent data formats and manual processes by leveraging FHIR. It allows registries to clearly define their data requirements using standardized formats and specify where this data can be found within various healthcare systems, such as EHRs or older message formats. Healthcare providers can then use this information to automatically extract the necessary data and submit it to the registry in a standardized FHIR format. The IG supports various data sources and submission methods, emphasizing automation and security. Its success relies on the adoption of FHIR and the willingness of both registries and healthcare providers to implement its recommendations, ultimately contributing to more efficient and accurate data sharing in healthcare.
 
 ---
 
-# [fhir-resp-net-ig](https://github.com/HL7/fhir-resp-net-ig)
+# [fhir-resp-net-ig](https://build.fhir.org/ig/HL7/fhir-resp-net-ig) ([source](https://github.com/HL7/fhir-resp-net-ig))
 
 The RESP-NET Content IG defines a standardized way for healthcare facilities to electronically report data about patients hospitalized with respiratory viruses like influenza, COVID-19, and RSV to public health agencies participating in the Respiratory Virus Hospitalization Surveillance Network (RESP-NET). The IG aims to replace the current manual processes of identifying and collecting data on these cases, which are time-consuming and labor-intensive. It leverages the FHIR standard to specify the required data elements, automate data extraction and reporting, and ensure secure data exchange. The process involves RESP-NET sites defining their reporting requirements, the MedMorph Health Data Exchange App (HDEA) setting up automated data extraction from EHRs based on those requirements, and the HDEA securely transmitting the extracted data to the appropriate RESP-NET site. This IG focuses specifically on hospitalized patients with certain respiratory viruses within the RESP-NET surveillance area and addresses data elements currently collected by RESP-NET. It does not cover aspects like data quality assessment or consent policies, and its effectiveness depends on the increasing adoption of EHR systems that support FHIR. 
 
 ---
 
-# [fhir-saner](https://github.com/HL7/fhir-saner)
+# [fhir-saner](https://build.fhir.org/ig/HL7/fhir-saner) ([source](https://github.com/HL7/fhir-saner))
 
 The Situational Awareness for Novel Epidemic Response (SANER) IG is a technical standard designed to improve how healthcare facilities share essential information during public health emergencies. It uses FHIR to define a standardized way for hospitals to automatically report data like available beds, ventilators in use, and patient statistics to public health agencies. This approach aims to replace older, less efficient methods that often relied on manual data entry and lacked the ability to keep up with technology advancements. SANER leverages existing FHIR resources and expands them with specific profiles and terminology to ensure that data is consistently represented and understood across different systems. It supports both automated data extraction from hospital EHRs and flexible reporting options to accommodate various infrastructure setups. By enabling a streamlined and automated flow of information, SANER seeks to provide public health officials with a clear and timely understanding of the situation during emergencies, ultimately supporting better resource allocation and decision-making to protect public health. While SANER prioritizes reporting on bed and ventilator capacity, it acknowledges the need for data security and privacy and recommends appropriate measures to safeguard sensitive information. It also allows for flexibility to accommodate local variations in coding practices and workflows within healthcare facilities. 
 
 ---
 
-# [fhir-sdoh-clinicalcare](https://github.com/HL7/fhir-sdoh-clinicalcare)
+# [fhir-sdoh-clinicalcare](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare) ([source](https://github.com/HL7/fhir-sdoh-clinicalcare))
 
 The "SDOHCC: Social Determinants of Health Clinical Care" IG aims to improve how healthcare and social service organizations share information about social factors that affect people's health, such as housing, food access, and transportation. It does this by creating a standard way to electronically exchange this information using FHIR. The guide defines specific data formats, uses standardized terminology from the Value Set Authority Center, and outlines processes for sharing information between healthcare providers, patients, and community organizations. It also addresses how to incorporate data from assessment tools into EHRs. This IG focuses on the US healthcare system and emphasizes the importance of patient privacy and consent, aligning with regulations like HIPAA. It also recognizes the need to collaborate with other data exchange guides to ensure broader compatibility. Because the language used to describe social determinants of health is still evolving, the guide will be updated regularly to reflect the latest terminology. By creating a consistent way to exchange this important information, the guide aims to support a more integrated approach to healthcare that considers the full range of factors affecting a person's well-being. 
 
 ---
 
-# [fhir-security-label-ds4p](https://github.com/HL7/fhir-security-label-ds4p)
+# [fhir-security-label-ds4p](https://build.fhir.org/ig/HL7/fhir-security-label-ds4p) ([source](https://github.com/HL7/fhir-security-label-ds4p))
 
 The Data Segmentation for Privacy (DS4P) IG defines a standardized way to label sensitive health information within FHIR. This allows healthcare providers to share information more easily while protecting specific parts of a patient's record, such as a social security number, rather than treating the entire record as equally sensitive. The IG expands on FHIR's existing capabilities by introducing standardized extensions to add details like the policy behind a label, who assigned it, and related documents. It also enables applying labels to specific data elements within a record and representing the highest sensitivity level of a collection of records. Standardized codes are provided for common sensitivity levels, purposes of use like treatment or research, and obligations for handling the data. The IG also describes a conceptual Security Labeling Service that can automatically assign labels based on policies. While aiming for broad applicability, the current version primarily uses examples from the US healthcare system and emphasizes the importance of trust agreements between those sharing and receiving information. The IG is intended as a foundation for more specific guides tailored to particular use cases and policy environments. 
 
 ---
 
-# [fhir-shc-vaccination-ig](https://github.com/HL7/fhir-shc-vaccination-ig)
+# [fhir-shc-vaccination-ig](https://build.fhir.org/ig/HL7/fhir-shc-vaccination-ig) ([source](https://github.com/HL7/fhir-shc-vaccination-ig))
 
 The SMART Health Cards Vaccination IG defines a standardized way to represent vaccination and infectious disease test records in a format suitable for SMART Health Cards. These cards, often accessed through a scannable QR code, enable individuals to easily share their health information with entities requiring verification, such as airlines or event organizers. The IG achieves standardization by creating specific profiles for common health data elements like patient demographics, immunization details, and observation (test) results, ensuring consistency in how this information is recorded and interpreted. To address privacy concerns and the limited storage capacity of QR codes, the IG emphasizes data minimization, offering two profile sets: "Primary" for minimal information and "Fallback" for situations where additional details are necessary. Key aspects of a patient's record, like vaccine types, are coded using standardized terminologies to ensure clarity and interoperability across different systems. The IG prioritizes representing information for easy verification of vaccination or test status, rather than complex clinical evaluations. While initially focused on pandemic-related needs, the IG is designed to be internationally applicable and encourages jurisdictions to develop their own profiles based on this framework, promoting a globally consistent approach to sharing verifiable health information. 
 
 ---
 
-# [fhir-shorthand](https://github.com/HL7/fhir-shorthand)
+# [fhir-shorthand](https://build.fhir.org/ig/HL7/fhir-shorthand) ([source](https://github.com/HL7/fhir-shorthand))
 
 This IG introduces FHIR Shorthand (FSH), a new language designed to make it easier to create and manage healthcare data standards using FHIR. Previous methods for developing these standards, such as manually editing FHIR artifacts or using spreadsheets, proved to be complex or prone to errors. FSH offers a simpler, text-based approach that is more user-friendly and scalable. It works by utilizing a compiler called SUSHI, which translates FSH code into standard FHIR artifacts, ensuring compatibility with existing systems. Additionally, a tool called GoFSH can convert existing FHIR artifacts into FSH, making it possible to transition older projects. FSH is specifically designed for creating IGs, which are collections of FHIR artifacts that define data standards for specific healthcare scenarios. Because it is open-source and community-driven, FSH promotes collaboration and aims to increase the accessibility and efficiency of defining and managing healthcare data standards, ultimately contributing to improved data exchange in healthcare.
 
 ---
 
-# [fhir-sirb](https://github.com/HL7/fhir-sirb)
+# [fhir-sirb](https://build.fhir.org/ig/HL7/fhir-sirb) ([source](https://github.com/HL7/fhir-sirb))
 
 This IG defines a standardized way to create and share research study forms electronically using FHIR. It aims to simplify the process of obtaining approval for multi-site research studies that use a single sIRB. The IG focuses on replacing the inefficient exchange of paper or document-based forms with structured, digital questionnaires that can be easily completed and shared between different institutions. These questionnaires cover common forms like research protocols, informed consent documents, and adverse event reports. The guide also leverages FHIR's ability to pre-fill common information across different forms, reducing the workload for research staff. While the IG does not address integrating data into existing research management systems, it offers a simplified approach for institutions to adopt standardized forms, even with limited technical resources. The guide acknowledges that future versions may expand to include more complex features and integration capabilities as the use of FHIR in research study management matures.
 
 ---
 
-# [fhir-specialty-rx](https://github.com/HL7/fhir-specialty-rx)
+# [fhir-specialty-rx](https://build.fhir.org/ig/HL7/fhir-specialty-rx) ([source](https://github.com/HL7/fhir-specialty-rx))
 
 This IG defines a standardized approach for exchanging patient information needed to fill prescriptions for specialty medications, which are usually high-cost drugs with complex handling requirements. It aims to improve the efficiency of this process, which traditionally involved manual and time-consuming steps, leading to delays in patients receiving their medications. The guide leverages FHIR to specify how patient demographics, clinical details (such as allergies and medical conditions), insurance data, and patient consents should be shared between healthcare providers (like doctors) and those fulfilling prescriptions (like pharmacies and specialty hubs). It outlines two main methods: one where the pharmacy requests information from the prescriber's EHR system and another where the prescriber's system proactively sends the information. The guide focuses specifically on the United States healthcare system and specialty medications, excluding the transmission of the initial prescription itself, which is handled by a separate standard. It accommodates different technological capabilities by supporting both direct data exchange and the use of intermediaries, and it includes a defined process for handling patient consent, a crucial aspect of specialty medication fulfillment. While it aims to streamline the process, the IG primarily focuses on standardizing data exchange and does not address all potential challenges in specialty medication fulfillment. 
 
 ---
 
-# [fhir-spl](https://github.com/HL7/fhir-spl)
+# [fhir-spl](https://build.fhir.org/ig/HL7/fhir-spl) ([source](https://github.com/HL7/fhir-spl))
 
 The FHIR Structured Product Labeling (SPL) IG defines a new method for submitting drug labels to the FDA using the FHIR standard. It aims to replace the older HL7 Version 3 SPL standard with a modern, interoperable approach. The guide achieves this by creating FHIR profiles that specify the necessary data elements for drug labels, mapping these elements to their counterparts in the older SPL format, and providing tools to automate the conversion between the two formats. The initial scope includes submissions for medicinal products and facility registrations, covering use cases like requesting National Drug Codes (NDC), registering establishments, and submitting drug labels. The guide leverages the FHIR "document" approach, using a structure called a Bundle to represent a complete SPL submission. It also utilizes other FHIR resources like Organization and MedicinalProductDefinition to represent specific entities. Notably, the guide focuses on human medicinal products and excludes areas like animal drugs or medical devices. Developed in collaboration with the HL7 Biomedical Research & Regulation work group, this IG seeks to standardize data exchange for drug label submissions to the FDA. 
 
 ---
 
-# [fhir-subscription-backport-ig](https://github.com/HL7/fhir-subscription-backport-ig)
+# [fhir-subscription-backport-ig](https://build.fhir.org/ig/HL7/fhir-subscription-backport-ig) ([source](https://github.com/HL7/fhir-subscription-backport-ig))
 
 This IG enables older systems using FHIR, versions R4 and R4B, to adopt a newer method for receiving updates called "topic-based subscriptions." Previously, these systems relied on a less efficient "query-based" approach. This new method allows applications to subscribe to specific types of changes in healthcare data, like a new patient registration or an updated medication order, and receive notifications when those changes occur. The IG defines how these subscriptions are created and managed, including the format of the notifications. It supports various communication methods like webhooks, email, and dedicated messaging systems, offering flexibility for different systems. Clients can also specify the level of detail included in the notifications, choosing to receive only identifiers, full resource details, or no content at all. The guide also addresses error handling and security considerations, ensuring reliable and secure communication. It allows clients to request notifications formatted in different FHIR versions, facilitating system upgrades and interoperability between systems using different FHIR versions. By adopting this IG, older FHIR systems can improve their efficiency and responsiveness to changes in healthcare data.
 
 ---
 
-# [fhir-udap-security-ig](https://github.com/HL7/fhir-udap-security-ig)
+# [fhir-udap-security-ig](https://build.fhir.org/ig/HL7/fhir-udap-security-ig) ([source](https://github.com/HL7/fhir-udap-security-ig))
 
 The UDAP Security IG aims to standardize and enhance the security of health information exchange between different healthcare organizations and applications, including those used by patients and providers. It achieves this by establishing a common set of rules for how apps verify their identity, register with systems they need to connect with, and manage user authorization. Instead of relying on simple passwords, the guide promotes the use of robust methods like digital certificates and encryption keys for stronger security. It also enables automated app registration, streamlining the process of connecting apps to health systems. The guide supports different types of apps, addressing the needs of both patient-facing apps and those used for communication between organizations. Additionally, it enables users to leverage their existing logins from one organization to access data held by another, when authorized. The IG builds upon previous efforts and aligns with national initiatives to promote secure health data exchange. It is designed to work with existing frameworks like SMART App Launch and accommodates different levels of trust between organizations. While it focuses on specific methods for authorization, it allows for flexibility in how certain data elements are represented.
 
 ---
 
-# [fhir-us-mcc](https://github.com/HL7/fhir-us-mcc)
+# [fhir-us-mcc](https://build.fhir.org/ig/HL7/fhir-us-mcc) ([source](https://github.com/HL7/fhir-us-mcc))
 
 The US Multiple Chronic Conditions (MCC) IG aims to enhance healthcare for patients with multiple chronic conditions, such as diabetes and heart disease, by improving how electronic systems share and utilize patient health information. It provides a standardized method for creating electronic care plans that can gather data from various healthcare providers and systems, enabling a comprehensive view of the patient's health. This allows healthcare teams to develop personalized care plans, track patient progress, and facilitate better communication with patients and caregivers. The guide utilizes the FHIR standard to structure and exchange care plan information, employing standardized terminology and building upon existing US Core FHIR profiles. It focuses specifically on the needs of patients in the US healthcare system with multiple chronic conditions and suggests using specific tools for structured data capture and incorporating patient-generated data through questionnaires. The guide's development is driven by factors such as the increasing prevalence of multiple chronic conditions, a growing aging population, and a focus on patient-centered care. While the guide promotes interoperability, it's worth noting that implementation requires access to the Value Set Authority Center for terminology codes, which necessitates a Unified Medical Language System license. 
 
 ---
 
-# [fhir-us-ndh](https://github.com/HL7/fhir-us-ndh)
+# [fhir-us-ndh](https://build.fhir.org/ig/HL7/fhir-us-ndh) ([source](https://github.com/HL7/fhir-us-ndh))
 
 The National Directory of Healthcare Providers & Services (NDH) IG seeks to create a nationwide, unified source of information about healthcare providers and services in the US. It addresses the problems of fragmented and outdated provider directories by leveraging FHIR. This format enables consistent organization and exchange of healthcare information, making it easier for different computer systems to communicate. The guide defines how to structure data elements like provider names, contact information, services offered, insurance networks, and electronic addresses. It also offers guidance on how providers can submit their information, how the directory can verify the accuracy of that information, and how others can access and utilize it. The NDH IG aims to improve the accuracy and accessibility of healthcare provider data, ultimately benefiting patients, providers, and other healthcare stakeholders by streamlining processes like finding providers, coordinating care, and verifying insurance coverage. The guide focuses specifically on the US healthcare system and builds upon existing standards and initiatives. While it outlines a comprehensive approach, it doesn't mandate a specific technical setup for the directory, allowing for flexibility in implementation. 
 
 ---
 
-# [fhir-us-ph-common-library-ig](https://github.com/HL7/fhir-us-ph-common-library-ig)
+# [fhir-us-ph-common-library-ig](https://build.fhir.org/ig/HL7/fhir-us-ph-common-library-ig) ([source](https://github.com/HL7/fhir-us-ph-common-library-ig))
 
 The US Public Health Profiles Library is an IG designed to improve how health information is shared for public health purposes in the United States. It does this by creating a standardized set of data elements that can be used by various healthcare systems, EHRs, and public health agencies. Instead of each public health project creating its own unique data format, this library provides a common set that everyone can use. This simplifies the process of sharing information, making it easier to track and respond to health concerns across different systems. The library builds upon existing standards whenever possible and only introduces new data elements when necessary for public health needs. It also provides clear instructions on how these data elements should be used and ensures that they are compatible with existing health information systems. The goal is to make it easier and more efficient to collect, share, and use health information to improve public health outcomes. 
 
 ---
 
-# [fhir-us-ph-library](https://github.com/HL7/fhir-us-ph-library)
+# [fhir-us-ph-library](https://build.fhir.org/ig/HL7/fhir-us-ph-library) ([source](https://github.com/HL7/fhir-us-ph-library))
 
 The US Public Health Profiles Library (USPHPL) IG aims to standardize how health information is shared for public health purposes in the United States. It achieves this by defining specific data formats and structures, based on the FHIR standard, making it easier for healthcare providers, EHR systems, and public health agencies to exchange information. Traditionally, public health reporting has often relied on disparate systems and definitions, leading to inefficiencies and difficulties in sharing data. This IG leverages the existing US Core IG as a foundation, adding specific profiles and requirements only when necessary for public health reporting. It addresses various aspects of data exchange, including defining the minimum necessary data elements, ensuring data privacy through masking techniques, and establishing clear expectations for how systems should conform to the guide. The USPHPL also introduces extensions to capture specific information relevant to public health, such as the reason for initiating a report or details about exposures and contact information. Furthermore, it defines profiles for managing value sets and libraries used in public health reporting, including those used for identifying reportable events and supporting automated decision-making. By promoting a standardized approach, the USPHPL aims to improve the efficiency and effectiveness of public health reporting and research. 
 
 ---
 
-# [fhir-us-phpl](https://github.com/HL7/fhir-us-phpl)
+# [fhir-us-phpl](https://build.fhir.org/ig/HL7/fhir-us-phpl) ([source](https://github.com/HL7/fhir-us-phpl))
 
 The US Public Health Profiles Library is a guide designed to improve how health information is shared for public health purposes in the United States. It does this by creating a standard way to organize and share health data, making it easier for different healthcare systems to communicate with each other. In the past, public health agencies often used different methods for reporting information, which made it difficult to combine and analyze data from various sources. This new guide builds upon an existing standard called US Core, adding specific guidelines for public health needs. It encourages everyone to use these standard formats to ensure that information can be easily exchanged and used for research and reporting. The guide also includes rules for how to handle situations where organizations need to adapt the standards to their specific needs. A dedicated group, the Public Health Working Group, is responsible for maintaining and updating the guide to ensure it remains relevant and useful for the public health community. The overall goal is to streamline public health reporting, reduce inconsistencies, and improve data sharing across the country, ultimately benefiting public health research and initiatives. 
 
 ---
 
-# [FHIR-us-pq-cmc-fda](https://github.com/HL7/FHIR-us-pq-cmc-fda)
+# [FHIR-us-pq-cmc-fda](https://build.fhir.org/ig/HL7/FHIR-us-pq-cmc-fda) ([source](https://github.com/HL7/FHIR-us-pq-cmc-fda))
 
 The FHIR-us-pq-cmc-fda IG seeks to improve how pharmaceutical companies share drug information with the US Food and Drug Administration (FDA). It focuses on standardizing the way drug quality, manufacturing, and control data, known as PQ/CMC data, is submitted. The guide introduces a structured, digital format called FHIR to replace the older, document-based approach. This new method allows the FDA to extract and analyze information more easily, potentially leading to a more efficient review process. The guide provides detailed instructions on how to format PQ/CMC data using FHIR, ensuring consistency across submissions. Currently, the guide focuses on information related to solid oral dosage forms, like tablets and capsules, and is designed to work within the existing electronic submission system used by the FDA. It also incorporates standardized terminology to ensure data is accurately represented. While the guide supports different data formats, it primarily uses the XML format required by the FDA. Future updates to the guide will address additional dosage forms and functionalities. The development of this guide is a joint effort between the FDA and a group focused on healthcare data standards, promoting broader compatibility within the healthcare system. 
 
 ---
 
-# [FHIR-us-pq-cmc](https://github.com/HL7/FHIR-us-pq-cmc)
+# [FHIR-us-pq-cmc](https://build.fhir.org/ig/HL7/FHIR-us-pq-cmc) ([source](https://github.com/HL7/FHIR-us-pq-cmc))
 
 The FHIR-us-pq-cmc IG aims to improve how pharmaceutical companies share drug information with the US Food and Drug Administration (FDA). Currently, drug companies submit complex documents that are difficult for computers to analyze. This IG introduces a new approach using FHIR. It defines how to structure information about drug ingredients, manufacturing processes, and quality controls, making it easier for the FDA to review. The guide focuses on submissions related to solid oral medications like tablets and capsules, with plans to expand to other drug types in the future. It aligns with the latest electronic submission standards and offers tools to create human-readable summaries from the structured data. This phased approach to standardizing drug information is expected to streamline the FDA's review process, although the full impact will depend on broader adoption and further development of the guide. 
 
 ---
 
-# [genomics-reporting](https://github.com/HL7/genomics-reporting)
+# [genomics-reporting](https://build.fhir.org/ig/HL7/genomics-reporting) ([source](https://github.com/HL7/genomics-reporting))
 
 The Genomics Reporting IG aims to standardize the electronic exchange of genetic test results, improving communication in genomic medicine. It establishes a common language for describing genetic variations, their potential effects, and related information like molecular biomarkers. The guide leverages FHIR to structure data in a consistent, machine-readable way, making it easier to share information between laboratories, doctors, researchers, and patients. It builds upon existing standards and terminologies in genomics while addressing limitations of older systems, such as inconsistent use of codes and difficulties representing complex relationships. The guide provides specific instructions for representing diverse genomic information, including pharmacogenomics (how genes affect drug response), and enables standardized queries for retrieving and processing this data. It acknowledges the evolving nature of genomics and allows for extensions to accommodate new knowledge. By promoting interoperability, the guide seeks to facilitate the integration of genomic data into clinical workflows, ultimately supporting better patient care and research advancements. 
 
 ---
 
-# [HAI-LTCF](https://github.com/HL7/HAI-LTCF)
+# [HAI-LTCF](https://build.fhir.org/ig/HL7/HAI-LTCF) ([source](https://github.com/HL7/HAI-LTCF))
 
 The HAI-LTCF IG aims to simplify how long-term care facilities (LTCFs) send reports about healthcare-associated infections (HAIs) to the Centers for Disease Control and Prevention (CDC). Currently, many facilities rely on paper forms or manual data entry on a website, which can be slow and error-prone. This IG introduces a standardized electronic format using FHIR. It defines digital versions of existing CDC forms, specifically for reporting on infections caused by certain resistant organisms. LTCF software systems can use these digital forms to collect the necessary information and automatically generate reports in a format the CDC can easily process. This initial version of the guide focuses on monthly summaries and individual case reports for specific types of infections. It's designed to be user-friendly by mirroring existing paper forms and builds upon established data standards to ensure consistency. It's important to note that this guide is being developed alongside a similar one using a different standard, and both aim to align with the CDC's reporting requirements, which remain the definitive source. 
 
 ---
 
-# [HAI](https://github.com/HL7/HAI)
+# [HAI](https://build.fhir.org/ig/HL7/HAI) ([source](https://github.com/HL7/HAI))
 
 This IG focuses on standardizing how healthcare facilities send electronic reports about healthcare-associated infections (HAIs) to the CDC's National Healthcare Safety Network (NHSN). These reports are essential for tracking and preventing HAIs. The IG uses FHIR to define how this information should be structured, making it easier for computer systems to exchange this data. It leverages FHIR's capabilities for representing structured forms, similar to the paper forms currently used by NHSN. The guide provides templates for different types of HAI reports (like surgical site infections or bloodstream infections) and examples of how completed reports should look. Additionally, it uses standardized codes for data elements like infection types, ensuring consistency across different systems. The IG focuses specifically on the electronic submission of these reports and does not cover other aspects of NHSN participation. It was developed alongside a similar guide using an older standard, ensuring that both approaches are aligned. It also aligns with broader standards for representing patient information in the US. The IG is expected to go through several trial versions before being finalized. 
 
 ---
 
-# [home-lab-report](https://github.com/HL7/home-lab-report)
+# [home-lab-report](https://build.fhir.org/ig/HL7/home-lab-report) ([source](https://github.com/HL7/home-lab-report))
 
 The HL7 At-Home In-Vitro Test Reporting IG aims to create a standardized way to digitally share at-home test results, like those for COVID-19, with healthcare providers and public health agencies. It focuses on enabling app developers to send these results in FHIR, which allows different health systems to easily understand and use the information. The IG achieves this by defining specific formats for packaging test results and related information, such as patient responses to in-app questions, into a single digital message. It also provides a framework for creating formats tailored to specific tests, starting with COVID-19 as an example. To accommodate older systems, the IG includes instructions for converting the new FHIR format into the older HL7v2 format. The IG primarily focuses on reporting single test results and leverages existing standards for identifying tests and applications. It also addresses the need for recording past test results when individuals take multiple tests over time. While the IG establishes a framework for sharing at-home test results, widespread adoption will depend on the ability of public health agencies and healthcare systems to receive and process data in the FHIR format. 
 
 ---
 
-# [ihe-sdc-ecc-on-fhir](https://github.com/HL7/ihe-sdc-ecc-on-fhir)
+# [ihe-sdc-ecc-on-fhir](https://build.fhir.org/ig/HL7/ihe-sdc-ecc-on-fhir) ([source](https://github.com/HL7/ihe-sdc-ecc-on-fhir))
 
 This IG provides a standardized method for converting healthcare data from IHE Structured Data Capture (SDC) forms into FHIR. This process facilitates easier sharing and analysis of healthcare information between different computer systems.  Traditionally, IHE SDC forms relied on a format that posed challenges for seamless data exchange. This guide addresses these challenges by outlining how to represent the information captured in SDC forms, such as answers to questions, using FHIR resources. It provides specific instructions for handling various question types, including single-select, multi-select, and text answers. The guide also describes how to package the converted information for efficient transport and interpretation. Furthermore, it emphasizes the use of standard terminologies to ensure that the meaning of the data is consistently understood across different platforms. While primarily focused on representing question-and-answer data, the guide also explores ways to handle more complex data structures in the future. By enabling the conversion of SDC data into FHIR, this guide aims to improve the interoperability of healthcare data and support better healthcare data management and analysis. 
 
 ---
 
-# [imaging-service-request-ig](https://github.com/HL7/imaging-service-request-ig)
+# [imaging-service-request-ig](https://build.fhir.org/ig/HL7/imaging-service-request-ig) ([source](https://github.com/HL7/imaging-service-request-ig))
 
 This Imaging Service Request IG aims to improve how different computer systems in healthcare facilities share information about medical imaging orders. It focuses on systems that manage orders, like those used by radiology departments, and systems that manage image acquisition, like those used to store and view images. The guide achieves this by creating a common language for these systems based on FHIR. It defines how imaging orders and related details should be represented in FHIR, making sure this aligns with an existing standard called DICOM, which is widely used for medical images. The guide also specifies how systems can create, cancel, and manage imaging orders using FHIR. It acknowledges that DICOM remains the primary source of truth for imaging information and focuses specifically on representing imaging orders for modality worklists, which are lists of imaging exams to be performed. By creating this standardized way to exchange information, the guide aims to improve the efficiency and accuracy of imaging workflows in healthcare settings, though it does not address all aspects of the imaging process, such as mapping DICOM MPPS or modeling the entire image ordering workflow. 
 
 ---
 
-# [livd](https://github.com/HL7/livd)
+# [livd](https://build.fhir.org/ig/HL7/livd) ([source](https://github.com/HL7/livd))
 
 The Laboratory In-Vitro Diagnostics (LIVD) IG aims to simplify how laboratories connect data from diagnostic devices with widely used health data standards. Currently, when labs acquire a new blood analyzer or other diagnostic device, they must manually match the device's specific test codes with standard codes like LOINC (Logical Observation Identifiers Names and Codes). This manual process is time-consuming and can lead to errors. The LIVD guide introduces a standardized way for device manufacturers to provide suggested matches between their device's codes and LOINC codes. This is done using a digital format based on the  standard, which allows for easy data exchange. Manufacturers can provide these mappings along with details like the type of specimen and result description. While the guide focuses on matching test results and not test orders, it offers a more efficient and accurate way for laboratories to integrate new devices. It's important to note that these mappings are suggestions, and labs retain the final decision on which codes to use. The guide doesn't automate the configuration of lab systems but instead provides valuable information to assist lab personnel in the mapping process, ultimately improving data sharing and analysis in healthcare. 
 
 ---
 
-# [nhsn-dqm](https://github.com/HL7/nhsn-dqm)
+# [nhsn-dqm](https://build.fhir.org/ig/HL7/nhsn-dqm) ([source](https://github.com/HL7/nhsn-dqm))
 
 The CDC's National Healthcare Safety Network (NHSN) is modernizing how healthcare facilities submit data electronically.  A new IG establishes a standardized method for sharing this data using FHIR.  This guide promotes easier reporting for facilities and streamlines data collection and analysis for the CDC.  It leverages existing health data standards and outlines a framework for reporting using digital quality measures (dQMs) that can be updated without requiring extensive revisions to the guide itself.  The framework focuses on using data that aligns with the US Core standard, a widely recognized set of health data guidelines.  This initiative is part of the CDC's broader data modernization efforts and involves collaboration with other government agencies.  The guide ensures data reported to NHSN remains protected under existing laws and adheres to established privacy and security standards.  It's important to note that this guide provides a general framework, and specific instructions for reporting individual NHSN measures will be provided in a separate document. 
 
 ---
 
-# [pacio-adi](https://github.com/HL7/pacio-adi)
+# [pacio-adi](https://build.fhir.org/ig/HL7/pacio-adi) ([source](https://github.com/HL7/pacio-adi))
 
 The PACIO Advance Directive Interoperability (ADI) IG aims to improve how healthcare systems manage advance directives, which are documents outlining a person's wishes for medical care if they cannot communicate them. Traditionally, these were paper-based, leading to difficulties in locating, verifying, and sharing them between healthcare providers. This IG uses a standardized digital format to address these challenges. It allows advance directives to be securely stored, updated, and accessed electronically by authorized individuals and systems. It supports various document types, including scanned paper directives and digital ones created directly within the system. The guide also helps manage different versions of a directive and ensures it can be easily found when needed. While it initially focuses on directives created by patients themselves and portable medical orders, future versions may address instructions given during medical encounters. The guide is designed to work with existing health data standards in the US and recognizes that specific requirements for advance directives can vary by location. 
 
 ---
 
-# [PDDI-CDS](https://github.com/HL7/PDDI-CDS)
+# [PDDI-CDS](https://build.fhir.org/ig/HL7/PDDI-CDS) ([source](https://github.com/HL7/PDDI-CDS))
 
 This IG focuses on improving how EHRs warn doctors about potential harmful drug-drug interactions. Traditionally, these warnings were often too general and didn't consider the patient's specific details, leading doctors to frequently ignore them. This IG proposes a new approach using modern technology standards to make these warnings more helpful. It suggests using patient information to create personalized warnings, providing them earlier in the medication ordering process, and offering specific recommendations to doctors, such as changing a medication or adding a protective one. The guide focuses specifically on interactions between drugs, not including interactions with things like vitamins or food. It outlines how the alerts can be integrated into the doctor's workflow within the EHR and suggests ways to customize the system for different clinical settings. Importantly, it emphasizes the need for doctors to be involved in setting up the system to ensure the warnings are useful and don't lead to unnecessary alert fatigue, which happens when doctors are overwhelmed by too many warnings. The guide also addresses how to handle situations where the system might need access to sensitive patient information. 
 
 ---
 
-# [personal-health-record-format-ig](https://github.com/HL7/personal-health-record-format-ig)
+# [personal-health-record-format-ig](https://build.fhir.org/ig/HL7/personal-health-record-format-ig) ([source](https://github.com/HL7/personal-health-record-format-ig))
 
 This IG provides a standard way to develop personal health record (PHR) apps that can easily share information with other health systems. It uses FHIR, which helps different healthcare providers and systems understand patient data. Previously, exchanging patient data was difficult because systems used outdated methods that required custom connections. This IG offers a more efficient approach by suggesting specific ways to organize and share data, like using standard categories for information such as patient demographics, observations, and medical conditions. It also recommends methods for handling large amounts of data and emphasizes the importance of keeping patient information secure. The guide focuses on how to store and exchange data but doesn't dictate specific features for PHR apps. It recognizes the challenges of gathering data from many sources, including doctors, wearable devices, and even social media, while highlighting the need to protect patient privacy and follow laws related to health information. 
 
 ---
 
-# [phd](https://github.com/HL7/phd)
+# [phd](https://build.fhir.org/ig/HL7/phd) ([source](https://github.com/HL7/phd))
 
 The Personal Health Device Data IG seeks to standardize how data from personal health devices, such as blood pressure monitors and glucose meters, is electronically shared between systems and applications. It accomplishes this by providing a standardized way to represent device data and information about the device itself using FHIR. This IG focuses on devices that can send data electronically and offers detailed instructions on how to map data from various device types to the FHIR format. Notably, the IG employs a flexible approach that can accommodate a wide array of devices without requiring specific knowledge of each device type, ensuring compatibility with future devices and measurements. It also addresses the challenge of ensuring accurate time stamps from devices with varying levels of time synchronization. However, it's important to note that this IG focuses solely on devices capable of electronic data transmission, excluding manual data entry or non-communicating devices. Furthermore, it does not interpret the data or offer guidance on its use; it simply defines the structure for sharing, leaving the interpretation and utilization to the receiving system. 
 
 ---
 
-# [phenomics-exchange-ig](https://github.com/HL7/phenomics-exchange-ig)
+# [phenomics-exchange-ig](https://build.fhir.org/ig/HL7/phenomics-exchange-ig) ([source](https://github.com/HL7/phenomics-exchange-ig))
 
 The GA4GH Phenopackets FHIR IG aims to improve how EHRs store and share information about patient characteristics, especially for individuals with rare diseases. It achieves this by using FHIR, which allows different computer systems to easily understand and exchange data. This IG focuses on creating detailed descriptions of a patient's observable traits, like symptoms or physical features, which are crucial for diagnosing rare diseases. It uses a specific coding system called the Human Phenotype Ontology (HPO) to represent these traits in a way that computers can analyze. By structuring this information consistently, the IG enables researchers and clinicians to share and compare patient data more effectively, potentially leading to faster and more accurate diagnoses. The IG also aims to integrate with other data standards, such as those used in cancer research, to promote broader data sharing and collaboration. This effort is expected to facilitate research and ultimately improve the diagnosis and treatment of rare diseases by making it easier to analyze patient information and compare it with existing knowledge about diseases and their associated characteristics. 
 
 ---
 
-# [physical-activity](https://github.com/HL7/physical-activity)
+# [physical-activity](https://build.fhir.org/ig/HL7/physical-activity) ([source](https://github.com/HL7/physical-activity))
 
 The Physical Activity IG aims to standardize how healthcare systems exchange information about patients' physical activity. It defines a structured approach for recording and sharing data on exercise types, frequency, and patient experiences. This includes creating and managing referrals to fitness services like personal trainers or gyms, as well as supporting patient engagement by enabling access to their data and progress tracking. The IG achieves this by introducing new profiles for existing FHIR resources like CarePlan and Goal, specifically tailored for physical activity data. It also introduces temporary codes for concepts not yet in standard terminologies and emphasizes the use of RESTful interactions for seamless data exchange between systems. The IG acknowledges different capabilities among service providers and promotes a patient-centered approach by ensuring data access and encouraging patient involvement in setting and achieving fitness goals. The guide's focus on structured data and interoperability aims to improve the coordination of care and support broader healthcare interoperability efforts, particularly future alignment with the US Core standard. 
 
 ---
 
-# [ReportIIITraveler-ig](https://github.com/HL7/ReportIIITraveler-ig)
+# [ReportIIITraveler-ig](https://build.fhir.org/ig/HL7/ReportIIITraveler-ig) ([source](https://github.com/HL7/ReportIIITraveler-ig))
 
 This IG focuses on improving how public health officials share information about travelers who become sick with contagious diseases, particularly during air travel. It establishes a standardized, digital format for exchanging this information, making it easier to track and control the spread of diseases. Previously, this information was often shared manually and without a consistent format, leading to delays and challenges, especially during large-scale outbreaks. This guide leverages FHIR to define how information about the sick traveler, their flight, and potential disease should be structured and shared electronically. It also aims to integrate with existing systems used by public health agencies, such as the CDC's central data platform. The guide prioritizes collaboration with various stakeholders, including health experts and technology providers, to ensure it addresses real-world needs. It acknowledges the importance of data security and plans to address it in alignment with established guidelines. The guide's scope is primarily on air travel and aims to support both basic and detailed reports, offering flexibility for different situations. It's important to note that this guide focuses on establishing a standardized approach and doesn't itself prevent or eliminate disease outbreaks.
 ---
 
-# [rtls-ig](https://github.com/HL7/rtls-ig)
+# [rtls-ig](https://build.fhir.org/ig/HL7/rtls-ig) ([source](https://github.com/HL7/rtls-ig))
 
 This IG defines a standard way for Real-Time Location Systems (RTLS), which track the location of items or people using tags, to share information with other healthcare systems like EHRs. It aims to improve communication between these systems by using FHIR. The guide specifies how systems can request location updates for specific tags, stop receiving those updates, and how the location updates themselves will be structured. Essentially, it acts as a blueprint for how RTLS and other systems can talk to each other about location data. This approach focuses on ensuring that different systems understand the information being exchanged, regardless of the specific RTLS technology being used. The guide does not specify how an RTLS determines a tag's location, leaving that aspect to the individual system. It also allows flexibility in defining what triggers a location update, recognizing that different RTLS implementations may have different criteria for sending updates. By standardizing the communication process, the guide aims to facilitate seamless integration of RTLS data into various healthcare applications. 
 
 ---
 
-# [sdc](https://github.com/HL7/sdc)
+# [sdc](https://build.fhir.org/ig/HL7/sdc) ([source](https://github.com/HL7/sdc))
 
 This IG focuses on standardizing how healthcare forms are created, completed, and processed electronically. It leverages FHIR to define the structure and content of digital forms. This means that different healthcare systems can use and understand these forms, improving how information is shared. The guide details how to design forms with questions and response options, and how to pre-fill them with existing patient data, saving time and reducing errors. It also outlines methods for extracting information from completed forms and converting it into structured data that can be used for various purposes, such as patient care, research, or administrative tasks. This structured data can then be easily shared and understood by different computer systems. The guide promotes consistency and interoperability in handling healthcare forms, potentially leading to more efficient and accurate data exchange in healthcare settings. 
 
 ---
 
-# [smart-app-launch](https://github.com/HL7/smart-app-launch)
+# [smart-app-launch](https://build.fhir.org/ig/HL7/smart-app-launch) ([source](https://github.com/HL7/smart-app-launch))
 
 The SMART App Launch IG focuses on enabling secure connections between independent software applications, or "apps," and EHR systems. It aims to standardize how apps access health data, making it easier for developers to build apps compatible with various EHRs. The IG leverages widely recognized standards like OAuth 2.0 for authorization and FHIR for exchanging healthcare information. This means users can grant apps specific access to their health data without sharing their EHR login details, and apps can understand and utilize data from different systems. SMART App Launch defines procedures for app registration, launching, authorization, and data access. It addresses security concerns by supporting different app types with varying security needs and requiring strong authorization methods. The IG also enables granular control over data access, allowing apps to request only the necessary information. Additionally, it supports sharing contextual information like the current patient or encounter with the app, improving user experience. While the IG considers potential security and privacy risks and offers mitigation strategies, it also acknowledges limitations like scope size restrictions and the experimental nature of some features. 
 
 ---
 
-# [smart-health-cards-and-links](https://github.com/HL7/smart-health-cards-and-links)
+# [smart-health-cards-and-links](https://build.fhir.org/ig/HL7/smart-health-cards-and-links) ([source](https://github.com/HL7/smart-health-cards-and-links))
 
 The "SMART Health Cards and Links" IG aims to establish a secure and trustworthy method for individuals to access and share their health information digitally. It introduces two primary standards: SMART Health Cards and SMART Health Links. Health Cards are like digital wallets for health data, containing verifiable information such as vaccination records or test results. They can be stored digitally or printed as a QR code. Health Links, on the other hand, are secure web links that can grant access to more extensive health information, including potentially a patient's entire medical record, through a standardized format. Both standards utilize the FHIR framework to structure data and employ strong encryption and digital signatures to ensure the information's authenticity and privacy. Individuals can choose what information to share and with whom, granting control over their health data. The guide also addresses practical considerations like QR code size limitations and the integration of these standards with existing health systems. The standards are designed to be adaptable and can be implemented independently of specific regulatory frameworks, offering flexibility for diverse applications and jurisdictions. 
 
 ---
 
-# [smart-web-messaging](https://github.com/HL7/smart-web-messaging)
+# [smart-web-messaging](https://build.fhir.org/ig/HL7/smart-web-messaging) ([source](https://github.com/HL7/smart-web-messaging))
 
 The SMART Web Messaging IG defines a standardized way for web-based health applications to interact more effectively with EHR systems. It aims to overcome limitations of previous approaches by enabling apps to exchange information and trigger actions within the EHR more seamlessly. This is achieved through a secure communication method using the browser's built-in messaging capabilities. The guide specifies how apps can send data to the EHR (like orders or clinical notes), prompt actions in the EHR (like navigating to a specific patient record), and work with temporary data during a clinician's session. It also allows apps to communicate with the EHR's data server indirectly when a direct connection isn't feasible. This standardized approach relies on defined message types and structures, ensuring that apps and EHRs can understand each other. The guide focuses specifically on web applications used within an EHR environment and leverages existing standards like FHIR and OAuth for compatibility and security. 
 
 ---
 
-# [smp-ig](https://github.com/HL7/smp-ig)
+# [smp-ig](https://build.fhir.org/ig/HL7/smp-ig) ([source](https://github.com/HL7/smp-ig))
 
 This IG aims to standardize how healthcare providers electronically share patient medication information, especially during transitions between care settings like hospitals and nursing homes. It addresses medication errors arising from poor communication. The IG uses FHIR to define a common "language" for sharing medication details, including how medication lists are structured and how systems can securely request and send this information. By promoting consistency, the IG intends to improve the accuracy and completeness of medication information available to different providers, ultimately enhancing patient safety during care transitions. While focused on post-acute care transitions, its principles can be broadly applied to enhance medication information exchange in various healthcare settings. It emphasizes using standardized codes for medications and clear error handling procedures to ensure smooth and reliable communication between different systems. 
 
 ---
 
-# [standard-patient-health-record-ig](https://github.com/HL7/standard-patient-health-record-ig)
+# [standard-patient-health-record-ig](https://build.fhir.org/ig/HL7/standard-patient-health-record-ig) ([source](https://github.com/HL7/standard-patient-health-record-ig))
 
 The Standard Patient Health Record IG aims to make it easier to create personal health record apps that can seamlessly share information with hospitals and other health apps. It does this by defining a standard way to store and exchange health data, ensuring that different systems can understand and use the information. Previously, these apps often used unique data formats that made it difficult to share information between them and hospital systems, leading to information silos and frustration for patients and healthcare providers. This IG leverages the FHIR standard and introduces a standardized file format for personal health records, promoting easier sharing. It focuses on how data is stored and exchanged, rather than dictating specific features for the apps themselves. The guide also addresses the challenge of managing health information over many years, considering different storage methods and data sources. It acknowledges real-world challenges like accessing data in emergencies or for patients with limited technology access and encourages the use of technologies like Bluetooth and QR codes for data transfer. Importantly, it emphasizes patient control over their health information, including the ability to add notes or corrections while maintaining data accuracy and origin. Finally, the guide highlights the importance of data security, patient privacy, and compliance with regulations that give patients the right to access their health data in standardized formats. 
 
 ---
 
-# [termchangeset-ig](https://github.com/HL7/termchangeset-ig)
+# [termchangeset-ig](https://build.fhir.org/ig/HL7/termchangeset-ig) ([source](https://github.com/HL7/termchangeset-ig))
 
 The TermChangeSet IG defines a standard way to represent and share updates to medical terminologies, such as LOINC and SNOMED CT, which are used to represent medical concepts in a standardized way. These terminologies are constantly being updated with new terms and definitions, and this IG aims to make it easier for healthcare systems to incorporate these changes. It does this by creating a structured format, called a "Terminology Change Set," that packages these updates in a consistent and easily understandable way. This format includes information about the update itself, like the source and date, as well as details about the specific changes being made, such as new terms, updated definitions, or changes to existing terms. The IG also specifies how to track the history of changes, ensuring transparency and traceability. By providing a standardized way to represent and share terminology updates, the IG aims to improve the consistency and accuracy of medical data, ultimately supporting better healthcare.
 
 ---
 
-# [terminology-fundamentals-ig](https://github.com/HL7/terminology-fundamentals-ig)
+# [terminology-fundamentals-ig](https://build.fhir.org/ig/HL7/terminology-fundamentals-ig) ([source](https://github.com/HL7/terminology-fundamentals-ig))
 
 The Terminology Fundamentals IG aims to improve how healthcare systems define and manage sets of medical codes, such as those used for diagnoses or lab tests. These sets, known as "Value Sets," are crucial for ensuring that different computer systems understand and use the same codes consistently. This IG introduces a standardized way to create and describe Value Sets, including details about their purpose, scope, and the specific codes they contain. It provides a clear, machine-readable format for defining these sets, allowing automated systems to generate and update the lists of codes as needed. The IG also emphasizes the importance of reusing Value Sets to ensure consistency across different healthcare organizations and systems. While it focuses on defining these sets and does not cover all aspects of code management, it offers a significant step towards better standardization and interoperability in healthcare information exchange. The guide acknowledges that code systems evolve over time and provides mechanisms for managing these changes to maintain the accuracy and relevance of Value Sets. 
 
 ---
 
-# [us-behavioral-health-profiles](https://github.com/HL7/us-behavioral-health-profiles)
+# [us-behavioral-health-profiles](https://build.fhir.org/ig/HL7/us-behavioral-health-profiles) ([source](https://github.com/HL7/us-behavioral-health-profiles))
 
 The US Core Data for Interoperability (USCDI) Plus Behavioral Health (BH) IG aims to standardize and improve the sharing of behavioral health information between healthcare systems in the United States. It establishes a common set of data elements, called the USCDI+ BH dataset, specifically focused on adult patients with mental health and substance use disorders. This guide utilizes the FHIR standard to define how these data elements should be structured and shared. It builds upon the existing US Core IG and leverages FHIR profiles to ensure consistency and compatibility with other healthcare data. The guide also addresses the management of various clinical documents, including PDFs and scanned records, using the DocumentReference FHIR resource. While it acknowledges challenges in standardizing assessments and the limitations posed by proprietary assessments, the guide represents a collaborative effort involving clinicians, patients, developers, and policymakers to improve the interoperability of behavioral health information and align with reporting requirements from agencies like the Substance Abuse and Mental Health Services Administration (SAMHSA). 
 
 ---
 
-# [US-Core](https://github.com/HL7/US-Core)
+# [US-Core](https://build.fhir.org/ig/HL7/US-Core) ([source](https://github.com/HL7/US-Core))
 
 The US Core IG is a set of rules and guidelines designed to improve how electronic health information is shared in the United States. It builds upon FHIR to define a common set of requirements for exchanging information like patient demographics, allergies, medications, lab results, and clinical notes. By establishing this common foundation, the US Core IG aims to make it easier for different health IT systems to communicate with each other, allowing for seamless and secure data exchange. It addresses limitations of previous approaches by providing more comprehensive data profiles, clear guidelines for handling missing information, and standardized ways to access specific types of data like medications and clinical notes. The guide also considers important factors like patient privacy and aligns with national regulations and standards for health information exchange. It is regularly updated to adapt to evolving requirements and feedback from the healthcare community, ensuring it remains relevant and supports the ongoing effort to improve interoperability in the US healthcare system.
 
 ---
 
-# [us-odh](https://github.com/HL7/us-odh)
+# [us-odh](https://build.fhir.org/ig/HL7/us-odh) ([source](https://github.com/HL7/us-odh))
 
 The Occupational Data for Health (ODH) guide aims to create a standard way to represent and share information about a person's work within healthcare systems. It addresses the prior lack of a consistent method for handling work-related information, which could hinder effective healthcare decisions. The guide leverages the HL7 FHIR standard, a modern approach to exchanging healthcare data electronically.  It defines specific data elements and structures, called profiles, for describing various aspects of work, such as job title, industry, and potential hazards. These profiles ensure that different systems can easily understand and share this information. The ODH guide focuses on work-related details relevant to patient care, population health management, and public health reporting, rather than administrative or billing purposes. It was developed by the National Institute for Occupational Safety and Health (NIOSH) with input from experts in clinical care, public health, and health IT, and it acknowledges that it may include more detailed occupational information than is currently collected in many healthcare systems. By promoting standardized ways to capture and exchange work information, the ODH guide seeks to support better-informed healthcare decisions and potentially improve patient care and public health outcomes. 
 
 ---
 
-# [UTG](https://github.com/HL7/UTG)
+# [UTG](https://build.fhir.org/ig/HL7/UTG) ([source](https://github.com/HL7/UTG))
 
 The UTG (Unified Terminology Governance) project aims to create a single, standardized source for healthcare terms and codes, like a central dictionary for all healthcare systems. It uses a technology called FHIR, which is a standard way to exchange healthcare information electronically. The project gathers terminology from different sources and organizes it into "code systems" which are sets of codes for medical concepts, and "value sets" which are lists of codes that define specific concepts. By centralizing and standardizing these terms, the project aims to make it easier for different healthcare systems to understand each other and share information accurately. This is important because as healthcare increasingly relies on electronic records, the ability for systems to communicate seamlessly becomes crucial for patient care. The project also includes ways to track changes and updates to the terminology, ensuring that everyone is using the most up-to-date information. While the project's structure suggests a comprehensive approach, a deeper understanding of its capabilities would require examining the specific code systems and value sets it contains. 
 
 ---
 
-# [uv-dx-pq](https://github.com/HL7/uv-dx-pq)
+# [uv-dx-pq](https://build.fhir.org/ig/HL7/uv-dx-pq) ([source](https://github.com/HL7/uv-dx-pq))
 
 The "uv-dx-pq" IG aims to improve how the biopharmaceutical industry manages and shares information about drug quality. Currently, this data is often stored in unstructured documents like Word files and PDFs, making it difficult to access, analyze, and exchange efficiently. This IG proposes a new approach using a standardized, machine-readable format called FHIR. By structuring quality data into specific categories and using FHIR resources, the IG enables easier data exchange between different software systems within and across organizations. This structured approach could streamline processes like drug development and manufacturing, although the guide primarily focuses on data exchange within the industry and is not intended for regulatory submissions. The IG prioritizes practical examples and aligns with international standards like ISO IDMP to ensure compatibility with other systems. While it does not define strict rules for data formatting, it offers a flexible framework that can be adapted to various needs. 
 
 ---
 
-# [uv-lab-rep-ig](https://github.com/HL7/uv-lab-rep-ig)
+# [uv-lab-rep-ig](https://build.fhir.org/ig/HL7/uv-lab-rep-ig) ([source](https://github.com/HL7/uv-lab-rep-ig))
 
 This IG establishes a universal standard for formatting and sharing lab reports, aiming to improve how healthcare systems exchange these crucial documents. It leverages FHIR to define how lab results should be structured and transmitted electronically. The guide offers flexibility by supporting two main approaches: a document-based method, which maintains compatibility with older systems that treat lab reports like signed documents, and a result-oriented method, which simplifies the retrieval of individual results for easier analysis and use. While the guide focuses on common lab tests like blood and urine tests, it does not cover specialized areas such as genetic testing. It builds upon previous efforts to standardize lab reporting and considers various factors, including legal requirements for signed reports and the need to balance document-based approaches with the ability to easily search and access specific lab results. The guide's development involved collaboration with relevant stakeholders, including the IHE PALM community, to ensure alignment with existing standards and practices. 
 
 ---
 
-# [uv-pocd](https://github.com/HL7/uv-pocd)
+# [uv-pocd](https://build.fhir.org/ig/HL7/uv-pocd) ([source](https://github.com/HL7/uv-pocd))
 
 This IG aims to standardize how medical devices in hospitals and clinics share data with other healthcare systems, such as EHRs and clinical decision support tools. It focuses on providing more detailed information, including device details, calibration, and status, along with patient measurements. The guide leverages FHIR for better data organization and exchange. It structures medical device and measurement data using a model based on the IEEE 11073 standard. This IG also offers ways to map data from older standards to FHIR. Currently, it focuses on professional medical devices in acute care and doesn't cover home-use devices or imaging systems. Waveform data and device alerts are planned for future releases. The goal is to improve the quality, consistency, and accessibility of medical device data for better patient care, research, and analysis. 
 
 ---
 
-# [v2ig](https://github.com/HL7/v2ig)
+# [v2ig](https://build.fhir.org/ig/HL7/v2ig) ([source](https://github.com/HL7/v2ig))
 
 This IG clarifies and updates the HL7 v2 messaging standard, a widely used format for exchanging healthcare information. It aims to make HL7 v2 data types easier to understand and use with modern systems. The guide achieves this by aligning v2 data types with their counterparts in FHIR whenever possible, which helps systems using both standards exchange information more seamlessly. It addresses known issues in the original v2 definitions, such as unclear data type specifications and inconsistencies. The guide focuses on redefining the basic data types of HL7 v2, using FHIR as a model for improvement. While many v2 data types can be directly mapped to FHIR, some require specific rules due to differences between the standards. By clarifying and standardizing v2 data types, this guide aims to improve the interoperability of systems that rely on HL7 v2, particularly as healthcare organizations transition to using FHIR.
 
 ---
 
-# [v2-to-fhir](https://github.com/HL7/v2-to-fhir)
+# [v2-to-fhir](https://build.fhir.org/ig/HL7/v2-to-fhir) ([source](https://github.com/HL7/v2-to-fhir))
 
 This IG helps healthcare systems exchange information even if they use different data formats. It focuses on translating data from HL7 Version 2 (v2) into FHIR. The guide provides detailed instructions on how to map or connect specific pieces of information from v2 to their corresponding parts in FHIR. This is done through spreadsheets that are then turned into computer-readable instructions. The guide concentrates on the most common types of v2 messages and data elements, allowing older systems to share data with newer systems that use FHIR. It covers various aspects of data translation, including matching medical terms between the two formats. While it primarily focuses on the initial conversion to FHIR, it acknowledges that further steps might be needed depending on how the receiving system uses the data. The guide also recognizes that some aspects, like managing patient identities and handling unique local data elements, might require custom solutions depending on the specific needs of each healthcare system. 
 
 ---
 
-# [VhDir](https://github.com/HL7/VhDir)
+# [VhDir](https://build.fhir.org/ig/HL7/VhDir) ([source](https://github.com/HL7/VhDir))
 
 The Validated Healthcare Directory (VHDir) IG seeks to create a standardized way to share healthcare provider information across different computer systems. It envisions a central source of provider data that is regularly verified and updated, eliminating the problems of outdated and inconsistent information found in existing, individually managed directories. VHDir uses the FHIR standard to define how this information is structured and exchanged. This includes detailed specifications for what data to include, how to search for specific providers, and how systems can request and receive data from the central directory. The guide prioritizes data accuracy through validation processes, such as providers confirming their own details and checking information against authoritative sources like licensing boards. VHDir aims to be adaptable for different regions and healthcare systems while also promoting data integrity. It focuses on how information is accessed from the central directory rather than dictating how the directory itself is built. While the guide doesn't currently include features like real-time updates, it acknowledges the potential need for such capabilities in the future. 
 
 ---
 
-# [vr-common-library](https://github.com/HL7/vr-common-library)
+# [vr-common-library](https://build.fhir.org/ig/HL7/vr-common-library) ([source](https://github.com/HL7/vr-common-library))
 
 The Vital Records Common Profiles Library IG aims to standardize the structure and exchange of digital birth, death, and fetal death records between computer systems. Previously, inconsistent formatting across systems hindered information sharing. This IG introduces standardized formats for data elements like dates and locations, and code lists for attributes like race and cause of death, enabling interoperability. It addresses past inconsistencies by aligning with broader data standards, offering data quality management, and potentially reducing reliance on external code systems. This approach aims to create more efficient and reliable vital records data exchange, though its impact depends on its adoption by various systems and organizations. 
 
 ---
 
-# [vrdr](https://github.com/HL7/vrdr)
+# [vrdr](https://build.fhir.org/ig/HL7/vrdr) ([source](https://github.com/HL7/vrdr))
 
 The Vital Records Death Reporting (VRDR) IG aims to improve how death records are shared electronically. It establishes a standard way for different computer systems involved in the death registration process, such as those used by hospitals, funeral homes, and government agencies, to exchange information about deaths. This new standard uses a structured format called FHIR, replacing the older format called Interjurisdictional Exchange (IJE). The guide defines specific templates for different pieces of information found in a death record, like the person's name, date of birth, cause of death, and location of death. It focuses on how states send death records to the National Center for Health Statistics and attempts to ensure that the new format can work with other systems and data flows in the death registration process. The guide also provides instructions on how to convert information from the old format to the new one to help with the transition. This initiative is part of a broader effort to modernize how death records are managed in the United States. 
 
 ---
 
-# [vulcan-rwd](https://github.com/HL7/vulcan-rwd)
+# [vulcan-rwd](https://build.fhir.org/ig/HL7/vulcan-rwd) ([source](https://github.com/HL7/vulcan-rwd))
 
 The Vulcan Real World Data IG aims to simplify the use of EHR data in medical research. It establishes a standardized method for representing and sharing this data using FHIR, enabling researchers to efficiently identify patient groups that meet specific study criteria and retrieve their relevant health information in a consistent format. Researchers can define criteria such as age, diagnosis, or medication to find suitable patients and then access detailed health data for those individuals, including demographics, diagnoses, medications, procedures, and lab results. This IG focuses on using data from EHRs for retrospective studies and builds upon existing efforts like the International Patient Access project. It acknowledges regional variations in data requirements and addresses the challenge of handling missing data. While the current version concentrates on EHRs, future iterations may incorporate other data sources like patient registries and insurance systems. By promoting data standardization, the IG seeks to enhance the efficiency and reliability of medical research. 
 
 ---
 
-# [Vulcan-schedule-ig](https://github.com/HL7/Vulcan-schedule-ig)
+# [Vulcan-schedule-ig](https://build.fhir.org/ig/HL7/Vulcan-schedule-ig) ([source](https://github.com/HL7/Vulcan-schedule-ig))
 
 The Vulcan Schedule of Activities FHIR IG aims to create a standard way to represent and electronically share schedules for clinical trials. It seeks to improve how different computer systems in healthcare, such as EHRs and research systems, understand and interact with these schedules. The guide focuses specifically on the schedule of activities within a clinical trial and uses a structured approach that defines the necessary data elements and their relationships. It leverages existing healthcare data standards, like FHIR and CDISC ODM, to ensure compatibility with current systems. The guide also addresses the need to represent flexible visit windows and the administration of investigational products. While it acknowledges the importance of representing unscheduled or conditional activities and collaborating with other relevant guidelines, these aspects are not fully addressed in the current version. The goal is to create a basic, functional solution that can be expanded upon in future iterations to handle more complex scenarios. This standardization will ultimately facilitate better planning, execution, and tracking of clinical trials, potentially leading to increased efficiency and improved data quality in clinical research. 
