@@ -12,7 +12,7 @@ const igName = repoPath.split('/').pop();
 await fs.mkdir('summaries', { recursive: true });
 async function processRepo(repoPath: string) {
   const inputDir = path.join(repoPath, 'input');
-  const outputFile = path.join('summaries', `${igName}.txt`);
+  const outputFile = path.join('summaries', `${igName}.md`);
 
   // Check if output file already exists
   try {
@@ -71,12 +71,29 @@ async function concatenateFiles(dir: string): Promise<string> {
 
   // Process sorted files
   let content = '';
+  const maxSize = 400 * 1024; // 400KB in bytes
+  let currentSize = 0;
+
   for (const file of allFiles) {
-    content += `<source path="${file.path}">\n`;
-    content += await fs.readFile(file.path, 'utf-8');
-    content += '</source>\n';
+    const fileContent = await fs.readFile(file.path, 'utf-8');
+    const sourceContent = `<source path="${file.path}">\n${fileContent}</source>\n`;
+    const sourceSize = Buffer.byteLength(sourceContent, 'utf-8');
+
+    if (currentSize + sourceSize > maxSize) {
+      console.log(`Skipping ${file.path} as it would exceed the 400KB limit.`);
+      continue;
+    }
+
+    content += sourceContent;
+    currentSize += sourceSize;
+
+    if (currentSize >= maxSize) {
+      console.log(`Reached 400KB limit. Stopping file processing.`);
+      break;
+    }
   }
 
+  console.log(`Total content size: ${currentSize / 1024} KB`);
   return content;
 }
 
@@ -95,25 +112,20 @@ async function generateSummary(content: string) {
 
   const promptInstructions = `# Direct IG Summary Prompt for Non-Experts
 Given the FHIR Implementation Guide (IG) source files above, create a clear, concise summary for patients and non-experts. Follow these guidelines:
-1. Start with a TL;DR. Example:
-**TL;DR:** This guide [...].
-
-2. Then provide direct statement of the IG's purpose and scope. Example:
-The [name of IG] [...].
-
-2. Proceed to describe how the IG addresses specific healthcare ecosystem needs, explaining with clear, straightforward language.
-3. Define technical terms or acronyms in context.
-4. Aim for 200-400 words total, simple paragraphs of plain text.
-5. Do not enumerate the files or profiles, just explain the important content.
+1. Aim for 150 words total, simple paragraphs of plain text without formatting.
+2. Describe how the IG addresses specific healthcare ecosystem needs, explaining with clear, straightforward language.
+3. Define technical terms or acronyms in context, if you need them.
+4. Do not enumerate the files or profiles, just explain the important content.
 Tone and Style Guide:
 - Use clear, precise language without unnecessary elaboration.
 - Maintain an objective, informative tone throughout.
 - Focus on explaining the IG's content and purpose, not its format or nature as a document.
 - Present information factually, including both capabilities and limitations.
-- Use third-person perspective, referring to "patients," "healthcare providers," or specific user groups relevant to the IG.
-- Assume the user is already aware of FHIR and aware that this IG uses FHIR.
-- Aim for 9th grade reading level.
-- Avoid promotional language or claims about benefits unless explicitly stated in the IG.
+- Use third-person neutral perspective, referring to "patients," "healthcare providers," or specific user groups relevant to the IG.
+- Do not make claims about benefits or claims that the IG is the best or only solution.
+- Assume the user is aware of FHIR and aware that this IG uses FHIR.
+- Write for 9th grade reading level.
+- Avoid promotional language or unverified claims about benefits
 The goal is to provide a straightforward, factual explanation of the IG's purpose, content, and applications in healthcare, helping non-experts understand its role in health information technology without unnecessary commentary.`;
 
   const request = {
@@ -133,7 +145,7 @@ The goal is to provide a straightforward, factual explanation of the IG's purpos
     const summary = await response.response;
     console.log('Summary:', summary.candidates?.[0].content.parts[0].text);
     // Save the summary to a file in the summaries directory
-    await fs.writeFile(path.join('summaries', `${igName}.txt`), summary.candidates?.[0].content.parts[0].text || "");
+    await fs.writeFile(path.join('summaries', `${igName}.md`), summary.candidates?.[0].content.parts[0].text || "");
   } catch (error) {
     console.error('Error generating summary:', error);
   }
