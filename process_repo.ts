@@ -142,12 +142,49 @@ The goal is to provide a straightforward, factual explanation of the IG's purpos
 
   try {
     const response = await generativeModel.generateContent(request);
-    const summary = await response.response;
-    console.log('Summary:', summary.candidates?.[0].content.parts[0].text);
-    // Save the summary to a file in the summaries directory
-    await fs.writeFile(path.join('summaries', `${igName}.md`), summary.candidates?.[0].content.parts[0].text || "");
+    let summary = response.response.candidates?.[0].content.parts[0].text || "";
+    console.log('InitialSummary:', summary);
+
+    // New step: Refine the summary
+    const refinementQuestions = [
+      "Open with 'This guide ...'",
+      "Use only the abbreviation 'FHIR', since the reader knows what FHIR is.",
+      "Expand any acronyms or technical terms except FHIR",
+      "The user already understand waht FHIR is, so no explanation is needed.",
+      "Explain what the IG does and how it works in direct terms; you do not need to justify it in broad or ultimate terms.",
+      "Write at 12th grade reading level",
+      "Write in the third person",
+      "Combine summary into a single paragraph that will give the reader a good idea of the IG's purpose",
+    ];
+
+    const refinementPrompt = `
+Excellent examples for reference:
+1. This guide explains how patients can get and share their health insurance claims information using the FHIR standard. It provides detailed instructions for insurance companies on how to structure and share claim specifics, including patient demographics, service dates, diagnoses, procedures, and costs. Patients can use this information to understand their healthcare expenses and share their data with applications that help them manage their health. The guide focuses specifically on sharing claims and encounter information, rather than clinical data like doctor's notes or lab results, and does not specify how patients should provide consent for data sharing, leaving that to the individual applications and insurance providers. 
+2. This guide defines "hooks," which are specific points within electronic health record systems where external decision support services can be integrated. These hooks, such as viewing a patient's medical chart, initiating a patient encounter, ordering medications, or scheduling appointments, allow external services to access relevant patient information and provide tailored advice. By specifying the data available at each hook, such as patient allergies when prescribing medication, the guide enables the development of decision support services that enhance the quality and efficiency of healthcare delivery, and it can adapt to different versions of the FHIR standard.
+
+Original summary that needs refinement :
+${summary}
+
+Please refine the original summary to address the following points:
+${refinementQuestions.join('\n')}
+
+Provide only the refined summary as your response, without any additional explanations or comments.`;
+
+    const refinementRequest = {
+      contents: [
+        { role: 'user', parts: [{ text: refinementPrompt }] },
+      ]
+    };
+
+    const refinementResponse = await generativeModel.generateContent(refinementRequest);
+    const refinedSummary = refinementResponse.response.candidates?.[0].content.parts[0].text || summary;
+
+    console.log('Refined Summary:', refinedSummary);
+    
+    // Save the refined summary to a file in the summaries directory
+    await fs.writeFile(path.join('summaries', `${igName}.md`), refinedSummary);
   } catch (error) {
-    console.error('Error generating summary:', error);
+    console.error('Error generating or refining summary:', error);
   }
 }
 
