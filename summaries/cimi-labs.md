@@ -1,18 +1,1 @@
-**TL;DR:** This guide helps computers share different kinds of lab results, like blood tests or urine tests, in a standard way.
-
-The "CIMI Laboratory Sub-Types Implementation Guide" explains how to use a common language (called FHIR) to exchange information about lab tests in a consistent format. It covers many types of lab results, including:
-
-* **Quantitative results:** These are numeric results with units, like blood glucose levels in mg/dL.
-* **Coded results:** These are results expressed as terms with specific meanings, like a blood type (A, B, AB, O).
-* **Ordinal results:** These are results on a scale, like the size of a tumor (small, medium, large).
-* **Narrative results:** These are results described in text, like a microscopic examination of a blood sample.
-* **Titer results:** These are results expressed as a ratio, like the concentration of antibodies in a blood sample.
-* **Document results:** These are results reported in a separate document, like a pathology report.
-
-This guide does not include microbiology lab tests because they require a different approach.
-
-By using this guide, different computer systems in healthcare, like those used in hospitals and labs, can share lab results more easily. This can help healthcare providers make better decisions about patient care. For example, it can help ensure that a doctor has access to all of a patient's lab results, even if they were done at different labs.
-
-This guide also defines specific requirements for how lab results should be recorded and shared. For example, it specifies that each lab result must include information about the patient, the type of test performed, the date and time the test was done, and the result of the test.
-
-By following the guidelines in this guide, healthcare organizations can improve the interoperability of their systems, making it easier to share information and improve patient care.
+The CIMI Laboratory Sub-Types IG seeks to standardize the exchange of common laboratory test results between electronic health systems. It addresses the challenge of varying data formats across different systems by leveraging FHIR. The IG defines specific templates, called profiles, for common lab test types like blood tests and urine tests, ensuring consistent representation of quantitative, qualitative, narrative, and ordinal results. It uses LOINC to uniquely identify each test and establishes controlled vocabularies to ensure uniform terminology for findings. While the IG focuses on the US healthcare context and does not cover microbiology tests, it mandates support for core data elements to ensure interoperability. For document-based results, it utilizes the DiagnosticReport resource instead of Observation due to limitations in handling attachments. The IG emphasizes adherence to FHIR security and privacy guidelines for protecting sensitive patient data but does not address all potential security and privacy concerns. By adopting the IG's recommendations, electronic health systems can improve the exchange and interpretation of lab results, potentially enhancing patient care and research capabilities.

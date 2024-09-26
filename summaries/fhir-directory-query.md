@@ -1,9 +1,1 @@
-**TL;DR:** This guide helps healthcare systems find and share information about healthcare providers and services.
-
-The National Directory Implementation Guide helps healthcare providers and organizations share information about their services and how to connect with them electronically. This includes details like locations, contact information, specialties, insurance networks, and whether they are accepting new patients.
-
-The guide defines ways to ensure the information is accurate and up-to-date. It also includes ways to protect sensitive information, making sure only authorized people can access it.
-
-This guide is designed to work with a large national system. However, it can also be used for smaller, local systems. 
-
-The goal of this guide is to make it easier for healthcare providers and organizations to connect and share information, ultimately improving healthcare for everyone. 
+The National Healthcare Directory IG aims to improve how healthcare provider information is shared and accessed across the US healthcare system by creating a standardized, central directory. It leverages FHIR to exchange healthcare data electronically. The guide defines how to structure this central directory and ensures all provider data is consistently formatted. It enables other systems, such as those used by hospitals or insurance companies, to easily access the directory through an API and provides robust search capabilities to find specific provider information. The guide also supports efficient transfer of large datasets and allows systems to stay updated with changes to provider data through subscriptions. The IG considers the need for data security, accommodates various directory sizes and levels of access, and addresses challenges like redundant data. While initially focused on the US healthcare system and its specific requirements, like the National Provider Identifier (NPI), the guide is based on international FHIR standards and aims to align with the US Core FHIR IG for broader interoperability. 

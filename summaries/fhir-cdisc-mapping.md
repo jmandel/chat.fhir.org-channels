@@ -1,12 +1,1 @@
-Okay, I'm ready to create a patient-friendly summary of a FHIR Implementation Guide (IG) when you provide the source files. 
-
-Just paste the relevant text from the IG, and I'll follow your guidelines to generate a clear and concise summary that explains:
-
-* **What the IG does in simple terms (TL;DR)**
-* **The specific purpose and scope of the IG**
-* **How the IG addresses healthcare needs**
-* **Any relevant technical terms, explained in plain language** 
-
-I'll make sure the summary is easy to understand for someone without a technical background, keeps it within 200-400 words, and follows your tone and style guidelines. 
-
-Let me know when you have the IG content ready! I'm here to help. 
+As you have not provided the FHIR IG source files needed for analysis, I cannot create a plain language summary. Please provide the IG content so I can accurately analyze its purpose, scope, and technical details and then create the summary according to your guidelines. I need the actual IG content to understand its objectives, the problems it addresses, its technical approach, and any important contextual factors, all of which are crucial for creating an accurate and informative plain language summary. 

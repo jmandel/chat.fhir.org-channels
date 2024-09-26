@@ -114,8 +114,9 @@ async function generateSummary(content: string) {
 Given the FHIR Implementation Guide (IG) source files above, provide a structured analysis addressing the following questions:
 
 1. What is this IG trying to do? Articulate its objectives without using jargon.
-2. How are the problems this IG addresses handled today, and what are the limitations of current practices?
-3. What new approaches does this IG introduce, and how does it work in terms of technicial approach?
+2. How were the problems this IG addresses handled previously, and what limitations led to the development of this IG? (Only use information provided in the input files; do not speculate or make assumptions.)
+3. What approaches does this IG introduce, and how does it work in terms of technicial approach?
+4. What are important scope decisions, design choices, or contextual factors?
 
 Provide concise, factual responses to each question based on the content of the IG. Aim for clarity and precision in your analysis. Begin with "# $igName: Analysis"`;
 
@@ -156,7 +157,7 @@ Use the analysis to create a plain language summary of the guide that adheres to
 4. Write in clear prose without jargon.
 5. Use third-person perspective.
 6. Maintain an objective, informative tone throughout.
-7. Present information factually, including both capabilities and limitations.
+7. Present information factually, including capabilities and (if any are defined in the analysis) limitations.
 8. Avoid promotional language or unverified claims about benefits.
 
 Provide only the refined summary as your response, without any additional explanations or comments.`;
@@ -171,6 +172,7 @@ Provide only the refined summary as your response, without any additional explan
     await fs.writeFile(path.join('prompts', `${igName}-refinement.txt`), JSON.stringify(refinementRequest, null, 2));
     const refinementResponse = await generativeModel.generateContent(refinementRequest);
     let refinedSummary = refinementResponse.response.candidates?.[0].content.parts[0].text || analysis;
+    console.log('Refined Summary:', refinedSummary);
 
     // Check if the refinedSummary contains explanations of FHIR, IG, or EHR
     const needsFinalRefinement = /(Fast Healthcare Interoperability Resources|Implementation Guide|Electronic Health Record)/i.test(refinedSummary);
@@ -182,13 +184,17 @@ Here's a summary of a FHIR Implementation Guide:
 
 ${refinedSummary}
 
-Please revise this summary to adhere to the following additional guideline:
-- Do not explain or expand the acronyms FHIR, IG, or EHR. Just use the acronyms and assume the reader is familiar with these terms.
+Please revise this summary to adhere to the following guideline:
+- Do not explain what FHIR is; do not expand the acronym FHIR; just call it FHIR.
+- Do not explain what an IG is; do not expand the acronym IG; just call it an IG.
+- Do not explain what an API is; do not expand the acronym API; just call it an API.
+- Do not explain what an EHR is; do not expand the acronym EHR; just call it an EHR.
+
+Retain the original summary and only revise it to avoid explaining FHIR, IG, and EHR.
 
 Provide only the final refined summary as your response, without any additional explanations or comments.`;
 
       const finalRefinementRequest = {
-        systemInstruction: "You are a skilled communicator with expertise in health information technology and a knack for clear, concise writing.",
         contents: [
           { role: 'user', parts: [{ text: finalRefinementPrompt }] },
         ]
@@ -197,9 +203,9 @@ Provide only the final refined summary as your response, without any additional 
       await fs.writeFile(path.join('prompts', `${igName}-final-refinement.txt`), JSON.stringify(finalRefinementRequest, null, 2));
       const finalRefinementResponse = await generativeModel.generateContent(finalRefinementRequest);
       refinedSummary = finalRefinementResponse.response.candidates?.[0].content.parts[0].text || refinedSummary;
+    console.log('Final Refined Summary:', refinedSummary);
     }
 
-    console.log('Final Refined Summary:', refinedSummary);
     
     // Save the final refined summary to a file in the summaries directory
     await fs.writeFile(path.join('summaries', `${igName}.md`), refinedSummary);

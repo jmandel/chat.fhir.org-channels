@@ -1,11 +1,1 @@
-**TL;DR:** This guide helps healthcare providers send and receive electronic referrals for patients needing extra support.
-
-The Bidirectional Services eReferral (BSeR) Implementation Guide explains how to use a standardized format for electronic referrals. It covers referrals for conditions like diabetes, obesity, arthritis, hypertension, early childhood nutrition, and tobacco use.
-
-The guide focuses on sharing only the necessary information between healthcare providers to protect patient privacy. It also allows for feedback from the referral recipient to the original provider, creating a closed loop for better communication and patient care.
-
-Instead of sending a patient's entire medical history, the guide helps providers select specific information relevant to the referral. This ensures that only the minimum necessary information is shared, keeping patient data secure.
-
-The guide also defines a workflow for referrals. It explains how a referral is created, accepted, tracked, and completed. This helps healthcare providers across different organizations work together smoothly to coordinate patient care.
-
-By standardizing the referral process, this guide aims to improve communication and coordination between healthcare providers and community organizations. This can help patients access the services they need more efficiently and effectively.
+The BSeR IG aims to improve how healthcare providers refer patients to other providers or community organizations for specific health needs, such as diabetes prevention or tobacco cessation. Currently, referrals often involve sharing a patient's entire medical history, which can be inefficient and raise privacy concerns. This IG leverages FHIR to create a structured approach for referrals, ensuring that only the minimum necessary information is shared. It defines what data is needed for different referral types and uses FHIR resources to manage the referral process, track its status, and link requests with feedback. The guide supports various methods for exchanging information and is designed to align with existing health information technology standards and HIPAA regulations on patient privacy. While the IG aims to improve provider engagement and care coordination by enabling the sharing of patient outcomes, its actual impact may vary depending on implementation and adoption across healthcare systems. The guide is designed to be adaptable for future referral types, but its long-term effectiveness will depend on ongoing updates and industry support. 

@@ -1,13 +1,1 @@
-**TL;DR:** This guide helps healthcare providers and payers share information about how well the provider is caring for their patients.
-
-The Da Vinci Value-Based Performance Reporting Implementation Guide (IG) improves communication between healthcare providers and payers about patient care quality and costs in value-based care agreements. These agreements offer financial rewards to providers for meeting certain performance goals, like making sure patients get recommended preventive screenings or managing chronic conditions effectively.
-
-This guide defines a standard way to share performance data using a format called FHIR (Fast Healthcare Interoperability Resources).  It helps providers understand their performance in areas like:
-
-- **Quality of care:** How well the provider is meeting specific quality measures, such as breast cancer screening rates or blood sugar control for patients with diabetes.
-- **Cost of care:** How the provider's costs for patient care compare to agreed-upon targets. 
-- **Utilization:** How often patients use healthcare services, such as hospital admissions or emergency room visits.
-
-By standardizing this reporting process, the IG aims to reduce administrative burden on providers, who often receive data in different formats from various payers. It also promotes transparency and helps both providers and payers track progress toward value-based care goals.
-
-This version of the IG focuses on reports sent from payers to providers. Future versions may address data flowing from providers back to payers. 
+The Da Vinci Value-Based Performance Reporting  aims to standardize how healthcare payers share performance data with healthcare providers participating in value-based care contracts, which reward providers for the quality and efficiency of care they deliver. This  defines a common format for these reports, allowing providers to easily understand their performance across different payers. Previously, the lack of a standard format made it difficult for providers to compare reports, track overall performance, and efficiently identify areas for improvement. The  achieves standardization by using  to create specific data structures for performance reports, quality measures, and contract details. It also defines standard terminologies for performance metrics and payment models, ensuring that payers and providers interpret data consistently. While the  promotes flexibility by allowing customization for specific needs, it also mandates that certain key elements must be supported by all implementations to ensure basic interoperability. Currently, the  focuses on reports sent from payers to providers, with future versions potentially addressing provider-to-payer reporting. By establishing a common language for performance reporting, the  seeks to reduce administrative burdens, improve data consistency, and ultimately enhance the effectiveness of value-based care. 

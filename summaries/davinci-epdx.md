@@ -1,13 +1,1 @@
-**TL;DR:** This guide helps health plans share patient information with doctors, other health plans, and apps that patients choose. 
-
-The Payer Data Exchange (PDex) Implementation Guide explains how health plans can use a standard format to share patient information. This makes it easier for different computer systems to understand and use the data. 
-
-The guide addresses several needs in the healthcare system. For example, it helps doctors get a patient's medical history from their health plan. It also allows patients to easily share their information with a new health plan when they switch insurance. Patients can also choose to share their information with third-party apps, like personal health records.
-
-To make sure patient data is shared securely, the guide uses special methods like CDS Hooks and SMART on FHIR. These methods allow doctors to request information about their patients and then decide which data should be added to their medical records. 
-
-The guide also explains how health plans can use the OAuth 2.0 protocol to let patients give permission to share their data with other health plans or apps. This means patients have more control over their information. 
-
-While this guide focuses on sharing clinical data, it also includes information from medical claims. It also helps health plans share prior authorization decisions with patients and other payers. 
-
-Overall, the PDex Implementation Guide helps improve how patient data is shared in the healthcare system, making it easier for everyone to access and use the information they need. 
+The Da Vinci Payer Data Exchange (PDex) IG aims to improve how payers and healthcare providers share patient health information, as well as how payers share data amongst themselves with patient consent. It uses a standardized approach based on FHIR. Currently, data exchange often relies on outdated methods like fax and mail, leading to slow and potentially inaccurate information sharing. PDex defines how payers should format common types of patient data like allergies and medications according to national standards. It also specifies how this data can be securely accessed through computer systems using APIs and how to manage patient consent. While PDex aims for broad compatibility, it acknowledges that some systems may not fully support the latest FHIR version and offers ways to handle these situations. The guide also emphasizes secure data transfer and plans to transition to newer, more robust security frameworks in the future. PDex is still under development and will be refined based on real-world implementation experiences. 

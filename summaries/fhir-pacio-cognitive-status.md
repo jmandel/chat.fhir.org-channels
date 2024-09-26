@@ -1,9 +1,0 @@
-**TL;DR:** This guide helps healthcare systems share information about a patient's mental abilities, like memory and decision-making.
-
-The PACIO Cognitive Status Implementation Guide (IG) defines how healthcare providers can exchange information about a patient's cognitive status, which includes their mental functioning, using a standardized format. This is especially important when a patient moves between different care settings, such as from a hospital to a nursing home or to home health services, ensuring that everyone involved in their care has a complete picture of their mental abilities.
-
-The guide addresses a critical need in the healthcare ecosystem by making it easier to share cognitive and mental health observations. This is often a challenge because different healthcare providers may use different systems or methods for recording this information. By using a common format, the guide helps to ensure that important details about a patient's mental state are not lost during transitions of care. This can lead to better care coordination, reduced errors, and improved patient outcomes.
-
-The IG focuses on exchanging observation data, such as the results of cognitive assessments and screenings. It provides guidance on how to represent this data using FHIR (Fast Healthcare Interoperability Resources), a standard for exchanging healthcare information electronically. It also includes examples of how to represent common assessment instruments, such as the Brief Interview for Mental Status (BIMS) and the Montreal Cognitive Assessment (MoCA).
-
-While the guide initially focuses on transitions related to post-acute care, it is intended to be expanded to cover a broader range of healthcare settings and mental functioning observations in the future. It also addresses security and patient privacy concerns, outlining how patient data can be shared securely and with the patient's consent.
