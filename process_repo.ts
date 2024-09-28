@@ -7,7 +7,7 @@ if (!repoPath) {
   console.error('Please provide the repository path as an argument.');
   process.exit(1);
 }
-const igName = repoPath.split('/').pop();
+const igName = repoPath.split('/').filter(Boolean).pop();
 
 await fs.mkdir('summaries', { recursive: true });
 async function processRepo(repoPath: string) {
@@ -17,7 +17,7 @@ async function processRepo(repoPath: string) {
   // Check if output file already exists
   try {
     await fs.access(outputFile);
-    console.log(`Summary for ${igName} already exists. Skipping this repo.`);
+    console.log(`Summary ${outputFile} for ${igName} already exists. Skipping this repo.`);
     return;
   } catch (error) {
     // File doesn't exist, continue processing
@@ -113,10 +113,11 @@ async function generateSummary(content: string) {
   const promptInstructions = `# FHIR IG Analysis
 Given the FHIR Implementation Guide (IG) source files above, provide a structured analysis addressing the following questions:
 
-1. What is this IG trying to do? Articulate its objectives without using jargon.
-2. How were the problems this IG addresses handled previously, and what limitations led to the development of this IG? (Only use information provided in the input files; do not speculate or make assumptions.)
-3. What approaches does this IG introduce, and how does it work in terms of technicial approach?
-4. What are important scope decisions, design choices, or contextual factors? (Only use information provided in the input files; do not speculate or make assumptions.)
+1. What is this IG trying to achieve, in what context, and for whom? Explain its objectives in simple terms.
+2. How does this IG improve upon previous approaches? (Use only information from the input files; avoid speculation.)
+3. What are the key features and technical approaches of this IG?
+4. How does this IG relate to broader healthcare standards and regulations?
+5. Who are the primary users or beneficiaries of this IG, including patients if applicable?
 
 Provide concise, factual responses to each question based on the content of the IG. Aim for clarity and precision in your analysis. Begin with "# $igName: Analysis"`;
 
@@ -151,19 +152,22 @@ Here is the analysis of a FHIR Implementation Guide:
 ${analysis}
 
 Use the analysis to create a plain language summary of the guide that adheres to these guidelines:
-1. Explain the IG's purpose and how it works.
-2. Write ~200 words in a single paragraph for a general audience.
-3. Write in clear prose without jargon.
-4. Use third-person perspective.
-5. Maintain an objective, informative tone throughout.
-6. Present information factually, including capabilities and (if any are noted in the analysis) limitations.
-7. Avoid promotional language or unverified claims about benefits.
+1. Explain the IG's purpose, context of use, without explaining what standards are in general.
+2. Write ~200-300 words in short paragraphs for a general audience.
+3. Use clear, jargon-free language.
+4. Write in third-person perspective.
+5. Maintain an objective, informative tone.
+6. Present information factually, including capabilities and broader context.
+7. Highlight any benefits for patients or healthcare providers.
+8. Mention how the IG relates to other standards or regulations, if applicable.
+9. Avoid promotional language or unverified claims.
 
-Provide only the refined summary as your response, without any additional explanations or comments.`;
+Provide only the refined summary as your response, without additional explanations or comments.`;
 
     const refinementRequest = {
       systemInstruction: "You are a skilled communicator with expertise in health information technology and a knack for clear, concise writing.",
       contents: [
+        { role: 'user', parts: [{ text: content + "\n\n" + promptInstructions }] },
         { role: 'user', parts: [{ text: refinementPrompt }] },
       ]
     };
@@ -184,17 +188,19 @@ Here's a summary of a FHIR Implementation Guide:
 ${refinedSummary}
 
 Please revise this summary to adhere to the following guideline:
-- Do not explain what FHIR is; do not expand the acronym FHIR; just call it FHIR.
-- Do not explain what an IG is; do not expand the acronym IG; just call it an IG.
-- Do not explain what an API is; do not expand the acronym API; just call it an API.
-- Do not explain what an EHR is; do not expand the acronym EHR; just call it an EHR.
+- Rather than referring to an "IG" or "Implementation Guide", just call it a "standard".
+- Remove any explanation that healthcare standards are like a common language or that they help computers talk to each other. That's common knowledge.
+- Remove any explanation of what FHIR is; do not expand the acronym FHIR; just call it FHIR.
+- Remove any explanation of what an API is; do not expand the acronym API; just call it an API.
+- Remove any explanation of what an EHR is; do not expand the acronym EHR; just call it an EHR.
 
-Retain the original summary and only revise it to avoid explaining FHIR, IG, and EHR.
+Retain the original summary and only revise it to address the guidelines above.
 
 Provide only the final refined summary as your response, without any additional explanations or comments.`;
 
       const finalRefinementRequest = {
         contents: [
+          { role: 'user', parts: [{ text: analysis }] },
           { role: 'user', parts: [{ text: finalRefinementPrompt }] },
         ]
       };
